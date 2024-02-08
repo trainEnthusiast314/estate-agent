@@ -7,6 +7,7 @@ import SellersList from './components/SellersList'
 import BuyersList from './components/BuyersList'
 import PropertyList from './components/PropertyList'
 import PropertyDetails from './components/PropertyDetails'
+import RegisterSeller from './components/RegisterSeller'
 
 
 function App() {
@@ -24,7 +25,10 @@ function App() {
             <Route path='/properties/:property_id' element={<PropertyDetails />} />
           </Routes>
         </BrowserRouter>
+
+        <RegisterSeller />
     </div>
+
   )
 }
 
