@@ -157,20 +157,6 @@
       "status": "FOR SALE",
       "sellerId": "12",
       "buyerId": "12"
-    },
-    {
-      "id": "eb7e",
-      "address": "my house road",
-      "postcode": "s34 31",
-      "type": "SEMI-DETACHED",
-      "price": "50",
-      "bedroom": "1",
-      "bathroom": "1",
-      "description": "dsadsa",
-      "image": "https://previews.123rf.com/images/estherpoon/estherpoon2008/estherpoon200800041/153171588-detached-houses-in-manchester-united-kingdom.jpg",
-      "status": "FOR SALE",
-      "sellerId": "12",
-      "buyerId": "12"
     }
   ],
   "buyer": [

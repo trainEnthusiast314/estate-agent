@@ -56,6 +56,7 @@ function AddProperty({setListOfProperties, setClicked}) {
         <label>add property image: <input onChange={handleChange} type="url" name="image" placeholder="image address e.g.https://house-placeholder.png"/></label>
         <input type="submit" />
        </form>
+    <button id='close-add-property' onClick={e=>{ setClicked(true)}}>Close</button>
     </div>
 
 }
