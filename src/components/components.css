@@ -159,12 +159,18 @@ body {
     
 }
 
+.link:hover {
+    font-style: italic;
+    color: #92146a;
+}
+
 
 #firstNav {
     margin-left: 0%;
     padding-left: 0%;
     margin-right: 5%;
 }
+
 
 #lastNav {
     margin-left: 10%;
