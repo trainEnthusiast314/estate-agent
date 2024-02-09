@@ -29,3 +29,235 @@ body {
 .form-button:hover {
     background-color:pink;
 }
+
+
+/* HomePage Styling */
+
+.home-page-topper {
+    display: flex;
+    background-color: rgb(168, 199, 230);
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+}
+
+.home-page-topper > div {
+    background-color: #f1f1f1;
+    margin: 10px;
+    padding: 20px;
+    /* font-size: 30px; */
+    width: 100%;
+}
+
+.company-name {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+}
+
+.company-info {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+
+
+.property-container {
+    display: flex;
+    background-color: rgb(102, 210, 108);
+}
+
+.property-container :first-child {
+    flex: 2 0 auto;
+    width: 25%;
+    background-color: #a3a057;
+    margin: 10px;
+    padding: 20px;
+}
+
+.property-container * {
+    flex: 0 0 auto;
+    background-color: #e6e165;
+    margin: 10px;
+    padding: 20px;
+}
+
+.seller-container {
+    display: flex;
+    background-color: rgb(210, 102, 190);
+}
+
+.seller-container :first-child {
+    flex: 1 0 auto;
+    width: 25%;
+    background-color: #92146a;
+    margin: 10px;
+    padding: 20px;
+}
+
+.seller-container * {
+    flex: 1 0 auto;
+    background-color: #852f54;
+    margin: 10px;
+    padding: 20px;
+}
+
+
+.buyer-container {
+    display: flex;
+    background-color: rgb(126, 102, 210);
+}
+
+.buyer-container :first-child {
+    flex: 0.2 0 auto;
+    width: 25%;
+    background-color: #8395de;
+    margin: 10px;
+    padding: 20px;
+}
+
+.buyer-container * {
+    flex: 1 0 auto;
+    background-color: #7ea0de;
+    margin: 10px;
+    padding: 20px;
+}
+
+
+
+/* NavBar Styling */
+
+.nav-bar{
+    background-image: url('/src/assets/cityphoto.jpg'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    list-style-type: none;
+    display: flex;
+    width: 100%;
+    height: 300px;
+    /* justify-content: center;
+    margin: 0 auto;
+    padding: 0;
+    vertical-align: middle; */
+
+
+}
+
+.nav-bar ul{
+    margin: 0;
+    vertical-align: middle;
+}
+
+.nav-bar li{
+    margin: 2%;
+    text-align: center;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+}
+
+.link{
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: xx-large;
+    
+}
+
+
+#firstNav {
+    margin-left: 0%;
+    padding-left: 0%;
+    margin-right: 5%;
+}
+
+#lastNav {
+    margin-left: 10%;
+}
+
+#logo {
+    margin: 0;
+    width: 7em;
+}
+
+/* Placehold media query section for different screen sizes */
+@media screen and (max-width:800px){
+    #hiddenNav {
+        display: none;
+    }
+}
+
+/* Property list styling */
+.property-list-page{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+.property-list-item{
+    text-align: center;
+    text-decoration: none;
+    list-style-type: none;
+    width: 50%;
+    background-color: lightblue;
+    margin: 0 auto;
+    border-radius: 10px;
+    
+}
+#add-property-click{
+    text-align: center;
+    background-color: red;
+    color: white;
+    transition: 0.5s;
+    padding: 1em 0;
+    width:30%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+    border-radius: 10px;
+}
+#add-property-click:hover{
+    
+    text-align: center;
+    background-color: darkred;
+    color: whitesmoke; 
+    cursor: pointer;
+    padding: 1em 0;
+    width:30%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+    border-radius: 10px;
+}
+
+/* add property styling */
+
+.add-property-container{
+    margin-top: 2em;
+    display: inline-block;
+    
+}
+/* Style inputs */
+.add-property-form input[type=text], select,input[type=number], textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  /* Style the submit button */
+  .add-property-form [type=submit] {
+    width: 100%;
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  
+  /* Add a background color to the submit button on mouse-over */
+  .add-property-form  input[type=submit]:hover {
+    background-color: #45a049;
+  }
