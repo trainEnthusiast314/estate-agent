@@ -1,6 +1,6 @@
 import './components.css'
 import { useState } from 'react' 
-import axios from 'axios';
+import { postSeller } from '../api/api';
 
 
 // A complete function that has inputs (through HTML) - using state to save the info inputted. 
@@ -11,39 +11,41 @@ import axios from 'axios';
 
 function RegisterSeller() {
 
-    let [seller, setseller] = useState({firstname : '', surname : '', address : '', postcode : '', telephone : ''})
+    let [seller, setSeller] = useState({firstname : '', surname : '', address : '', postcode : '', telephone : ''})
 
     return (
         <div className="form-container">
             <form>
             First Name: <div><input name="firstname" value={seller.firstname} 
             onChange={(e) =>
-                setseller((seller) => ({ ...seller, firstname: e.target.value }))}></input></div>
+                setSeller((seller) => ({ ...seller, firstname: e.target.value }))} required></input></div>
 
             Surname: <div><input name="surname" value={seller.surname}
             onChange={(e) =>
-                setseller((seller) => ({ ...seller, surname: e.target.value }))}></input></div>
+                setSeller((seller) => ({ ...seller, surname: e.target.value }))} required></input></div>
 
             Address: <div><textarea name="address" value={seller.address}
             onChange={(e) =>
-                    setseller((seller) => ({ ...seller, address: e.target.value }))}></textarea></div>
+                    setSeller((seller) => ({ ...seller, address: e.target.value }))} required></textarea></div>
 
             Postcode: <div><input name="postcode" value={seller.postcode}
                 onChange={(e) =>
-                    setseller((seller) => ({ ...seller, postcode: e.target.value }))}></input></div>
+                    setSeller((seller) => ({ ...seller, postcode: e.target.value }))} required></input></div>
 
             Telephone: <div><input name="telephone" value={seller.telephone}
                 onChange={(e) =>
-                    setseller((seller) => ({ ...seller, telephone: e.target.value }))}></input></div>
+                    setSeller((seller) => ({ ...seller, telephone: e.target.value }))} required></input></div>
 
             <button className="form-button" onClick={(e)=> {
-                axios.post('http://localhost:3000/seller', seller )
-                .then(response => {
-                  console.log(response.data);
-                })
-                .catch(error => {
-                  console.error(error);
-                });
+                // prevents button from refreshing page
+                e.preventDefault()
+                // if statement to check values are put in the form before submitting to database
+                if (seller.firstname, seller.surname, seller.address, seller.postcode, seller.telephone) {   
+                    //calls the api and adds the seller information to the database
+                    postSeller(seller)
+                    //sets the data back to empty to clear form
+                    setSeller({firstname : '', surname : '', address : '', postcode : '', telephone : ''})
+                }
             }}>Submit</button>
             </form>
         </div>

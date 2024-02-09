@@ -11,6 +11,13 @@ export const fetchProperties=()=>{
     )
 }
 
+export const postSeller=(seller)=> {
+    return estateApi.post('/seller', seller )
+        .then(response => {
+        console.log(response.data);})
+        .catch(error => {console.error(error);})
+}
+
 export const fetchProperty=(property_id)=>{
     return estateApi.get(`/property/${property_id}`).then(res=>{
         return res.data
