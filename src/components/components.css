@@ -30,18 +30,111 @@ body {
     background-color:pink;
 }
 
+
+/* HomePage Styling */
+
+.home-page-topper {
+    display: flex;
+    background-color: rgb(168, 199, 230);
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+}
+
+.home-page-topper > div {
+    background-color: #f1f1f1;
+    margin: 10px;
+    padding: 20px;
+    /* font-size: 30px; */
+    width: 100%;
+}
+
+.company-name {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+}
+
+.company-info {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+
+
+.property-container {
+    display: flex;
+    background-color: rgb(102, 210, 108);
+}
+
+.property-container :first-child {
+    flex: 0 0 auto;
+    width: 25%;
+    background-color: #a3a057;
+    margin: 10px;
+    padding: 20px;
+}
+
+.property-container * {
+    flex: 1 0 auto;
+    background-color: #a3a057;
+    margin: 10px;
+    padding: 20px;
+}
+
+.seller-container {
+    display: flex;
+    background-color: rgb(210, 102, 190);
+}
+
+.seller-container :first-child {
+    flex: 1 0 auto;
+    width: 25%;
+    background-color: #682352;
+    margin: 10px;
+    padding: 20px;
+}
+
+.seller-container * {
+    flex: 1 0 auto;
+    background-color: #852f54;
+    margin: 10px;
+    padding: 20px;
+}
+
+.buyer-container {
+    display: flex;
+    background-color: rgb(126, 102, 210);
+}
+
+.buyer-container :first-child {
+    flex: 0.2 0 auto;
+    width: 25%;
+    background-color: #8395de;
+    margin: 10px;
+    padding: 20px;
+}
+
+.buyer-container * {
+    flex: 1 0 auto;
+    background-color: #7ea0de;
+    margin: 10px;
+    padding: 20px;
+}
+
+
+
 /* NavBar Styling */
 
 .nav-bar{
-    /* background-color: rgba(55, 135, 215, 0.844); */
-    /* color: white; */
+    background-image: url('/src/assets/cityphoto.jpg'); 
+    background-repeat: no-repeat;
+    background-size: cover;
     list-style-type: none;
     display: flex;
     width: 100%;
-    justify-content: center;
+    height: 300px;
+    /* justify-content: center;
     margin: 0 auto;
     padding: 0;
-    vertical-align: middle;
+    vertical-align: middle; */
+
 
 }
 
@@ -61,7 +154,7 @@ body {
 .link{
     color: aliceblue;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: large;
+    font-size: xx-large;
     
 }
 

@@ -6,17 +6,55 @@ function Home() {
 
     return(
     <div>
-        <div className='homePageTopper'>
-            <h1>Test Text</h1>
-            {/* <img src={city}></img>  */}
+        <div className='home-page-topper'>
+            <div className='company-name'>
+                Welcome to <br/>
+                Company Name
+            </div>
+            <div className='company-info'>
+                The very best in lettings in Manchester!
+            </div>
+            
+            
         </div>
-        
-        <div className='homePageItems'>
-            <h2>About Us Section</h2>
-                <ul>
-                    <li><h2>Property List Section?</h2></li>
-                    <li><h2>Don't see what you're looking for *resister new property link?*</h2></li>
-                </ul>
+
+        <br/>
+
+        <div className='property-container'>
+            <div>
+                Property List Section?
+            </div>
+            <div>
+                Don't see what you're looking for?
+                *Link to register property form*
+            </div>
+        </div>
+
+        <br/>
+
+        <div className='seller-container'>
+            <div>
+                I'm Selling  <br/>
+                *link to find out more*
+            </div>
+            <div>
+                *Display featured property?*
+            </div>
+        </div>
+
+        <br/>
+
+        <div className='buyer-container'>
+            <div>
+                I'm Buying  <br/>
+                *link to find out more*
+            </div>
+            <div>
+                *Diplay featured property?*
+            </div>
+        </div>
+
+        <div>
 
             <h2>Contact Us Form?</h2>
         </div>
