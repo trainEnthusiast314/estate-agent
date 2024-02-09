@@ -33,7 +33,7 @@ function PropertyList() {
 
             </ul>
         })}
-        <div onClick={e=>{clicked?setClicked(false):setClicked(true)}}>{clicked?<div>List Property Click here</div>:<AddProperty setListOfProperties={setListOfProperties}/>}</div>
+        <div onClick={e=>{clicked?setClicked(false):setClicked(false)}}>{clicked?<div>List Property Click here</div>:<AddProperty setListOfProperties={setListOfProperties} setClicked={setClicked}/>}</div>
         
         </div>
         
