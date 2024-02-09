@@ -15,14 +15,15 @@ import { postAccount } from '../api/api';
 
 function RegisterForm(user) {
 
-    let [account, setAccount] = useState({firstname : '', surname : '', address : '', postcode : '', telephone : ''})
+    let [account, setAccount] = useState({firstName : '', surname : '', address : '', postcode : '', phone : '', email : '', password : ''})
+    let [password, setPassword] = useState({check : ''})
 
     return (
         <div className="form-container">
             <form>
-            First Name: <div><input name="firstname" value={account.firstname} 
+            First Name: <div><input name="firstname" value={account.firstName} 
             onChange={(e) =>
-                setAccount((account) => ({ ...account, firstname: e.target.value }))} required></input></div>
+                setAccount((account) => ({ ...account, firstName: e.target.value }))} required></input></div>
 
             Surname: <div><input name="surname" value={account.surname}
             onChange={(e) =>
@@ -36,20 +37,41 @@ function RegisterForm(user) {
                 onChange={(e) =>
                     setAccount((account) => ({ ...account, postcode: e.target.value }))} required></input></div>
 
-            Telephone: <div><input name="telephone" value={account.telephone}
+            Telephone: <div><input name="telephone" value={account.phone}
                 onChange={(e) =>
-                    setAccount((account) => ({ ...account, telephone: e.target.value }))} required></input></div>
+                    setAccount((account) => ({ ...account, phone: e.target.value }))} required></input></div>
+                    <br />
+                    <hr />
+            Email Address: <div><input name="email" value={account.email} type="email" 
+            onChange={(e) =>
+                setAccount((account) => ({ ...account, email: e.target.value }))} required></input></div>
+
+            Password: <div><input name="password" value={account.password} type="password" 
+            onChange={(e) =>
+                setAccount((account) => ({ ...account, password: e.target.value }))} required></input></div>
+
+            Repeat Password: <div><input value={password.check} type="password" 
+            onChange={(e) =>
+                setPassword((password) => ({check: e.target.value }))} required></input></div>
 
             <button className="form-button" onClick={(e)=> {
                 // prevents button from refreshing page
                 e.preventDefault()
                 // if statement to check values are put in the form before submitting to database
-                if (account.firstname, account.surname, account.address, account.postcode, account.telephone) {   
-                    //calls the api and adds the account information to the database
-                    postAccount(account, user.user)
-                    //sets the data back to empty to clear form
-                    setAccount({firstname : '', surname : '', address : '', postcode : '', telephone : ''})
+                if (account.firstName, account.surname, account.address, account.postcode, account.phone, account.email, account.password) {   
+                    if (account.password === password.check) {
+                        //calls the api and adds the account information to the database
+                        postAccount(account, user.user)
+                        //sets the data back to empty to clear form
+                        setAccount({firstName : '', surname : '', address : '', postcode : '', phone : '', email : '', password : ''})
                 }
+                    else (
+                        alert('Please make sure passwords match')
+                    )    
+            }
+                else (
+                    alert('Please fill in all required fields')
+                )
             }}>Submit</button>
             </form>
         </div>
