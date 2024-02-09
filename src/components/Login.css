@@ -1,0 +1,22 @@
+
+.dataField{
+    margin: 0.5%;
+    width: 30em;
+    height: 2em;
+    border-radius: 50px;
+    padding-left: 15px;
+ 
+}
+
+.loginPage{
+    text-align: center;
+    background-color: skyblue;
+    
+}
+
+.submitBtn{
+    border-radius: 50px;
+    width: 5em;
+    height: 2em;
+    font-size: 1.5em;
+}
