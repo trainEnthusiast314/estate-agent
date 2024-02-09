@@ -16,7 +16,6 @@ function PropertyDetails() {
                 )
         })
     },[setProperty,property_id,setIsLoading])
-    console.log(property)
     return isLoading?<p>... loading</p>:<div>
         <ul key={property_id}>
             <li>property at {property.address}, {property.postcode}</li>

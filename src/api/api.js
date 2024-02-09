@@ -24,3 +24,11 @@ export const fetchProperty=(property_id)=>{
     }
     )
 }
+
+export const postProperty=(property)=>{
+    return estateApi.post(`/property`,property).then(res=>{
+        console.log(res)
+    }).catch(err=>{
+        console.log(err)
+    })
+}
