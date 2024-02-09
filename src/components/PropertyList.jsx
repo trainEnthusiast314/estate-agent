@@ -9,7 +9,7 @@ import AddProperty from "./AddProperty"
 function PropertyList() {
     const [isLoading,setIsLoading]=useState(true)
     const [listOfProperties,setListOfProperties]=useState([])
-   
+   const [clicked,setClicked]=useState(true)
     useEffect(()=>{
         setIsLoading(true)
         fetchProperties().then(data=>{
@@ -33,8 +33,10 @@ function PropertyList() {
 
             </ul>
         })}
+        <div onClick={e=>{clicked?setClicked(false):setClicked(true)}}>{clicked?<div>List Property Click here</div>:<AddProperty setListOfProperties={setListOfProperties}/>}</div>
+        
         </div>
-        <AddProperty setListOfProperties={setListOfProperties}/>
+        
        
     </div>
 }
