@@ -1,0 +1,32 @@
+.footer-container {
+    display:flex;
+    background-color: rgb(48, 60, 100);
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    color:#fff;
+    justify-content: center;
+    align-items: top;
+    margin-top:6em;
+}
+
+.footer-content {
+    width:20%;
+    display:inline-block;
+    margin: 1em;
+    text-align:center;
+}
+
+.footer-content > ul {
+    list-style-type:none;
+}
+
+.footer-content > img {
+    width:50px;
+    margin:5px;
+    opacity: 0.5;
+    transition: linear 0.8s;
+}
+
+.footer-content > img:hover {
+    opacity: 1;
+}
