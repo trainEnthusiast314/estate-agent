@@ -1,4 +1,4 @@
-// imports
+import RegisterSeller from "./RegisterSeller"
 
 function SellersList() {
 

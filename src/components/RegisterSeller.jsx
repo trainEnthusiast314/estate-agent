@@ -1,35 +1,51 @@
 import './components.css'
 import { useState } from 'react' 
+import axios from 'axios';
+
+
+// A complete function that has inputs (through HTML) - using state to save the info inputted. 
+// On click of button all of the data inputted gets send straight to JSON server (if you are connected to the server)
+
+// Does not currently check if seller is already registered (!!)
 
 
 function RegisterSeller() {
 
-    let [inputs, setInputs] = useState({firstname : '', surname : '', address : '', postcode : '', telephone : ''})
+    let [seller, setseller] = useState({firstname : '', surname : '', address : '', postcode : '', telephone : ''})
 
     return (
         <div className="form-container">
-
-            First Name: <div><input name="firstname" value={inputs.firstname} 
+            <form>
+            First Name: <div><input name="firstname" value={seller.firstname} 
             onChange={(e) =>
-                setInputs((inputs) => ({ ...inputs, firstname: e.target.value }))}></input></div>
+                setseller((seller) => ({ ...seller, firstname: e.target.value }))}></input></div>
 
-            Surname: <div><input name="surname" value={inputs.surname}
+            Surname: <div><input name="surname" value={seller.surname}
             onChange={(e) =>
-                setInputs((inputs) => ({ ...inputs, surname: e.target.value }))}></input></div>
+                setseller((seller) => ({ ...seller, surname: e.target.value }))}></input></div>
 
-            Address: <div><textarea name="address" value={inputs.address}
+            Address: <div><textarea name="address" value={seller.address}
             onChange={(e) =>
-                    setInputs((inputs) => ({ ...inputs, address: e.target.value }))}></textarea></div>
+                    setseller((seller) => ({ ...seller, address: e.target.value }))}></textarea></div>
 
-            Postcode: <div><input name="postcode" value={inputs.postcode}
+            Postcode: <div><input name="postcode" value={seller.postcode}
                 onChange={(e) =>
-                    setInputs((inputs) => ({ ...inputs, postcode: e.target.value }))}></input></div>
+                    setseller((seller) => ({ ...seller, postcode: e.target.value }))}></input></div>
 
-            Telephone: <div><input name="telephone" value={inputs.telephone}
+            Telephone: <div><input name="telephone" value={seller.telephone}
                 onChange={(e) =>
-                    setInputs((inputs) => ({ ...inputs, telephone: e.target.value }))}></input></div>
+                    setseller((seller) => ({ ...seller, telephone: e.target.value }))}></input></div>
 
-            <p className="form-button" onClick={(e)=> {console.log(inputs)}}>Submit</p>
+            <button className="form-button" onClick={(e)=> {
+                axios.post('http://localhost:3000/seller', seller )
+                .then(response => {
+                  console.log(response.data);
+                })
+                .catch(error => {
+                  console.error(error);
+                });
+            }}>Submit</button>
+            </form>
         </div>
     )
 
