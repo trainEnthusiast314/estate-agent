@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const estateApi=axios.create(
+export const estateApi=axios.create(
     {baseURL:'http://localhost:3000'}
 )
 
