@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react"
 import { postProperty } from "../api/api"
 
-function AddProperty({setListOfProperties}) {
+function AddProperty({setListOfProperties, setClicked}) {
     const [input,setInput]=useState({})
     const [postedProperty,setPostedProperty]=useState({})
     const handleChange=(e)=>{
@@ -28,7 +28,9 @@ function AddProperty({setListOfProperties}) {
         if(Object.keys(postedProperty).length===11){
              setListOfProperties(current=>{
                 return [...current, postedProperty]
+                
             })
+            setClicked(true)
             setInput({})
             postProperty(postedProperty)
             
