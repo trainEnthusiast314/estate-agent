@@ -2,10 +2,9 @@
 import './Login.css'
 import React from 'react';
 import {useState} from 'react';
-import {Link} from 'react-router-dom';
 
 
-function Login() {
+function CreateAccount() {
     let [input, setInputs] = useState({});
     let [userDetails, setUserDetails] = useState({});
     
@@ -30,10 +29,31 @@ function Login() {
     
     <div className = "grid-container">
     <div className='userPage' >
-        <h1>Login</h1>   
+        <h1>Create an Account</h1>   
         
         <form onSubmit={handleSubmit}>
-         
+        <div>
+        <input 
+            className = "dataField"
+            id ="firstName" 
+            name = "firstName" 
+            type = "text" 
+            placeholder = "First Name" 
+            required
+            onChange = {handleChange}
+            />
+        </div>  
+        <div>
+        <input 
+            className = "dataField"
+            id ="surname" 
+            name = "surname" 
+            type = "text" 
+            placeholder = "Surname" 
+            required
+            onChange = {handleChange}
+            />
+        </div>  
         <div>
         <input 
             className = "dataField"
@@ -60,19 +80,18 @@ function Login() {
         <div>
 
         {/*Used for when the user creates their account*/}
-       {/* <select class = "dataField" id = "accountType" name = "accountType">
+       <select class = "dataField" id = "accountType" name = "accountType">
             <option value = "buyer">Buyer</option>
             <option value = "seller">Seller</option>
-    </select>*/}
+        </select>
         </div>
 
-        <div id = "createAcc"><Link to = "/createaccount"  >Create Account</Link></div>
        
-        <input className = "submitBtn" id= "loginButton" type = "submit" value = "Login"></input>
+        <input className = "submitBtn" id= "createAccountBtn" type = "submit" value = "Create Account"></input>
         
         </form>
     </div></div>)
 
 }
 
-export default Login
+export default CreateAccount
