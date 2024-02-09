@@ -34,3 +34,6 @@ api folder will contain the api calls
 util folder should contain functions that can be reusable across all files (so functions are not repeated over multiple files)
 import dependencies and css files at the top of each component file (as required)
 delete imports that are unused
+
+-------TRELLO--------
+https://trello.com/b/B3e52NOK/project
