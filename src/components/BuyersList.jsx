@@ -1,9 +1,14 @@
 import RegisterForm from "./RegisterForm"
 
 function BuyersList() {
+
     return (
-    <RegisterForm user="buyer" />
+        <>
+        <h1>Register as a new buyer:</h1>
+        <RegisterForm user="seller" />
+        </>
     )
+
 }
 
 export default BuyersList
