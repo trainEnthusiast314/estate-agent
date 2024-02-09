@@ -10,3 +10,10 @@ export const fetchProperties=()=>{
     }
     )
 }
+
+export const postSeller=(seller)=> {
+    return estateApi.post('/seller', seller )
+        .then(response => {
+        console.log(response.data);})
+        .catch(error => {console.error(error);})
+}
