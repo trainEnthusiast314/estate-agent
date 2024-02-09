@@ -32,3 +32,11 @@ export const postProperty=(property)=>{
         console.log(err)
     })
 }
+
+export const fetchSellers=()=>{
+    return estateApi.get('/seller').then(res=>{
+        return res.data
+    }
+    )
+}
+
