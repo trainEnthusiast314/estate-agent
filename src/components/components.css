@@ -8,16 +8,21 @@ body {
     margin:0, auto;
     width:20vw;
     border:1px solid black;
+    padding:20px;
 }
 
-.form-container > div {
+.form-container > form > div {
     display:inline-block;
     width:100%;
 }
 
+.form-container > form > div > input {
+    margin-bottom:10px;
+}
+
 .form-button {
     background-color:aquamarine;
-    margin:0, auto;
+    margin-top:20px;
     text-align: center;
     font-weight:bold;
     cursor:pointer;

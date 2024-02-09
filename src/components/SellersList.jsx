@@ -3,6 +3,7 @@ import React from "react"
 import {useState, useEffect} from "react";
 import {fetchSellers} from "../api/api"
 import "../styles/sellerList.css"
+import RegisterForm from "./RegisterForm";
 
 function SellersList() {
     const [isLoading, setIsLoading] = useState(true)
@@ -23,7 +24,10 @@ function SellersList() {
     }, [setListOfSellers])
 
     return isLoading?<div>Loading Sellers .....</div>:
+    
     <div className="seller-list-page">
+        <h1>Register as a new seller:</h1>
+        <RegisterForm user="seller" />
         <h2>List of Sellers</h2>
         <div className="seller-list-container">
             {listOfSellers.map(seller=>{seller
