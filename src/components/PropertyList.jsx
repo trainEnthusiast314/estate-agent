@@ -26,6 +26,7 @@ function PropertyList() {
                 <Link to={`/properties/${property.id}`}>
                 <li><img src={`${property.image}`} width='100vw' height="100vh" alt={`image of property at ${property.address}`}/></li>
                 </Link>
+                <li>Bedrooms ${property.bedroom}</li>
                 <li>price £{property.price}</li>
 
             </ul>
