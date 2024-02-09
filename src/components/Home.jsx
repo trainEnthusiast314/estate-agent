@@ -8,7 +8,7 @@ function Home() {
     <div>
         <div className='homePageTopper'>
             <h1>Test Text</h1>
-            <img src={city}></img> 
+            {/* <img src={city}></img>  */}
         </div>
         
         <div className='homePageItems'>

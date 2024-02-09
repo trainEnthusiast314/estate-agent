@@ -33,9 +33,8 @@ body {
 /* NavBar Styling */
 
 .nav-bar{
-    background-color: rgba(55, 135, 215, 0.844);
-    /* background-image: <img src="../assets/cityphoto.jpg"/>; */
-    color: white;
+    /* background-color: rgba(55, 135, 215, 0.844); */
+    /* color: white; */
     list-style-type: none;
     display: flex;
     width: 100%;
@@ -59,6 +58,14 @@ body {
     align-items: center;
 }
 
+.link{
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    
+}
+
+
 #firstNav {
     margin-left: 0%;
     padding-left: 0%;
@@ -72,5 +79,12 @@ body {
 #logo {
     margin: 0;
     width: 7em;
+}
+
+/* Placehold media query section for different screen sizes */
+@media screen and (max-width:800px){
+    #hiddenNav {
+        display: none;
+    }
 }
 
