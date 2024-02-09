@@ -7,7 +7,7 @@ import city from "../assets/cityphoto.jpg";
 function Nav() {
     return (
         <div>
-            <ul className='nav-bar' style={{backgroundImage: `url(${city})`}}>
+            <ul className='nav-bar'>
                 <li id="firstNav"><img src={logo} id="logo"/></li>
                 <li id="hiddenNav"><Link to='/' className={'nav-bar-element, link'}>Home</Link></li>
                 <li id="hiddenNav"><Link to='/properties' className={'nav-bar-element, link'}>Properties</Link></li>

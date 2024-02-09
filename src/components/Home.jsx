@@ -6,20 +6,56 @@ function Home() {
 
     return(
     <div>
-        <div className='homePageTopper'>
-            <h1>Test Text</h1>
-            {/* <img src={city}></img>  */}
+        <div className='home-page-topper'>
+            <div className='company-name'>
+                Welcome to <br/>
+                Company Name
+            </div>
+            <div className='company-info'>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            </div>
+            
+            
         </div>
-        
-        <div className='homePageItems'>
-            <h2>About Us Section</h2>
-                <ul>
-                    <li><h2>Property List Section?</h2></li>
-                    <li><h2>Don't see what you're looking for *resister new property link?*</h2></li>
-                </ul>
 
-            <h2>Contact Us Form?</h2>
+        <br/>
+
+        <div className='property-container'>
+            <div>
+                <h1>Available Properties</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. .</p>
+            </div>
+            <div>
+                <h3>Don't See What You're Looking For?</h3>
+                <h3>**Insert Link to add property form**</h3>
+            </div>
         </div>
+
+        <br/>
+
+        <div className='seller-container'>
+            <div>
+                <h1>I'm Selling</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. .</p>
+            </div>
+            <div>
+                <h1>*Display featured property?*</h1>
+            </div>
+        </div>
+
+        <br/>
+
+        <div className='buyer-container'>
+            <div>
+                <h1>I'm Selling</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. .</p>
+            </div>
+            <div>
+                <h1>*Display featured property?*</h1>
+            </div>
+        </div>
+
         
     </div>)
 }
