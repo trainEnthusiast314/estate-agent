@@ -110,18 +110,26 @@ body {
     text-align: center;
     background-color: red;
     color: white;
-    margin-top: 2em;
     transition: 0.5s;
     padding: 1em 0;
+    width:30%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+    border-radius: 10px;
 }
 #add-property-click:hover{
     
     text-align: center;
     background-color: darkred;
-    color: whitesmoke;
-    margin-top: 2em;
+    color: whitesmoke; 
     cursor: pointer;
     padding: 1em 0;
+    width:30%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+    border-radius: 10px;
 }
 
 /* add property styling */
@@ -132,7 +140,7 @@ body {
     
 }
 /* Style inputs */
-.add-property-container>input[type=text], select,input[type=number], textarea {
+.add-property-form input[type=text], select,input[type=number], textarea {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
