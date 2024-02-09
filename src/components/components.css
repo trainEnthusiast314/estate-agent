@@ -64,7 +64,7 @@ body {
 }
 
 .property-container :first-child {
-    flex: 0 0 auto;
+    flex: 2 0 auto;
     width: 25%;
     background-color: #a3a057;
     margin: 10px;
@@ -72,8 +72,8 @@ body {
 }
 
 .property-container * {
-    flex: 1 0 auto;
-    background-color: #a3a057;
+    flex: 0 0 auto;
+    background-color: #e6e165;
     margin: 10px;
     padding: 20px;
 }
@@ -86,7 +86,7 @@ body {
 .seller-container :first-child {
     flex: 1 0 auto;
     width: 25%;
-    background-color: #682352;
+    background-color: #92146a;
     margin: 10px;
     padding: 20px;
 }
@@ -97,6 +97,7 @@ body {
     margin: 10px;
     padding: 20px;
 }
+
 
 .buyer-container {
     display: flex;
