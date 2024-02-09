@@ -1,6 +1,6 @@
 // imports
 import {Link} from 'react-router-dom';
-import "./navbar.css";
+import "./components.css";
 import logo from "../assets/qalogo.jpg";
 import city from "../assets/cityphoto.jpg";
 
