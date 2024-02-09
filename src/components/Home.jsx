@@ -12,7 +12,8 @@ function Home() {
                 Company Name
             </div>
             <div className='company-info'>
-                The very best in lettings in Manchester!
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
             </div>
             
             
@@ -22,11 +23,12 @@ function Home() {
 
         <div className='property-container'>
             <div>
-                Property List Section?
+                <h1>Available Properties</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. .</p>
             </div>
             <div>
-                Don't see what you're looking for?
-                *Link to register property form*
+                <h3>Don't See What You're Looking For?</h3>
+                <h3>**Insert Link to add property form**</h3>
             </div>
         </div>
 
@@ -34,11 +36,11 @@ function Home() {
 
         <div className='seller-container'>
             <div>
-                I'm Selling  <br/>
-                *link to find out more*
+                <h1>I'm Selling</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. .</p>
             </div>
             <div>
-                *Display featured property?*
+                <h1>*Display featured property?*</h1>
             </div>
         </div>
 
@@ -46,18 +48,14 @@ function Home() {
 
         <div className='buyer-container'>
             <div>
-                I'm Buying  <br/>
-                *link to find out more*
+                <h1>I'm Selling</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. .</p>
             </div>
             <div>
-                *Diplay featured property?*
+                <h1>*Display featured property?*</h1>
             </div>
         </div>
 
-        <div>
-
-            <h2>Contact Us Form?</h2>
-        </div>
         
     </div>)
 }
