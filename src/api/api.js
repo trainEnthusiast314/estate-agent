@@ -10,3 +10,10 @@ export const fetchProperties=()=>{
     }
     )
 }
+
+export const fetchProperty=(property_id)=>{
+    return estateApi.get(`/property/${property_id}`).then(res=>{
+        return res.data
+    }
+    )
+}
