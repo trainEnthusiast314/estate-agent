@@ -8,6 +8,7 @@ import BuyersList from './components/BuyersList'
 import PropertyList from './components/PropertyList'
 import PropertyDetails from './components/PropertyDetails'
 import Footer from './components/Footer'
+import CreateAccount from './components/CreateAccount'
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
             <Route path='/buyers' element={<BuyersList />} />
             <Route path='/properties' element={<PropertyList />} />
             <Route path='/properties/:property_id' element={<PropertyDetails />} />
+            <Route path='/createaccount' element={<CreateAccount />} />
           </Routes>
         </BrowserRouter>
         <Footer />
