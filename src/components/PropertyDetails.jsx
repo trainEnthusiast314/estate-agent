@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router"
 import { fetchProperty } from "../api/api"
+import Booking from './Booking'
 
 function PropertyDetails() {
     const {property_id}=useParams()
@@ -26,7 +27,9 @@ function PropertyDetails() {
             <li><p>{property.description}</p></li>
             
         </ul>
+        <Booking/>
     </div>
+    
 
 }
 

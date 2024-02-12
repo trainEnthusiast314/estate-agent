@@ -40,3 +40,11 @@ export const fetchSellers=()=>{
     )
 }
 
+export const fetchBooking=()=>{
+    return estateApi.get(`/booking/` ).then(res=>{
+        
+        return res.data
+    }
+    )
+}
+
