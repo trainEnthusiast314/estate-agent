@@ -55,3 +55,11 @@ export const fetchBuyers=()=>{
 }
 
 
+export const deleteProperty=(property_id)=>{
+    return estateApi.delete(`/property/${property_id}`).then(res=>{
+        console.log(res)
+    }).catch(err=>{
+        console.log(err)
+        alert(err.status)
+    })
+}
