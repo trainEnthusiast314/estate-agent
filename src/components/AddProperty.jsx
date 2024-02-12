@@ -15,7 +15,7 @@ function AddProperty({setListOfProperties, setClicked}) {
     const handleSubmit=(e)=>{
         e.preventDefault()
     
-        if(sellers.filter(item=>{return item.id===input.sellerId}).length>0){
+        if(sellers.filter(item=>{return item.id==input.sellerId}).length>0){
             if(Object.keys(input).length===9){
             
             setPostedProperty(current=>{
@@ -53,8 +53,13 @@ function AddProperty({setListOfProperties, setClicked}) {
     
     return <div className="add-property-container">
        <form className="add-property-form" onSubmit={handleSubmit}>
-       <label>seller Id: <input onChange={handleChange} type="text" placeholder="12" required name="sellerId"/></label>
-
+       
+       <label >choose seller: <select name="sellerId" onChange={handleChange}>
+       <option value="">-----</option>
+        {sellers.map((seller)=>{
+            return <option value={seller.id}>{seller.firstName} {seller.surname}</option>
+        })}
+        </select></label>
         <label>Address: <input type="text" name="address" placeholder="Somewhere House, Some Street, Some City" required onChange={handleChange} /></label>
 
         <label>Post Code: <input onChange={handleChange} type="text" placeholder="SO1 2ME" name="postcode" required/></label>
