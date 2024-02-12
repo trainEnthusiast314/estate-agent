@@ -25,7 +25,7 @@ function Home() {
                 <p className='info-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 <br/>
                 <br/>
-                <Link to='/properties?_sort=bedroom&_order=desc&type=&status=' className={'nav-bar-element, link'}>Find out more...</Link>
+                <Link to='/properties?_sort=bedroom&_order=desc&type=&status=' className={'info-link'}>Find out more...</Link>
                 </p>
             </div>
             <div className='home-page-column column2'>
@@ -42,7 +42,7 @@ function Home() {
                 <p className='info-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                 <br/>
                 <br/>
-                <Link to='/sellers' className={'nav-bar-element, link'}>Register Now</Link></p>
+                <Link to='/sellers' className={'info-link'}>Register Now</Link></p>
             </div>
             <div id='hiddenFeature' className='home-page-column column2'>
                 <h1 className='info-text'>*Display featured property?*</h1>
@@ -55,7 +55,7 @@ function Home() {
                 <p className='info-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 <br/>
                 <br/>
-                <Link to='/buyers' className={'nav-bar-element, link'}>Register Now</Link></p>
+                <Link to='/buyers' className={'info-link'}>Register Now</Link></p>
             </div>
             <div id='hiddenFeature' className='home-page-column column2'>
                 <h1 className='info-text'>*Display featured property?*</h1>
