@@ -3,93 +3,105 @@
     {
       "id": "1",
       "firstName": "John",
-      "surname": "Doe"
+      "surname": "Doe",
+      "address": "13 Reather Walk, Manchester",
+      "postcode": "M40 7PD",
+      "phone": "0161 311 6348"
     },
     {
       "id": "2",
       "firstName": "Anna",
-      "surname": "Smith"
+      "surname": "Smith",
+      "address": "6 Lord Lane, Failsworth",
+      "postcode": "M35 0SL",
+      "phone": "0161 742 1143"
     },
     {
       "id": "3",
       "firstName": "Peter",
-      "surname": "Jones"
+      "surname": "Jones",
+      "address": "38 Thornley Street, Middleton",
+      "postcode": "M24 2HX",
+      "phone": "01706 321855"
     },
     {
       "id": "4",
       "firstName": "Karen",
-      "surname": "Slater"
+      "surname": "Slater",
+      "address": "1 Pattishall Close, Manchester",
+      "postcode": "M4 7DU",
+      "phone": "0161 730 6724"
     },
     {
       "id": "5",
       "firstName": "Jade",
       "surname": "Huang",
-      "address": "China",
-      "postcode": "",
-      "phone": ""
+      "address": "67C King Street, Knutsford",
+      "postcode": "WA16 6DX",
+      "phone": "01565 671670"
     },
     {
       "firstName": "Andy",
       "surname": "Smith",
-      "address": "",
-      "postcode": "",
-      "phone": "",
+      "address": "1088 Stockport Road, Manchester",
+      "postcode": "M19 2SU",
+      "phone": "0161 450 3708",
       "id": "7"
     },
     {
       "firstName": "Stephanie ",
       "surname": "Hill",
-      "address": "brecon Town, Brecon",
-      "postcode": "BR1 2JE",
-      "phone": "",
+      "address": "6 Wimpory Street, Manchester",
+      "postcode": "M11 2FP",
+      "phone": "0161 374 3673",
       "id": "8"
     },
     {
       "firstName": "Jade",
       "surname": "Song",
-      "address": "Sichuan, China",
-      "postcode": "1131321",
-      "phone": "",
+      "address": "Flat 3, Willow Court, Willow Bank, Manchester",
+      "postcode": "M14 6XP",
+      "phone": "0161 422 8502",
       "id": "9"
     },
     {
       "firstName": "Nicohola",
       "surname": "Green",
-      "address": "Fairwater, Cardiff",
-      "postcode": "CF1 1AA",
-      "phone": "1234234",
+      "address": "2 Greenbank Avenue, Swinton",
+      "postcode": "M27 0GB",
+      "phone": "0161 118 3475",
       "id": "10"
     },
     {
-      "firstName": "",
-      "surname": "",
-      "address": "",
-      "postcode": "",
-      "phone": "",
+      "firstName": "Sally",
+      "surname": "Bates",
+      "address": "39 Moss Lane, Sale",
+      "postcode": "M33 6QF",
+      "phone": "0161 046 3264",
       "id": "11"
     },
     {
       "firstName": "Cookie",
       "surname": "Cat",
-      "address": "Tesco Street",
-      "postcode": "A11 AA1",
-      "phone": "12345",
+      "address": "1 Lee Street, Middleton",
+      "postcode": "M24 5JW",
+      "phone": "01706 073046",
       "id": "12"
     },
     {
       "firstName": "Sam",
       "surname": "Ash",
-      "address": "Very Wealth Place",
-      "postcode": "QA1 1QA",
-      "phone": "123344556",
+      "address": "6 Kingston Road, Failsworth",
+      "postcode": "M35 9JD",
+      "phone": "0161 341 7164",
       "id": "13"
     }
   ],
   "property": [
     {
       "id": "1",
-      "address": "34 OK Place, OK Town",
-      "postcode": "OK1 1OK",
+      "address": "3 Inchcape Drive, Manchester",
+      "postcode": "M9 8JN",
       "type": "DETACHED",
       "price": 100000,
       "bedroom": 3,
@@ -98,13 +110,13 @@
       "sellerId": 1,
       "status": "SOLD",
       "buyerId": 3,
-      "image": "https://dchba.org/wp-content/uploads/2020/06/house-placeholder.png",
+      "image": "../src/assets/houses/cottage-2955582_640.jpg",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     },
     {
       "id": "2",
-      "address": "Somewhere House, Some Street, Some City",
-      "postcode": "SO1 2ME",
+      "address": "5 Parkfield Avenue, Urmston",
+      "postcode": "M41 9FE",
       "type": "APARTMENT",
       "price": 200000,
       "bedroom": 1,
@@ -113,12 +125,12 @@
       "sellerId": 1,
       "status": "SOLD",
       "buyerId": 3,
-      "image": "https://dchba.org/wp-content/uploads/2020/06/house-placeholder.png",
+      "image": "../src/assets/houses/home-1597079_640.jpg",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     },
     {
-      "address": "2 Welsh Street, Ebbw Vale",
-      "postcode": "TR1 1GA",
+      "address": "122 Lords Street, Cadishead",
+      "postcode": "M44 5YB",
       "type": "DETACHED",
       "price": 125000,
       "bedroom": 1,
@@ -127,12 +139,12 @@
       "sellerId": 3,
       "status": "FOR SALE",
       "id": "3",
-      "image": "https://dchba.org/wp-content/uploads/2020/06/house-placeholder.png",
+      "image": "../src/assets/houses/house-540796_640.jpg",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     },
     {
-      "address": "8 Hilltop, Ebbw Vale",
-      "postcode": "EB1 2VA",
+      "address": "253 Littleton Road, Salford",
+      "postcode": "M7 3TB",
       "type": "DETACHED",
       "price": 99000,
       "bedroom": 3,
@@ -141,19 +153,19 @@
       "sellerId": 4,
       "status": "SOLD",
       "id": "4",
-      "image": "https://dchba.org/wp-content/uploads/2020/06/house-placeholder.png",
+      "image": "../src/assets/houses/small-house-353929_640.jpg",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     },
     {
       "id": "c5ed",
-      "address": "my house road",
-      "postcode": "s34 31",
+      "address": "25 Whitehall Road, Manchester",
+      "postcode": "M20 6RY",
       "type": "SEMI-DETACHED",
       "price": "2",
       "bedroom": "2",
       "bathroom": "2",
-      "description": "cool",
-      "image": "https://previews.123rf.com/images/estherpoon/estherpoon2008/estherpoon200800041/153171588-detached-houses-in-manchester-united-kingdom.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "image": "../src/assets/houses/vw-beetle-405876_640.jpg",
       "status": "FOR SALE",
       "sellerId": "12",
       "buyerId": "12"
@@ -176,27 +188,35 @@
   "buyer": [
     {
       "id": "1",
-      "firstName": "Cookie",
-      "surname": "Cat",
-      "address": "42 Pen-y-lan Road, Cardiff",
-      "postcode": "CA1 8RR",
-      "phone": ""
+      "firstName": "Penny",
+      "surname": "Cath",
+      "address": "5 Wilderswood Close, Manchester",
+      "postcode": "M20 4XU",
+      "phone": "0161 566 5810"
     },
     {
       "id": "2",
       "firstName": "Nilla",
       "surname": "Cat",
-      "address": "100 Magor Road, Newport",
-      "postcode": "NP1 2LL",
-      "phone": ""
+      "address": "140 Leicester Road, Salford",
+      "postcode": "M7 4GA",
+      "phone": "0161 587 8706"
     },
     {
       "firstName": "Monty",
       "surname": "Dog",
-      "address": "Very Rich Street, London",
-      "postcode": "W1",
-      "phone": "",
+      "address": "34 Ravensbury Street, Manchester",
+      "postcode": "M11 4JL",
+      "phone": "0161 764 5760",
       "id": "3"
+    },
+    {
+      "id": "e18c",
+      "firstname": "David",
+      "surname": "Buyerman",
+      "address": "2 Venesta Avenue, Salford",
+      "postcode": "M6 8FE",
+      "telephone": "0161 671 1635"
     }
   ],
   "booking": [
