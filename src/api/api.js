@@ -62,4 +62,11 @@ export const fetchBuyers=()=>{
     )
 }
 
+export const postBooking=(booking)=>{
+    return estateApi.post(`/booking`,booking).then(res=>{
+        console.log(res)
+    }).catch(err=>{
+        console.log(err)
+    })
+}
 
