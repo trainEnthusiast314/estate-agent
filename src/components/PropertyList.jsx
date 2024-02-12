@@ -20,7 +20,41 @@ function PropertyList() {
     },[setListOfProperties])
     
     return isLoading?<div>...is loading</div>:<div className="property-list-page">
-        {listOfProperties.map(property=>{
+        <h2>list of properties</h2>
+        <div className="property-sort-querries">
+            <label>sort by : 
+                <select onChange={handleChangeQuery} value={query}>
+                    <option value="bedroom">bedrooms</option>
+                    <option value="bathroom">bathrooms</option>
+                    <option value="price">price</option>
+                    
+                    </select></label>
+                    <label>order : 
+                <select onChange={handleChangeOrder} value={order}>
+                    <option value="asc">accending</option>
+                    <option value="desc">decending</option>
+                    
+                    </select></label>
+                    <label>type : 
+                <select onChange={handleChangeType} value={type}>
+                 <option value="">All</option>
+                    <option value="DETACHED">detached</option>
+                    <option value="SEMI-DETACHED">semi detached</option>
+                    <option value="TERRACE">terrace</option>
+                    <option value="APARTMENT">apartment</option>
+                    
+                    </select></label>
+                    <label>status : 
+                <select onChange={handleChangeStatus} value={status}>
+                 <option value="">All</option>
+                    <option value="SOLD">Sold</option>
+                    <option value="FOR SALE">For Sale</option>
+                   
+                    
+                    </select></label>
+            
+        </div>
+        <div className="property-list-container">{listOfProperties.map(property=>{
             return (
 
                 <div class="property-wrapper">
@@ -41,6 +75,7 @@ function PropertyList() {
         })}
         <div onClick={e=>{clicked?setClicked(false):null}}>{clicked?<div id="add-property-click">List Property Click here</div>:<AddProperty setListOfProperties={setListOfProperties} setClicked={setClicked}/>}</div>
         
+        </div>
         </div>
         
        
