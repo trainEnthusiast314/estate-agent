@@ -84,3 +84,9 @@
     margin-top: 2em;
     border-radius: 10px;
 }
+
+.property-sort-querries{
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+}
