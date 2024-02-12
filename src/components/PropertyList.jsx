@@ -20,7 +20,7 @@ function PropertyList() {
     },[setListOfProperties])
     
     return isLoading?<div>...is loading</div>:<div className="property-list-page">
-        <h2>list of properties</h2>
+        
         <div className="property-sort-querries">
             <label>sort by : 
                 <select onChange={handleChangeQuery} value={query}>
@@ -56,12 +56,11 @@ function PropertyList() {
         </div>
         <div className="property-list-container">{listOfProperties.map(property=>{
             return (
-
-                <div class="property-wrapper">
-                <div class="ppt title"><Link to={`/properties/${property.id}`}><h1>{property.address}</h1></Link></div>
-                <div class="ppt image"><Link to={`/properties/${property.id}`}><img class="property-list-image" src={`${property.image}`} alt={`image of property at ${property.address}`}/></Link></div>
-                <div class="ppt description">{property.description}</div>
-                <div class="ppt content">
+                <div className={property.status.replaceAll(' ', '')}>
+                <div className="ppt title"><Link to={`/properties/${property.id}`}><h1>{property.address}</h1></Link></div>
+                <div className="ppt image"><Link to={`/properties/${property.id}`}><img class="property-list-image" src={`${property.image}`} alt={`image of property at ${property.address}`}/></Link></div>
+                <div className="ppt description">{property.description}</div>
+                <div className="ppt content">
                     <h2>£{property.price}</h2>
                     <h3>{property.address}, {property.postcode}</h3>
                     <p>Bedrooms: {property.bedroom}</p>

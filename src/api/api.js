@@ -40,3 +40,11 @@ export const fetchSellers=()=>{
     )
 }
 
+export const fetchBuyers=()=>{
+    return estateApi.get('/buyer').then(res=>{
+        return res.data
+    }
+    )
+}
+
+

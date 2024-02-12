@@ -1,6 +1,8 @@
 import './components.css'
-import { useState } from 'react' 
+import { useEffect, useState } from 'react' 
 import { postAccount } from '../api/api';
+import { fetchSellers } from '../api/api';
+import { fetchBuyers } from '../api/api';
 
 
 // A complete function that has inputs (through HTML) - using state to save the info inputted. 
@@ -15,8 +17,33 @@ import { postAccount } from '../api/api';
 
 function RegisterForm(user) {
 
-    let [account, setAccount] = useState({firstName : '', surname : '', address : '', postcode : '', phone : '', email : '', password : ''})
-    let [password, setPassword] = useState({check : ''})
+    let [account, setAccount] = useState({firstName : '', surname : '', address : '', postcode : '', phone : ''})
+    let dataNames = []
+
+    if (user.user === "seller") {
+
+        useEffect(() =>{
+            fetchSellers().then((data)=>{
+                for (let id in data) {
+                    dataNames.push(data[id].firstName.toLowerCase().trim() + data[id].surname.toLowerCase().trim())
+                }
+            })
+        })
+}
+
+    if (user.user === "buyer") {
+
+        useEffect(() =>{
+            fetchBuyers().then((data)=>{
+                for (let id in data) {
+                    dataNames.push(data[id].firstName.toLowerCase().trim() + data[id].surname.toLowerCase().trim())
+                }
+            })
+        })
+    }
+
+
+
 
     return (
         <div className="form-container">
@@ -40,35 +67,29 @@ function RegisterForm(user) {
             Telephone: <div><input name="telephone" value={account.phone}
                 onChange={(e) =>
                     setAccount((account) => ({ ...account, phone: e.target.value }))} required></input></div>
-                    <br />
-                    <hr />
-            Email Address: <div><input name="email" value={account.email} type="email" 
-            onChange={(e) =>
-                setAccount((account) => ({ ...account, email: e.target.value }))} required></input></div>
 
-            Password: <div><input name="password" value={account.password} type="password" 
-            onChange={(e) =>
-                setAccount((account) => ({ ...account, password: e.target.value }))} required></input></div>
-
-            Repeat Password: <div><input value={password.check} type="password" 
-            onChange={(e) =>
-                setPassword((password) => ({check: e.target.value }))} required></input></div>
 
             <button className="form-button" onClick={(e)=> {
                 // prevents button from refreshing page
                 e.preventDefault()
+
                 // if statement to check values are put in the form before submitting to database
-                if (account.firstName, account.surname, account.address, account.postcode, account.phone, account.email, account.password) {   
-                    if (account.password === password.check) {
+                if (account.firstName, account.surname, account.address, account.postcode, account.phone) {   
+
+                    let checker = account.firstName.toLowerCase().trim() + account.surname.toLowerCase().trim()
+                    
+                    if (!dataNames.includes(checker)) {
                         //calls the api and adds the account information to the database
                         postAccount(account, user.user)
                         //sets the data back to empty to clear form
-                        setAccount({firstName : '', surname : '', address : '', postcode : '', phone : '', email : '', password : ''})
+                        setAccount({firstName : '', surname : '', address : '', postcode : '', phone : ''})
                 }
-                    else (
-                        alert('Please make sure passwords match')
-                    )    
+
+                else (
+                    alert('Name already registered')
+                )
             }
+
                 else (
                     alert('Please fill in all required fields')
                 )
