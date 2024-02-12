@@ -66,7 +66,7 @@ function PropertyList() {
     }
     //
     return isLoading?<div>...is loading</div>:<div className="property-list-page">
-        <h2>list of properties</h2>
+        
         <div className="property-sort-querries">
             <label>sort by : 
                 <select onChange={handleChangeQuery} value={query}>
