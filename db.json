@@ -169,20 +169,6 @@
       "status": "FOR SALE",
       "sellerId": "12",
       "buyerId": "12"
-    },
-    {
-      "id": "7fa3",
-      "address": "cool person street, Coolington",
-      "postcode": "CP8 12J",
-      "type": "TERRACE",
-      "price": "400000",
-      "bedroom": "5",
-      "bathroom": "2",
-      "description": "The coolest place around on cool street",
-      "image": "https://assetsio.reedpopcdn.com/minecraft-house-ideas-3-floor-white-container-house.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp",
-      "status": "FOR SALE",
-      "sellerId": "12",
-      "buyerId": "12"
     }
   ],
   "buyer": [
