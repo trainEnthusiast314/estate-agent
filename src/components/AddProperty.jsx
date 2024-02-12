@@ -1,11 +1,12 @@
 // imports
 
 import { useEffect, useState } from "react"
-import { postProperty } from "../api/api"
+import { fetchSellers, postProperty } from "../api/api"
 
 function AddProperty({setListOfProperties, setClicked}) {
     const [input,setInput]=useState({})
     const [postedProperty,setPostedProperty]=useState({})
+    const [sellers,setSellers]=useState([])
     const handleChange=(e)=>{
         setInput(current=>{
             return {...current, [e.target.name]: e.target.value}
@@ -13,19 +14,29 @@ function AddProperty({setListOfProperties, setClicked}) {
     }
     const handleSubmit=(e)=>{
         e.preventDefault()
-        
-        if(Object.keys(input).length===8){
+    
+        if(sellers.filter(item=>{return item.id===input.sellerId}).length>0){
+            if(Object.keys(input).length===9){
+            
             setPostedProperty(current=>{
-                return {...input, status:"FOR SALE", sellerId:'12' ,buyerId:'12'}
+                return {...input, status:"FOR SALE" }
             })
            
             }
         else{alert('please fill in all details before proceeding')}
+        } else{
+            alert('this seller does not exsist')
+            setClicked(true)
+            setInput({})
+        }
+        
         
     }
     useEffect(()=>{
-        
-        if(Object.keys(postedProperty).length===11){
+        fetchSellers().then(data=>{
+            setSellers(data)
+        })
+        if(Object.keys(postedProperty).length===10){
              setListOfProperties(current=>{
                 return [...current, postedProperty]
                 
@@ -37,9 +48,13 @@ function AddProperty({setListOfProperties, setClicked}) {
         }
         
     },[setPostedProperty,postedProperty])
+
+   
     
     return <div className="add-property-container">
        <form className="add-property-form" onSubmit={handleSubmit}>
+       <label>seller Id: <input onChange={handleChange} type="text" placeholder="12" required name="sellerId"/></label>
+
         <label>Address: <input type="text" name="address" placeholder="Somewhere House, Some Street, Some City" required onChange={handleChange} /></label>
 
         <label>Post Code: <input onChange={handleChange} type="text" placeholder="SO1 2ME" name="postcode" required/></label>
@@ -51,8 +66,8 @@ function AddProperty({setListOfProperties, setClicked}) {
             <option value="TERRACE">TERRACE</option>
             <option value="APARTMENT">APARTMENT</option>
         </select></label>
-
-        <label>Price: £<input onChange={handleChange} type="number" placeholder="30000" required name="price"/></label>
+         
+        <label>Price: £<input onChange={handleChange} type="number" placeholder="30000" required name="price" min='1'/></label>
 
         <label>Bedrooms: <input onChange={handleChange} type="number" placeholder="e.g. 2" min='1' max='30' required name="bedroom"/></label>
 
