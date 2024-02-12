@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { fetchSellers } from "../api/api"
 import "../styles/sellerList.css"
 import RegisterForm from "./RegisterForm";
-
+import { Link } from "react-router-dom";
 
 function SellersList() {
     const [isLoading, setIsLoading] = useState(true)
@@ -45,6 +45,7 @@ function SellersList() {
                                         <li><h3>Address: </h3> <span>{handleInputDisplay(seller.address)}</span></li>
                                         <li><h3>Postcode:</h3><span>{handleInputDisplay(seller.postcode)}</span></li>
                                         <li><h3>Phone:</h3><span>{handleInputDisplay(seller.phone)}</span></li>
+                                        <li><Link to={`/sellers/${seller.id}`}><h3>Manage Properties</h3></Link></li>
                                     </ul>
                                 </div>
                             )
