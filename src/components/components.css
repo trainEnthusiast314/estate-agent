@@ -39,18 +39,18 @@ body {
 /* HomePage Styling */
 
 .home-page-containers {
-    /* display: flex; */
-    margin: 2%;
+    margin: 1%;
     background-color: rgb(220, 231, 233);
     justify-content: flex-start;
-    /* width: 100%; */
+    padding: 1%;
 }
 
 .home-page-row {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
+    /* flex-wrap: wrap; */
+    /* width: auto; */
+    padding: 1%;
 }
 
 .home-page-column {
@@ -58,51 +58,19 @@ body {
     flex-direction: column;
     flex-basis: 100%;
     flex: 1;
-    margin: 10px;
-    padding: 20px;
+    margin: 1%;
+    border-radius: 10px;
 }
 
 .column1 {
-    background-color: blue;
-    /* height: auto; */
+    background-color: rgb(126, 126, 215);
+    flex-grow: 20;
   }
   
-  .column2 {
-    background-color: green;
-    /* height: auto; */
-  }
-  
-
-/* .property-containers {
-    background-color: #6e81d4;
-    margin: 10px;
-    padding: 20px;
-    width: 100%;
-} */
-
-/* 
-.property-containers > div {
-    background-color: #6ed482;
-    margin: 10px;
-    padding: 20px;
-    flex: 1 0 auto;
-} */
-
-/* .seller-containers {
-    flex: 0.6 0 auto;
-    width: 20%;
-    background-color: #92146a;
-    margin: 10px;
-    padding: 20px;
-} */
-
-/* .buyer-containers {
-    flex: 0.2 0 auto;
-    width: 20%;
-    background-color: #83dade;
-    margin: 10px;
-    padding: 20px;
-} */
+.column2 {
+   background-color: rgb(0, 81, 128);
+   flex-grow: 10;
+}
 
 .company-name {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -115,14 +83,14 @@ body {
 .title-text {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 40px;
-    margin: 10px;
+    margin: 5px;
     padding: 20px;
 }
 
 .info-text {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 20px;
-    padding: 1%;
+    padding: 2%;
 }
 
 /* NavBar Styling */
@@ -186,15 +154,23 @@ body {
     #hiddenNav {
         display: none;
     }
+
+    #hiddenFeature {
+        display: none;
+    }
     
-    .home-page-containers {
+    /* .home-page-containers {
+        flex-wrap: wrap;
+    } */
+
+    .home-page-row {
+        /* flex-wrap: wrap; */
+        flex-direction: column;
+    }
+    .home-page-column {
         flex-wrap: wrap;
     }
-/* 
-    .property-containers {
-        flex-wrap: wrap;
-    }
-     */
+
 }
 
 
