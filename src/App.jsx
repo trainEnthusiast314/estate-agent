@@ -1,7 +1,7 @@
 import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Nav from './components/Nav'
-import Home from './components/Home'
+import Home from './components/Home_copy'
 import Login from './components/Login'
 import SellersList from './components/SellersList'
 import BuyersList from './components/BuyersList'

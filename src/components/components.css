@@ -38,93 +38,92 @@ body {
 
 /* HomePage Styling */
 
-.home-page-topper {
-    display: flex;
-    background-color: rgb(168, 199, 230);
-    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+.home-page-containers {
+    /* display: flex; */
+    margin: 2%;
+    background-color: rgb(220, 231, 233);
+    justify-content: flex-start;
+    /* width: 100%; */
 }
 
-.home-page-topper > div {
-    background-color: #f1f1f1;
-    margin: 10px;
-    padding: 20px;
-    /* font-size: 30px; */
+.home-page-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     width: 100%;
 }
 
-.company-name {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 40px;
-}
-
-.company-info {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 20px;
-}
-
-
-.property-container {
+.home-page-column {
     display: flex;
-    background-color: rgb(102, 210, 108);
-}
-
-.property-container :first-child {
-    flex: 2 0 auto;
-    width: 25%;
-    background-color: #a3a057;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
     margin: 10px;
     padding: 20px;
 }
 
-.property-container * {
-    flex: 0 0 auto;
-    background-color: #e6e165;
+.column1 {
+    background-color: blue;
+    /* height: auto; */
+  }
+  
+  .column2 {
+    background-color: green;
+    /* height: auto; */
+  }
+  
+
+/* .property-containers {
+    background-color: #6e81d4;
     margin: 10px;
     padding: 20px;
-}
+    width: 100%;
+} */
 
-.seller-container {
-    display: flex;
-    background-color: rgb(210, 102, 190);
-}
-
-.seller-container :first-child {
+/* 
+.property-containers > div {
+    background-color: #6ed482;
+    margin: 10px;
+    padding: 20px;
     flex: 1 0 auto;
-    width: 25%;
+} */
+
+/* .seller-containers {
+    flex: 0.6 0 auto;
+    width: 20%;
     background-color: #92146a;
     margin: 10px;
     padding: 20px;
-}
+} */
 
-.seller-container * {
-    flex: 1 0 auto;
-    background-color: #852f54;
-    margin: 10px;
-    padding: 20px;
-}
-
-
-.buyer-container {
-    display: flex;
-    background-color: rgb(126, 102, 210);
-}
-
-.buyer-container :first-child {
+/* .buyer-containers {
     flex: 0.2 0 auto;
-    width: 25%;
-    background-color: #8395de;
+    width: 20%;
+    background-color: #83dade;
+    margin: 10px;
+    padding: 20px;
+} */
+
+.company-name {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 60px;
+    margin: 10px;
+    padding: 20px;
+    width: 100%;
+}
+
+.title-text {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
     margin: 10px;
     padding: 20px;
 }
 
-.buyer-container * {
-    flex: 1 0 auto;
-    background-color: #7ea0de;
-    margin: 10px;
-    padding: 20px;
+.info-text {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    padding: 1%;
 }
-
-
 
 /* NavBar Styling */
 
@@ -140,8 +139,6 @@ body {
     margin: 0 auto;
     padding: 0;
     vertical-align: middle; */
-
-
 }
 
 .nav-bar ul{
@@ -169,13 +166,11 @@ body {
     color: #92146a;
 }
 
-
 #firstNav {
     margin-left: 0%;
     padding-left: 0%;
     margin-right: 5%;
 }
-
 
 #lastNav {
     margin-left: 10%;
@@ -187,11 +182,21 @@ body {
 }
 
 /* Placehold media query section for different screen sizes */
-@media screen and (max-width:800px){
+@media screen and (max-width:1000px){
     #hiddenNav {
         display: none;
     }
+    
+    .home-page-containers {
+        flex-wrap: wrap;
+    }
+/* 
+    .property-containers {
+        flex-wrap: wrap;
+    }
+     */
 }
+
 
 /* Property list styling */
 .property-list-page{
