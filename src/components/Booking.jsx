@@ -7,8 +7,8 @@ import {Link} from 'react-router-dom';
 import { fetchBooking } from "../api/api"
 
 
-function Booking() {
-    let property = [];
+function Booking(props) {
+    let bookings = [];
     const [isLoading, setIsLoading] = useState(true)
     const [listOfBookings, setListOfBookings] = useState([])
     useEffect(()=>{
@@ -23,18 +23,14 @@ function Booking() {
     function findBookingbyPropertyId(){
         for(let item in listOfBookings){
            
-                if(listOfBookings[item].propertyId ==2){
+                if(listOfBookings[item].propertyId ==props.propId){
                     console.log("-----------------------------------------------")
-                   property.push(listOfBookings[item])
-                   
+                    bookings.push(listOfBookings[item])
+
                 };
 
-                
-                
                 }
-                
-               
-       
+
         }
         
     
@@ -43,13 +39,27 @@ function Booking() {
    
     }
     findBookingbyPropertyId()
-    let test = property.find(test => test.id === "2")
+   // console.log(bookings)
+
     return(
     <div>
         <h1>Make a booking</h1>
         
         
-        {console.log(test)}
+        <div className = "booking-list-container" >{bookings.map(property =>{
+            return(
+                <div className = "booking-wrapper" key = {props.propId}>
+                <div>Booking ID {property.id}</div>
+                <div>Property ID {property.time}</div>
+                </div>)
+        } )}
+        </div>
+        <form>
+            <input type = "date"/>
+            <input type = "time"/>
+            <input type = "submit" value="Book"/>
+        </form>
+        
       
 
       

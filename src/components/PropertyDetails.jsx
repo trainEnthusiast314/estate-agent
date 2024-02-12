@@ -27,7 +27,7 @@ function PropertyDetails() {
             <li><p>{property.description}</p></li>
             
         </ul>
-        <Booking/>
+        <Booking propId= {property_id}/>
     </div>
     
 
