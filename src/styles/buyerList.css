@@ -1,5 +1,5 @@
 .buyer-list-page{
-    margin: .5em;
+    margin: .5em 1em;
 }
 
 .buyerCard {
@@ -50,4 +50,16 @@
 .head h2 {
     margin-top: 0;
     margin-bottom: 0;
+}
+
+.register-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.buyer-list-item button {
+    cursor: pointer;
+    text-align: end;
 }

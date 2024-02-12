@@ -26,8 +26,10 @@ function SellersList() {
 
     return (
         <div className="seller-list-page">
-            <h1>Register as a new seller:</h1>
-            <RegisterForm user="seller" />
+            <div className="register-form">
+                <h1>Register as a New Seller</h1>
+                <RegisterForm user="seller" />
+            </div>
 
             {isLoading ?
                 <div>Loading Sellers .....</div> :
