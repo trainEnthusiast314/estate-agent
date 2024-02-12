@@ -193,49 +193,9 @@ body {
     }
 }
 
+
 /* Property list styling */
-.property-list-page{
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    
-    
-}
-.property-list-item{
-    text-align: center;
-    text-decoration: none;
-    list-style-type: none;
-    width: 50%;
-    background-color: lightblue;
-    margin: 0 auto;
-    border-radius: 10px;
-    
-}
-#add-property-click{
-    text-align: center;
-    background-color: red;
-    color: white;
-    transition: 0.5s;
-    padding: 1em 0;
-    width:30%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2em;
-    border-radius: 10px;
-}
-#add-property-click:hover{
-    
-    text-align: center;
-    background-color: darkred;
-    color: whitesmoke; 
-    cursor: pointer;
-    padding: 1em 0;
-    width:30%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2em;
-    border-radius: 10px;
-}
+
 
 /* add property styling */
 
