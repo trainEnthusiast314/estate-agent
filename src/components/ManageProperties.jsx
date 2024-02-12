@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router"
-import { fetchProperties } from "../api/api"
+import { deleteProperty, fetchProperties } from "../api/api"
 import { Link } from "react-router-dom"
 import './property-list-style.css'
 function ManageProperties(){
@@ -20,7 +20,24 @@ function ManageProperties(){
         })
     },[setPropertyList])
    
+    const handleDelete=(property)=>{
+        if(confirm(`This action will permenantly delete ${property.address}, Are you sure you want to proceed`)){
 
+            deleteProperty(property.id).then(res=>{
+            setPropertyList(currentList=>{
+                return currentList.filter((listing)=>{
+                    return listing.id != property.id
+                })
+            })
+            alert('sucess')
+        }).catch(err=>{
+            alert('try again')
+        })
+        } else{
+
+        }
+        
+    }
     return <div>
         {propertyList.map(property=>{
             return (
@@ -36,6 +53,7 @@ function ManageProperties(){
                     <p>Bathrooms: {property.bathroom}</p>
                     <p>{property.type}</p>
                     <h4>{property.status}</h4>
+                    <button onClick={e=>{handleDelete(property)}}>DELETE</button>
                 </div>
                 </div>
                 )
