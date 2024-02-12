@@ -4,8 +4,14 @@ export const estateApi=axios.create(
     {baseURL:'http://localhost:3000'}
 )
 
-export const fetchProperties=()=>{
-    return estateApi.get('/property').then(res=>{
+export const fetchProperties=(query)=>{
+    
+    return estateApi.get('/property',{params:{
+        _sort:query
+       
+    }
+        
+    }).then(res=>{
         return res.data
     }
     )
