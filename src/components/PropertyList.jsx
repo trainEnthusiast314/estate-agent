@@ -6,7 +6,7 @@ import {  estateApi, fetchProperties } from "../api/api"
 import { Link, useSearchParams } from "react-router-dom"
 import AddProperty from "./AddProperty"
 import './property-list-style.css'
-
+import bedSVG from '../assets/bed.svg'
 function PropertyList() {
     const [isLoading,setIsLoading]=useState(true)
     const [listOfProperties,setListOfProperties]=useState([])
@@ -109,7 +109,7 @@ function PropertyList() {
                 <div className="ppt content">
                     <h2>£{property.price}</h2>
                     <h3>{property.address}, {property.postcode}</h3>
-                    <p>Bedrooms: {property.bedroom}</p>
+                    <p><img src={bedSVG} className="property-list-svg"/> {property.bedroom}</p>
                     <p>Bathrooms: {property.bathroom}</p>
                     <p>{property.type}</p>
                     <h4>{property.status}</h4>

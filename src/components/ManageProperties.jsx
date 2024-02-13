@@ -81,7 +81,7 @@ function ManageProperties(){
                     <p>Bedrooms: {property.bedroom}</p>
                     <p>Bathrooms: {property.bathroom}</p>
                     <p>{property.type}</p>
-                    <h4>{property.status} <span><button onClick={e=>{handleClickStatus(property.id,property.status)}}>change status</button></span></h4>
+                    <h4><button onClick={e=>{handleClickStatus(property.id,property.status)}}>{property.status}</button></h4>
                     <button onClick={e=>{handleDelete(property)}}>DELETE</button>
                     
                 </div>
