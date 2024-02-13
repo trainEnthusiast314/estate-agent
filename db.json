@@ -1,14 +1,6 @@
 {
   "seller": [
     {
-      "id": "1",
-      "firstName": "John",
-      "surname": "Doe",
-      "address": "13 Reather Walk, Manchester",
-      "postcode": "M40 7PD",
-      "phone": "0161 311 6348"
-    },
-    {
       "id": "2",
       "firstName": "Anna",
       "surname": "Smith",
@@ -87,14 +79,6 @@
       "postcode": "M24 5JW",
       "phone": "01706 073046",
       "id": "12"
-    },
-    {
-      "firstName": "Sam",
-      "surname": "Ash",
-      "address": "6 Kingston Road, Failsworth",
-      "postcode": "M35 9JD",
-      "phone": "0161 341 7164",
-      "id": "13"
     }
   ],
   "property": [
@@ -186,14 +170,6 @@
     }
   ],
   "buyer": [
-    {
-      "id": "1",
-      "firstName": "Penny",
-      "surname": "Cath",
-      "address": "5 Wilderswood Close, Manchester",
-      "postcode": "M20 4XU",
-      "phone": "0161 566 5810"
-    },
     {
       "id": "2",
       "firstName": "Nilla",
