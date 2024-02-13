@@ -78,3 +78,14 @@ export const deleteProperty=(property_id)=>{
         alert(err.status)
     })
 }
+
+export const deleteBuyer = (id) => {
+    return estateApi.delete(`/buyer/${id}`).then(res => {
+        console.log(res)
+    })
+}
+export const deleteSeller = (id) => {
+    return estateApi.delete(`/seller/${id}`).then(res => {
+        console.log(res)
+    })
+}

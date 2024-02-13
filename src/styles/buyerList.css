@@ -12,7 +12,7 @@
 }
 
 .buyerCard:hover{
-    transform: scale(1.02);
+    transform: scale(100% + 5px);
     cursor: pointer;
     background-color: rgba(0,0,0,.04);
 }
