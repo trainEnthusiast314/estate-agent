@@ -5,6 +5,7 @@ import { fetchSellers, deleteSeller } from "../api/api"
 import "../styles/sellerList.css"
 import RegisterForm from "./RegisterForm";
 import { Link } from "react-router-dom";
+import {FaTrashAlt} from "react-icons/fa";
 
 function SellersList() {
     const [isLoading, setIsLoading] = useState(true)
@@ -45,7 +46,7 @@ function SellersList() {
             {isLoading ?
                 <div>Loading Sellers .....</div> :
                 <>
-                    <h2>List of Sellers</h2>
+                    <h2 className="list-title">Current Sellers</h2>
                     <div className="seller-list-container">
                         {listOfSellers.map(seller => {
                             return (
@@ -55,9 +56,9 @@ function SellersList() {
                                         <li><h3>Address: </h3> <span>{handleInputDisplay(seller.address)}</span></li>
                                         <li><h3>Postcode:</h3><span>{handleInputDisplay(seller.postcode)}</span></li>
                                         <li><h3>Phone:</h3><span>{handleInputDisplay(seller.phone)}</span></li>
-                                        <li><button onClick={()=>handleDelete(seller.id)} className="del-btn">Delete</button></li>
-                                        <li><Link to={`/sellers/${seller.id}`}><h3>Manage Properties</h3></Link></li>
+                                        <li className="manage-btn"><Link to={`/sellers/${seller.id}`}><h3>Manage Properties</h3></Link></li>
                                     </ul>
+                                    <FaTrashAlt onClick={()=>handleDelete(seller.id)} className="del-btn"/>
                                 </div>
                             )
                         })

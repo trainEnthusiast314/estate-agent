@@ -89,6 +89,13 @@ export const deleteProperty=(property_id)=>{
     })
 }
 
+export const updatePropertyStatus=(property_id,update)=>{
+    return estateApi.patch(`/property/${property_id}`,update).then((res)=>{
+        console.log(res)
+    }).catch(err=>{
+        console.log(err)
+    })
+}
 
 export const deleteBuyer = (id) => {
     return estateApi.delete(`/buyer/${id}`).then(res => {
@@ -98,15 +105,6 @@ export const deleteBuyer = (id) => {
 export const deleteSeller = (id) => {
     return estateApi.delete(`/seller/${id}`).then(res => {
         console.log(res)})}
-
-export const updatePropertyStatus=(property_id,update)=>{
-    return estateApi.patch(`/property/${property_id}`,update).then((res)=>{
-        console.log(res)
-    }).catch(err=>{
-        console.log(err)
-
-    })
-}
 
 export const updateListingStatus=(property_id,update)=>{
     estateApi.patch(`/property/${property_id}`,update).then(res=>{
