@@ -167,6 +167,7 @@ function PropertyList() {
             
 
         })}
+
         <div onClick={e=>{clicked?setClicked(false):null}}>{clicked?<div id="add-property-click">List Property Click here</div>:<AddProperty setListOfProperties={setListOfProperties} setClicked={setClicked}/>}</div>
         
         </div>
