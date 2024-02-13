@@ -74,7 +74,7 @@ body {
     flex: 1;
     margin: 1%;
     border-radius: 10px;
-    height: auto;
+    height: 20em;
 }
 
 .column1 {
@@ -89,7 +89,7 @@ body {
 
 .company-name {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 5em;
+    font-size: 3em;
     color: #1B3954;
     margin: 1%;
     width: 100%;
@@ -98,47 +98,109 @@ body {
 
 .title-text {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 3em;
-    color: white;
+    font-size: 2.5em;
+    color: #1B3954;
     margin: 1%;
     padding: 1%;
 }
 
 .about-text {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 2em;
+    font-size: 1em;
     color: #1B3954;
     text-align: justify;
 }
 
-.info-text {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+.heading-text {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 2em;
-    color: white;
-    margin-left: 10px;
+    color: #fcfcfd;
+    margin: 1%;
     padding: 1%;
 }
 
+.info-text {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+    color:#1B3954;
+    margin-left: 1%;
+    padding: 1%;
+    padding-right: 25%;
+    font-weight: bold;
+    text-align: justify;
+}
+
 .info-link{
-    color: aliceblue;
+    color:#1B3954;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1em;  
 }
+
 .button-link {
     background-color: #5DCAD1; 
     border: none;
-    color: white;
+    color:#1B3954;
     margin: 10%;
     padding: 15px 32px;
     text-align: center;
     border-radius: 10px;
-    font-size: 2em;
+    font-size: 1em;
   }
 
-/* NavBar Styling */
+  .button-link:hover {
+    background-color: #1B3954; 
+    color:#5DCAD1;
+    cursor:pointer;
+  }
 
+  .recently-added {
+    background: url('../assets/houses/house-540796_640.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x:hidden;
+    /* justify-content: center; */
+    /* height:auto; */
+    width:100%;
+}
 
+.recently-sold {
+    background: url('../assets/houses/home-1597079_640.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x:hidden;
+    /* justify-content: center; */
+    /* height:auto; */
+    width:100%;
+}
 
+.property-container {
+    background: url('../assets/property-image.PNG');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* overflow-x:hidden; */
+    /* justify-content: center; */
+    /* height:auto; */
+    width:100%;
+}
+.buyer-container {
+    background: url('../assets/buyer-image.PNG');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x:hidden;
+    /* justify-content: center; */
+    /* height:auto; */
+    width:100%;
+    
+}
+.seller-container {
+    background: url('../assets/seller-image.PNG');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x:hidden;
+    /* justify-content: center; */
+    /* height:auto; */
+    width:100%;
+}
 
 /* Placehold media query section for different screen sizes */
 @media screen and (max-width:1000px){
@@ -169,7 +231,17 @@ body {
 
 .add-property-container{
     margin-top: 2em;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 60vw;
+    background-color: #D3DADA;
+    padding: 1em;
+    border-radius: 15px;
+    color: #1B3954;
+    border:1px solid black;
+    text-align:center;
+    
     
 }
 /* Style inputs */
@@ -200,3 +272,27 @@ body {
   .add-property-form  input[type=submit]:hover {
     background-color: #45a049;
   }
+
+  #close-add-property{
+        width: 100%;
+        background-color: red;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: 0.5s;
+      
+  }
+  #close-add-property:hover{
+    width: 100%;
+    background-color: darkred;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  
+}
