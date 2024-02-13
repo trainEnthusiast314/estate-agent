@@ -171,7 +171,7 @@
       "id": "7fa3",
       "address": "cool person street, Coolington",
       "postcode": "CP8 12J",
-      "listed": "true",
+      "listed": true,
       "type": "TERRACE",
       "price": "400000",
       "bedroom": "5",

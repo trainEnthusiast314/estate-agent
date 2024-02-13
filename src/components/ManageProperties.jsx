@@ -140,7 +140,7 @@ function ManageProperties(){
                     <p> <img src={propertyTypeIcon} alt={`icon illustrating property type of ${property.type}`} className="property-list-svg"/> {property['type'].toLowerCase()}</p>
                     <h4><button onClick={e=>{handleClickStatus(property.id,property.status)}}>{property.status}</button></h4>
                     <button onClick={e=>{handleDelete(property)}}>DELETE</button>
-                    <button onClick={e=>{handleClickListing(property)}}>{property.listed?'withdraw':'list'}</button>
+                    <button onClick={e=>{handleClickListing(property)}}>{property.listed?'listed':'unlisted'}</button>
                 </div>
                 </div>
                 )

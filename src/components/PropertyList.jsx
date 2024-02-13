@@ -119,6 +119,7 @@ function PropertyList() {
                    
                     
                     </select></label>
+                    
             
         </div> 
         <div className="property-list-container">{listOfProperties.map(property=>{
