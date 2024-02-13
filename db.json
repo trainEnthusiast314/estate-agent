@@ -125,7 +125,7 @@
     {
       "address": "122 Lords Street, Cadishead",
       "postcode": "M44 5YB",
-      "listed": "true",
+      "listed": true,
       "type": "DETACHED",
       "price": 125000,
       "bedroom": 1,
