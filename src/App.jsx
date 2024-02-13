@@ -9,6 +9,7 @@ import PropertyList from './components/PropertyList'
 import PropertyDetails from './components/PropertyDetails'
 import Footer from './components/Footer'
 import CreateAccount from './components/CreateAccount'
+import ManageProperties from './components/ManageProperties'
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
             <Route path='/properties' element={<PropertyList />} />
             <Route path='/properties/:property_id' element={<PropertyDetails />} />
             <Route path='/createaccount' element={<CreateAccount />} />
+            <Route path='/sellers/:seller_id' element={<ManageProperties/>}/>
           </Routes>
         </BrowserRouter>
         <Footer />
