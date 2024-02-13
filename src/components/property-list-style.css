@@ -71,6 +71,21 @@
 
   .title h1 {
     color: #5DCAD1;
+    display: inline;
+  }
+
+  .manage-link {
+    display: inline-block;
+    float: right;
+    text-align:right;
+    margin:0;
+    font-size:0.8em;
+    color:  #fff;
+    text-decoration: none;
+  }
+
+  .manage-link:hover {
+    text-decoration: underline;
   }
 
 
@@ -116,5 +131,14 @@
   width:1.5em;
   height:1.5em;
   
+}
+
+.property-settings-img {
+  width: 2em;
+  height: 2em;
+  filter: brightness(0) invert(1);
+  display: inline-block;
+  float: right;
+  margin-right:0;
 }
 
