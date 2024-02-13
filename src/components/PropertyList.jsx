@@ -12,6 +12,7 @@ import flat from '../assets/apartments.png'
 import detached from '../assets/home.png'
 import semiDetached from '../assets/semi-detached.png'
 import terrace from '../assets/terraced-house.png'
+
 function PropertyList() {
     const [isLoading,setIsLoading]=useState(true)
     const [listOfProperties,setListOfProperties]=useState([])
@@ -139,6 +140,7 @@ function PropertyList() {
                 )
 
         })}
+
         <div onClick={e=>{clicked?setClicked(false):null}}>{clicked?<div id="add-property-click">List Property Click here</div>:<AddProperty setListOfProperties={setListOfProperties} setClicked={setClicked}/>}</div>
         
         </div>
