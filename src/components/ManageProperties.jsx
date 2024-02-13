@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router"
-import { deleteProperty, fetchProperties } from "../api/api"
+import { deleteProperty, fetchProperties, updatePropertyStatus } from "../api/api"
 import { Link } from "react-router-dom"
 import './property-list-style.css'
 function ManageProperties(){
     const {seller_id}=useParams()
     const [propertyList,setPropertyList]=useState([])
-    
+    //
     useEffect(()=>{
         fetchProperties({query:'',type:'',status:''}).then(data=>{
             
@@ -19,7 +19,7 @@ function ManageProperties(){
             setPropertyList(arr)
         })
     },[setPropertyList])
-   
+   //
     const handleDelete=(property)=>{
         if(confirm(`This action will permenantly delete ${property.address}, Are you sure you want to proceed`)){
 
@@ -38,6 +38,35 @@ function ManageProperties(){
         }
         
     }
+    const handleClickStatus=(id,status)=>{
+        if(status==='FOR SALE'){
+            updatePropertyStatus(id,{status:'SOLD'})
+            setPropertyList(currentList=>{
+                return currentList.map(item=>{
+                    if (item.id==id){
+                        item.status='SOLD'
+                        return item
+                    } else{
+                        return item
+                    }
+                })
+            })
+        } else{
+            updatePropertyStatus(id,{status:'FOR SALE'})
+            setPropertyList(currentList=>{
+                return currentList.map(item=>{
+                    if (item.id==id){
+                        item.status='FOR SALE'
+                        return item
+                    } else{
+                        return item
+                    }
+                })
+            })
+        }
+        
+    }
+    //
     return <div>
         {propertyList.map(property=>{
             return (
@@ -52,8 +81,9 @@ function ManageProperties(){
                     <p>Bedrooms: {property.bedroom}</p>
                     <p>Bathrooms: {property.bathroom}</p>
                     <p>{property.type}</p>
-                    <h4>{property.status}</h4>
+                    <h4>{property.status} <span><button onClick={e=>{handleClickStatus(property.id,property.status)}}>change status</button></span></h4>
                     <button onClick={e=>{handleDelete(property)}}>DELETE</button>
+                    
                 </div>
                 </div>
                 )
