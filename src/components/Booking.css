@@ -1,0 +1,50 @@
+
+
+.time-container {
+    float: left;
+
+
+  }
+
+  .buyer-dropdown{
+    width: 150px;
+    
+ 
+ 
+  }
+
+.booking-date{
+    width: 150px;
+}
+
+    
+  
+
+.hour-container {
+    padding-top: 10px;
+    float: left;
+  
+}
+  
+.colon{
+    float: left;
+}
+
+.minute-container {
+    padding-top: 10px;
+    float: left;
+
+
+}
+ .bookingList{
+
+    background-color: red;
+    
+    
+ }
+
+.returnDiv{
+    background-color: pink;
+}
+
+

@@ -1,6 +1,8 @@
 // imports
 import { useEffect, useState } from "react";
 import React from 'react';
+import './Booking.css';
+import TimeComponent from './TimeComponent'
 
 
 
@@ -56,43 +58,90 @@ function Booking(props) {
         let newBooking ={
             buyerId:document.getElementById("buyerId").value,
             propertyId: props.propId,
-            time : (document.getElementById("bookingDate").value + " "+ document.getElementById("bookingTime").value)
+            time : (document.getElementById("bookingDate").value + " "+ document.getElementById("timeHour").value +":"+document.getElementById("timeMin").value )
             }
         postBooking(newBooking)
     }
     return(
-    <div>
+        <div className = "returnDiv">
         <h1>Make a booking</h1>
         
         
-        <div className = "booking-list-container" >{bookings.map(property =>{
+        <div className = "booking-list-container">{bookings.map(property =>{
             return(
                 <div className = "booking-wrapper" key = {props.propId}>
                 <div>Booking ID {property.id}</div>
                 <div>Booking Date {((property.time).split(" "))[0]}</div> 
                 <div>Booking Time {((property.time).split(" "))[1]}</div>
                 <hr/>
-                </div>)
+                </div>
+                )
         } )}
         </div>
-        <form >
-           <span>
-            <label>Buyer</label>
+        
+        <form  className = "bookingForm">
+            <ul className = "bookingList">
+
+                {/* Item 1 within the grid */}
+                <li> 
+                    <label>Buyer</label>
+                    <div className = "buyer-dropdown">
+                        <select id="buyerId" name="buyerId" required >{listOfBuyers.map(buyer => {
+                            return(
+                                <option value = {buyer.id}>{buyer.id}-{buyer.firstName} {buyer.surname}</option>
+                            )
+                        })}
+                        
+                        </select>
+                    </div>
+                </li>
+
+                {/* Item 2 in the grid */}
+                <li>
+                    <div className = "calendar-booking">
+                        <input id = "bookingDate" type = "date" required/>       
+                    </div>
+                </li>
+
+                <li>
+                    <TimeComponent/>
+                </li>
+
+                
+
+                
+                    
+           
+               </ul> 
+         
             
+            <button  onClick={handleSubmit}>Book</button>
+        </form>
+       
+        </div>
+            
+  
+     )
+       
+        {/* <form >
+           
+            <label>Buyer</label>
+            <div className = "buyer-dropdown">
             <select id="buyerId" name="buyerId" required >{listOfBuyers.map(buyer => {
                 return(
-                    <option value = {buyer.id}>{buyer.id}{buyer.firstName}</option>
+                    <option value = {buyer.id}>{buyer.id}-{buyer.firstName} {buyer.surname}</option>
                 )
             })}
             
             </select>
-            
-            
-          
-            <input id = "bookingDate" type = "date" required/>
+            </div>
+             */}
+            {/*             
+            <div className = "calendar-booking">
+            <input id = "bookingDate" type = "date" required/></div> */}
             {/* <input id = "bookingTime"type = "time" min = "09:00" max = "17:00" required/> */}
 
-            
+            {/* <div className = "hour-container">
             <select id = "timeHour" name = "timeHour">{hours.map(hour =>{
                 return(
                     <option value = {hour}>{hour}</option>
@@ -100,30 +149,31 @@ function Booking(props) {
                 })}
             </select>
                 
-           
+           </div>
 
-          
+          <div className = "colon">
             <h1>:</h1>
-           
+           </div>
 
-           
+           <div className = "minute-container">
             <select id = "timeMin" name = "timeMin">{minutes.map(minute =>{
                 return(
                     <option value = {minute}>{minute}</option>
                     )
                 })}
-            </select></span>
-         
-             <br/>
-            <button onClick={handleSubmit}>Book</button>
-        </form>
+            </select>
+
+            </div>
+            
+            <button onClick={handleSubmit}>Book</button> */}
+        {/* </form> */}
         
-      
+       
 
       
         
-    </div>
-    )
+   
+  
 
 }
 
