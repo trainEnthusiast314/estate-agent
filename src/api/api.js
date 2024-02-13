@@ -87,7 +87,7 @@ export const deleteBuyer = (id) => {
 }
 export const deleteSeller = (id) => {
     return estateApi.delete(`/seller/${id}`).then(res => {
-        console.log(res)
+        console.log(res)})}
 
 export const updatePropertyStatus=(property_id,update)=>{
     return estateApi.patch(`/property/${property_id}`,update).then((res)=>{
