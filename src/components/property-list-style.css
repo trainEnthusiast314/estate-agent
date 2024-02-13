@@ -23,24 +23,9 @@
   .title {
     grid-area: title;
   }
-  
-  .SOLD {
-      opacity: 0.5;
-      display: grid;
-      width:80vw;
-      grid-gap: 0.5em;
-      grid-template-columns: 20% 30% 50%;
-      grid-template-areas:
-      "title  title  title"
-      "image content description";
-      background-color: #fff;
-      color: #444;
-      margin-bottom:3em;
-      margin-left:auto;
-      margin-right:auto;
-    }
 
-.FORSALE {
+
+.FORSALE, .SOLD {
       display: grid;
       width:80vw;
       grid-gap: 0.5em;
@@ -54,6 +39,10 @@
       margin-left:auto;
       margin-right:auto;
 } 
+
+.SOLD {
+  opacity: 0.5;
+}
   
   
   .ppt {
@@ -71,11 +60,22 @@
 
   .title h1 {
     color: #5DCAD1;
+    display: inline;
   }
 
+  .manage-link {
+    display: inline-block;
+    float: right;
+    text-align:right;
+    margin:0;
+    font-size:0.8em;
+    color:  #fff;
+    text-decoration: none;
+  }
 
-
-
+  .manage-link:hover {
+    text-decoration: underline;
+  }
 
 
 
@@ -117,4 +117,24 @@
   height:1.5em;
   
 }
+
+.property-settings-img {
+  width: 2em;
+  height: 2em;
+  filter: brightness(0) invert(1);
+  display: inline-block;
+  float: right;
+  margin-right:0;
+}
+
+
+@media screen and (max-width:1000px){
+  .FORSALE, .SOLD {
+    display: block;
+  }
+
+  .title, .description, .content {
+    margin-top:1em;
+  }
+} 
 

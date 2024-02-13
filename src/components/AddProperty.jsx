@@ -19,7 +19,7 @@ function AddProperty({setListOfProperties, setClicked}) {
             if(Object.keys(input).length===9){
             
             setPostedProperty(current=>{
-                return {...input, status:"FOR SALE" }
+                return {...input, status:"FOR SALE", listed:"true" }
             })
            
             }
@@ -36,7 +36,7 @@ function AddProperty({setListOfProperties, setClicked}) {
         fetchSellers().then(data=>{
             setSellers(data)
         })
-        if(Object.keys(postedProperty).length===10){
+        if(Object.keys(postedProperty).length===11){
              setListOfProperties(current=>{
                 return [...current, postedProperty]
                 

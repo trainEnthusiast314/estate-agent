@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { fetchBuyers, deleteBuyer } from "../api/api"
 import "../styles/buyerList.css"
 import RegisterForm from "./RegisterForm";
+import {FaTrashAlt} from "react-icons/fa";
 
 
 function BuyersList() {
@@ -29,7 +30,7 @@ function BuyersList() {
     useEffect(() => {
         setIsLoading(true)
         fetchBuyers().then(data => {
-            console.log(data)
+           
             setListOfBuyers([...data])
             setIsLoading(false)
         })
@@ -45,7 +46,7 @@ function BuyersList() {
             {isLoading ?
                 <div>Loading Buyers .....</div> :
                 <>
-                    <h2>List of Buyers</h2>
+                    <h2 className="list-title">Current Buyers</h2>
                     <div className="buyer-list-container">
                         {listOfBuyers.map(buyer => {
                             return (
@@ -55,8 +56,10 @@ function BuyersList() {
                                         <li><h3>Address: </h3> <span>{handleInputDisplay(buyer.address)}</span></li>
                                         <li><h3>Postcode:</h3><span>{handleInputDisplay(buyer.postcode)}</span></li>
                                         <li><h3>Phone:</h3><span>{handleInputDisplay(buyer.phone)}</span></li>
-                                        <li><button onClick={()=>handleDelete(buyer.id)} className="del-btn">Delete</button></li>
+                                        {/* <li><button onClick={()=>handleDelete(buyer.id)} className="del-btn"><FaTrashAlt/></button></li> */}
+                                        
                                     </ul>
+                                    <FaTrashAlt onClick={()=>handleDelete(buyer.id)} className="del-btn"/>
                                 </div>
                             )
                         })

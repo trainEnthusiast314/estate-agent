@@ -2,6 +2,11 @@
     margin: .5em 1em;
 }
 
+.buyer-list-container{
+    margin-left: 6%;
+    margin-right: 6%;
+}
+
 .buyerCard {
     margin:1em;
     padding: .6em;
@@ -9,12 +14,25 @@
     border: 1px solid black;
     transition: transform 0.2s;
     transition: background-color 0.2;
+    color: #D3DADA;
+    background-color:#1B3954
 }
 
 .buyerCard:hover{
-    transform: scale(100% + 5px);
+    transform: scale(1.02);
     cursor: pointer;
-    background-color: rgba(0,0,0,.04);
+    color:#1B3954;
+    background-color: #D3DADA;
+}
+
+@media screen and (min-width: 600px) {
+    .buyerCard:hover{
+        transform:scale(1.006)
+    }
+}
+
+.list-title {
+    text-align: center;
 }
 
 .buyer-list-item {
@@ -30,13 +48,13 @@
 }
 
 .buyer-list-item h3 {
-    margin-right: 10px;
+    margin: .5em 10px .5em .5em;
 }
 
 
 .uuid {
     margin:0;
-    color: rgba(0,0,0,.5)
+    color: #5DCAD1
 }
 
 
@@ -59,7 +77,18 @@
     flex-direction: column;
 }
 
-.buyer-list-item button {
+.del-btn {
+    position: relative;
+    bottom: 50px;
+    right: 15px;
+    font-size: 2em;
+    transition: transform 0.2s;
+    float:right;
+    clear:both
+}
+
+.del-btn:hover{
     cursor: pointer;
-    text-align: end;
+    transform: scale(1.05);
+    color:#5DCAD1
 }
