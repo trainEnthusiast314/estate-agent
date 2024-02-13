@@ -3,9 +3,14 @@ import { useParams } from "react-router"
 import { deleteProperty, fetchProperties, updatePropertyStatus } from "../api/api"
 import { Link } from "react-router-dom"
 import './property-list-style.css'
+import "../styles/sellerList.css"
+import { fetchSellersbyID } from "../api/api"
+
 function ManageProperties(){
     const {seller_id}=useParams()
     const [propertyList,setPropertyList]=useState([])
+    const [sellerInfo, setSellerInfo]=useState([])
+
     //
     useEffect(()=>{
         fetchProperties({query:'',type:'',status:''}).then(data=>{
@@ -20,6 +25,13 @@ function ManageProperties(){
         })
     },[setPropertyList])
    //
+
+    useEffect(()=>{
+        fetchSellersbyID(seller_id).then(data=>{
+            setSellerInfo(data)
+        })
+    },[setSellerInfo])
+
     const handleDelete=(property)=>{
         if(confirm(`This action will permenantly delete ${property.address}, Are you sure you want to proceed`)){
 
@@ -68,10 +80,18 @@ function ManageProperties(){
     }
     //
     return <div>
+                <div className="sellerCard">
+                    <h1>Manage Properties for</h1>
+                        <ul key={sellerInfo.id} className="seller-list-item">
+                         <li className="head"><h2>{sellerInfo.firstName} {sellerInfo.surname}</h2><span className="uuid">Seller uid: {sellerInfo.id}</span></li>
+                         <li><h3>Address: </h3> <span>{sellerInfo.address}</span></li>
+                         <li><h3>Postcode:</h3><span>{sellerInfo.postcode}</span></li>
+                         <li><h3>Phone:</h3><span>{sellerInfo.phone}</span></li>
+                         </ul>
+                </div>
         {propertyList.map(property=>{
-            return (
-
-                <div className="property-wrapper" key={property.id}>
+            return (               
+                <div className={property.status.replaceAll(' ', '')}>
                 <div className="ppt title"><Link to={`/properties/${property.id}`}><h1>{property.address}</h1></Link></div>
                 <div className="ppt image"><Link to={`/properties/${property.id}`}><img className="property-list-image" src={`${property.image}`} alt={`image of property at ${property.address}`}/></Link></div>
                 <div className="ppt description">{property.description}</div>
