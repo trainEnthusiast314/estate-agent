@@ -122,7 +122,7 @@ function PropertyList() {
             
         </div> 
         <div className="property-list-container">{listOfProperties.map(property=>{
-            let propertyTypeIcon
+            if(property.listed){let propertyTypeIcon
             switch(property.type){
                 case 'DETACHED':
                     propertyTypeIcon=detached
@@ -162,7 +162,8 @@ function PropertyList() {
                     <h4>{property.status}</h4>
                 </div>
                 </div>
-                )
+                )}
+            
 
         })}
         <div onClick={e=>{clicked?setClicked(false):null}}>{clicked?<div id="add-property-click">List Property Click here</div>:<AddProperty setListOfProperties={setListOfProperties} setClicked={setClicked}/>}</div>
