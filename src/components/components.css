@@ -89,36 +89,40 @@ body {
 
 .company-name {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 60px;
+    font-size: 5em;
     color: #1B3954;
-    margin: 10px;
+    margin: 1%;
     width: 100%;
+    text-align: start;
 }
 
 .title-text {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 40px;
+    font-size: 3em;
     color: white;
-    margin: 10px;
+    margin: 1%;
+    padding: 1%;
 }
 
 .about-text {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 20px;
+    font-size: 2em;
     color: #1B3954;
+    text-align: justify;
 }
 
 .info-text {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 20px;
+    font-size: 2em;
     color: white;
     margin-left: 10px;
+    padding: 1%;
 }
 
 .info-link{
     color: aliceblue;
     font-family: Arial, Helvetica, sans-serif;
-    font-size:medium;  
+    font-size: 1em;  
 }
 .button-link {
     background-color: #5DCAD1; 
@@ -128,9 +132,7 @@ body {
     padding: 15px 32px;
     text-align: center;
     border-radius: 10px;
-    /* text-decoration: none; */
-    /* display: inline-block; */
-    font-size: 20px;
+    font-size: 2em;
   }
 
 /* NavBar Styling */
