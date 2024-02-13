@@ -1,0 +1,49 @@
+.nav-bar{
+    background: url('src/assets/Manchester.jpg') 50% 40%; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x:hidden;
+    justify-content: center;
+    height:25em;
+    width:100%;
+} 
+
+.nav-bar ul{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(48, 60, 100, 0.8);
+    width: 100%;
+    margin-top:2em;
+}
+
+.nav-bar li{
+    margin: 1em;    
+}
+
+.link {
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+.link:hover {
+    color: #5DCAD1;
+}
+
+@media screen and (max-width:1000px){
+    .nav-bar ul {
+        column-count: 1;
+        display:block;
+        background: none;
+    }
+    #hiddenNav {
+        background-color: rgb(48, 60, 100, 0.8);
+        padding:1em;
+        margin-right:3em;
+        text-align:right;
+        display:block;
+    }
+}

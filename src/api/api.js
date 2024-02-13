@@ -47,6 +47,13 @@ export const fetchSellers=()=>{
     )
 }
 
+export const fetchSellersbyID=(seller_id)=>{
+    return estateApi.get(`/seller/${seller_id}`).then(res=>{
+        return res.data
+    }
+    )
+}
+
 export const fetchBooking=()=>{
     return estateApi.get(`/booking/` ).then(res=>{
         
@@ -76,5 +83,24 @@ export const deleteProperty=(property_id)=>{
     }).catch(err=>{
         console.log(err)
         alert(err.status)
+    })
+}
+
+
+export const deleteBuyer = (id) => {
+    return estateApi.delete(`/buyer/${id}`).then(res => {
+        console.log(res)
+    })
+}
+export const deleteSeller = (id) => {
+    return estateApi.delete(`/seller/${id}`).then(res => {
+        console.log(res)})}
+
+export const updatePropertyStatus=(property_id,update)=>{
+    return estateApi.patch(`/property/${property_id}`,update).then((res)=>{
+        console.log(res)
+    }).catch(err=>{
+        console.log(err)
+
     })
 }

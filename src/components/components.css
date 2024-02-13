@@ -6,10 +6,24 @@ body {
     text-align:center;
     display:inline-block;
     margin:0, auto;
-    width:20vw;
+    width:60vw;
     border:1px solid black;
     padding:20px;
+    background-color:#D3DADA;
+    border-radius:1em;
+    color:#1B3954;
 }
+
+@media only screen and (min-width: 768px) {
+    .form-container {
+        width:30vw;
+    }
+
+    .form-container > form > div > input{
+        width:50% !important;
+    }
+}
+
 
 .form-container > form > div {
     display:inline-block;
@@ -18,10 +32,12 @@ body {
 
 .form-container > form > div > input {
     margin-bottom:10px;
+    width: calc(100% - 3em)
 }
 
 .form-button {
-    background-color:aquamarine;
+    background-color:#1B3954;
+    color:  #DCAD99;
     margin-top:20px;
     text-align: center;
     font-weight:bold;
@@ -32,7 +48,8 @@ body {
 }
 
 .form-button:hover {
-    background-color:pink;
+    background-color:#DCAD99;
+    color:#1B3954;
 }
 
 
@@ -72,108 +89,115 @@ body {
 
 .company-name {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 60px;
+    font-size: 5em;
     color: #1B3954;
-    margin: 10px;
+    margin: 1%;
     width: 100%;
+    text-align: start;
 }
 
 .title-text {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 40px;
-    color: white;
-    margin: 10px;
+    font-size: 4em;
+    color: #1B3954;
+    margin: 1%;
+    padding: 1%;
 }
 
 .about-text {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 20px;
+    font-size: 2em;
     color: #1B3954;
+    text-align: justify;
+}
+
+.heading-text {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 3.5em;
+    color: #fcfcfd;
+    margin: 1%;
+    padding: 1%;
 }
 
 .info-text {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 20px;
-    color: white;
-    margin-left: 10px;
+    font-size: 2em;
+    color:#1B3954;
+    margin-left: 1%;
+    padding: 1%;
+    padding-right: 25%;
+    font-weight: bold;
+    text-align: justify;
 }
 
 .info-link{
-    color: aliceblue;
+    color:#1B3954;
     font-family: Arial, Helvetica, sans-serif;
-    font-size:medium;  
+    font-size: 1em;  
 }
+
 .button-link {
     background-color: #5DCAD1; 
     border: none;
-    color: white;
+    color:#1B3954;
     margin: 10%;
     padding: 15px 32px;
     text-align: center;
     border-radius: 10px;
-    /* text-decoration: none; */
-    /* display: inline-block; */
-    font-size: 20px;
+    font-size: 2em;
   }
 
-/* NavBar Styling */
-
-.nav-bar{
-    background-image: url('/src/assets/manchestercity.png'); 
+  .recently-added {
+    background: url('../assets/houses/house-540796_640.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    /* list-style-type: none;
-    display: flex; */
-    width: 100%;
-    height: 400px;
-    /* position: fixed; */
+    overflow-x:hidden;
+    /* justify-content: center; */
+    height:auto;
+    width:100%;
 }
 
-.nav-bar ul{
-    /* padding-top: 1%; */
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-around
-
+.recently-sold {
+    background: url('../assets/houses/home-1597079_640.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x:hidden;
+    /* justify-content: center; */
+    height:auto;
+    width:100%;
 }
 
-.nav-bar li{
-    margin: 2%;    
+.property-container {
+    background: url('../assets/property-image.PNG');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* overflow-x:hidden; */
+    /* justify-content: center; */
+    height:30em;
+    width:100%;
 }
-
-
-#logo {
-    float: left;
-    padding: 1%;
-    width: 10%;
-}
-
-#icon {
-    float: right;
-    padding: 1%;
-    width: 10%;
-    margin-right: 1%;
-}
-
-.link{
-    color: aliceblue;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: xx-large;
+.buyer-container {
+    background: url('../assets/buyer-image.PNG');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x:hidden;
+    /* justify-content: center; */
+    height:30em;
+    width:100%;
     
 }
-
-.link:hover {
-    font-style: italic;
-    color: #92146a;
+.seller-container {
+    background: url('../assets/seller-image.PNG');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x:hidden;
+    /* justify-content: center; */
+    height:30em;
+    width:100%;
 }
-
 
 /* Placehold media query section for different screen sizes */
 @media screen and (max-width:1000px){
-    #hiddenNav {
-        display: none;
-    }
 
     #hiddenFeature {
         display: none;
@@ -201,7 +225,17 @@ body {
 
 .add-property-container{
     margin-top: 2em;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 60vw;
+    background-color: #D3DADA;
+    padding: 1em;
+    border-radius: 15px;
+    color: #1B3954;
+    border:1px solid black;
+    text-align:center;
+    
     
 }
 /* Style inputs */
@@ -232,3 +266,27 @@ body {
   .add-property-form  input[type=submit]:hover {
     background-color: #45a049;
   }
+
+  #close-add-property{
+        width: 100%;
+        background-color: red;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: 0.5s;
+      
+  }
+  #close-add-property:hover{
+    width: 100%;
+    background-color: darkred;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  
+}

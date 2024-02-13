@@ -2,11 +2,16 @@
 
 import { useEffect } from "react"
 import { useState } from "react"
-import {  estateApi, fetchProperties } from "../api/api"
+import {  fetchProperties } from "../api/api"
 import { Link, useSearchParams } from "react-router-dom"
 import AddProperty from "./AddProperty"
 import './property-list-style.css'
-
+import bedSVG from '../assets/bed.svg'
+import bathroomSVG from '../assets/bath.svg'
+import flat from '../assets/apartments.png'
+import detached from '../assets/home.png'
+import semiDetached from '../assets/semi-detached.png'
+import terrace from '../assets/terraced-house.png'
 function PropertyList() {
     const [isLoading,setIsLoading]=useState(true)
     const [listOfProperties,setListOfProperties]=useState([])
@@ -69,20 +74,20 @@ function PropertyList() {
         
         <div className="property-sort-querries">
             <label>sort by : 
-                <select onChange={handleChangeQuery} value={query}>
+                <select onChange={handleChangeQuery} value={query} className="property-sort-select">
                     <option value="bedroom">bedrooms</option>
                     <option value="bathroom">bathrooms</option>
                     <option value="price">price</option>
                     
                     </select></label>
                     <label>order : 
-                <select onChange={handleChangeOrder} value={order}>
+                <select onChange={handleChangeOrder} value={order} className="property-sort-select">
                     <option value="asc">accending</option>
                     <option value="desc">decending</option>
                     
                     </select></label>
                     <label>type : 
-                <select onChange={handleChangeType} value={type}>
+                <select onChange={handleChangeType} value={type} className="property-sort-select">
                  <option value="">All</option>
                     <option value="DETACHED">detached</option>
                     <option value="SEMI-DETACHED">semi detached</option>
@@ -91,7 +96,7 @@ function PropertyList() {
                     
                     </select></label>
                     <label>status : 
-                <select onChange={handleChangeStatus} value={status}>
+                <select onChange={handleChangeStatus} value={status} className="property-sort-select">
                  <option value="">All</option>
                     <option value="SOLD">Sold</option>
                     <option value="FOR SALE">For Sale</option>
@@ -101,17 +106,33 @@ function PropertyList() {
             
         </div>
         <div className="property-list-container">{listOfProperties.map(property=>{
+            let propertyTypeIcon
+            switch(property.type){
+                case 'DETACHED':
+                    propertyTypeIcon=detached
+                    break
+                case 'SEMI-DETACHED':
+                    propertyTypeIcon=semiDetached
+                    break
+                case 'APARTMENT':
+                    propertyTypeIcon=flat
+                    break
+                case 'TERRACE':
+                    propertyTypeIcon=terrace
+                    break
+                
+            }
             return (
                 <div className={property.status.replaceAll(' ', '')}>
                 <div className="ppt title"><Link to={`/properties/${property.id}`}><h1>{property.address}</h1></Link></div>
                 <div className="ppt image"><Link to={`/properties/${property.id}`}><img class="property-list-image" src={`${property.image}`} alt={`image of property at ${property.address}`}/></Link></div>
-                <div className="ppt description">{property.description}</div>
+                <div className="ppt description">{property.description}<br /><br />Seller ID: {property.sellerId}<br /><br /><Link to={`/sellers/${property.sellerId}`}>Click here to manage</Link></div>
                 <div className="ppt content">
                     <h2>£{property.price}</h2>
                     <h3>{property.address}, {property.postcode}</h3>
-                    <p>Bedrooms: {property.bedroom}</p>
-                    <p>Bathrooms: {property.bathroom}</p>
-                    <p>{property.type}</p>
+                    <p><img src={bedSVG} className="property-list-svg" alt="icon for number of bedrooms"/> {property.bedroom}</p>
+                    <p><img src={bathroomSVG} className="property-list-svg" alt='icon for number of bathrooms'/> {property.bathroom}</p>
+                    <p> <img src={propertyTypeIcon} alt={`icon illustrating property type of ${property.type}`} className="property-list-svg"/> {property['type'].toLowerCase()}</p>
                     <h4>{property.status}</h4>
                 </div>
                 </div>

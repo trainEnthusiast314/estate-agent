@@ -1,7 +1,7 @@
-// imports
+ // imports
 import React from "react"
 import { useState, useEffect } from "react";
-import { fetchBuyers } from "../api/api"
+import { fetchBuyers, deleteBuyer } from "../api/api"
 import "../styles/buyerList.css"
 import RegisterForm from "./RegisterForm";
 
@@ -15,8 +15,15 @@ function BuyersList() {
         return (input ? input : 'Data Unavailable')
     }
 
-    function handleDelete() {
-        alert("Deleted Buyer")
+    function handleDelete(id) {
+        if(confirm(`Are you sure you want to deleted Buyer ${id}?`)){
+        deleteBuyer(id).then(res=>{setListOfBuyers(currentList=>{
+            return currentList.filter((buyer)=>{return buyer.id!=id})
+        })
+        alert('Successfully deleted user!')
+        }).catch(err=>{alert('Try again!')})    
+        
+        } else {}
     }
 
     useEffect(() => {
@@ -48,7 +55,7 @@ function BuyersList() {
                                         <li><h3>Address: </h3> <span>{handleInputDisplay(buyer.address)}</span></li>
                                         <li><h3>Postcode:</h3><span>{handleInputDisplay(buyer.postcode)}</span></li>
                                         <li><h3>Phone:</h3><span>{handleInputDisplay(buyer.phone)}</span></li>
-                                        <li><button class="del-btn">Delete</button></li>
+                                        <li><button onClick={()=>handleDelete(buyer.id)} className="del-btn">Delete</button></li>
                                     </ul>
                                 </div>
                             )

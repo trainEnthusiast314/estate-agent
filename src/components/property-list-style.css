@@ -106,7 +106,15 @@
 }
 
 .property-sort-querries{
+  margin: 0.5em;
   justify-content: center;
   display: flex;
   flex-direction: row;
+  gap: 1em;
 }
+.property-list-svg{
+  width:1.5em;
+  height:1.5em;
+  
+}
+
