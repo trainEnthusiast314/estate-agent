@@ -74,7 +74,7 @@ body {
     flex: 1;
     margin: 1%;
     border-radius: 10px;
-    height: auto;
+    height: 20em;
 }
 
 .column1 {
@@ -89,7 +89,7 @@ body {
 
 .company-name {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 5em;
+    font-size: 3em;
     color: #1B3954;
     margin: 1%;
     width: 100%;
@@ -98,7 +98,7 @@ body {
 
 .title-text {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 4em;
+    font-size: 2.5em;
     color: #1B3954;
     margin: 1%;
     padding: 1%;
@@ -106,14 +106,14 @@ body {
 
 .about-text {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 2em;
+    font-size: 1em;
     color: #1B3954;
     text-align: justify;
 }
 
 .heading-text {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 3.5em;
+    font-size: 2em;
     color: #fcfcfd;
     margin: 1%;
     padding: 1%;
@@ -121,7 +121,7 @@ body {
 
 .info-text {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 2em;
+    font-size: 1em;
     color:#1B3954;
     margin-left: 1%;
     padding: 1%;
@@ -144,7 +144,7 @@ body {
     padding: 15px 32px;
     text-align: center;
     border-radius: 10px;
-    font-size: 2em;
+    font-size: 1em;
   }
 
   .button-link:hover {
@@ -159,7 +159,7 @@ body {
     background-size: cover;
     overflow-x:hidden;
     /* justify-content: center; */
-    height:auto;
+    /* height:auto; */
     width:100%;
 }
 
@@ -169,7 +169,7 @@ body {
     background-size: cover;
     overflow-x:hidden;
     /* justify-content: center; */
-    height:auto;
+    /* height:auto; */
     width:100%;
 }
 
@@ -179,7 +179,7 @@ body {
     background-size: cover;
     /* overflow-x:hidden; */
     /* justify-content: center; */
-    height:30em;
+    /* height:auto; */
     width:100%;
 }
 .buyer-container {
@@ -188,7 +188,7 @@ body {
     background-size: cover;
     overflow-x:hidden;
     /* justify-content: center; */
-    height:30em;
+    /* height:auto; */
     width:100%;
     
 }
@@ -198,7 +198,7 @@ body {
     background-size: cover;
     overflow-x:hidden;
     /* justify-content: center; */
-    height:30em;
+    /* height:auto; */
     width:100%;
 }
 
