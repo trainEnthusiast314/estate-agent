@@ -47,6 +47,13 @@ export const fetchSellers=()=>{
     )
 }
 
+export const fetchSellersbyID=(seller_id)=>{
+    return estateApi.get(`/seller/${seller_id}`).then(res=>{
+        return res.data
+    }
+    )
+}
+
 export const fetchBooking=()=>{
     return estateApi.get(`/booking/` ).then(res=>{
         
