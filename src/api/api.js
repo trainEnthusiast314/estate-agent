@@ -78,3 +78,11 @@ export const deleteProperty=(property_id)=>{
         alert(err.status)
     })
 }
+
+export const updatePropertyStatus=(property_id,update)=>{
+    return estateApi.patch(`/property/${property_id}`,update).then((res)=>{
+        console.log(res)
+    }).catch(err=>{
+        console.log(err)
+    })
+}
