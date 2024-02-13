@@ -30,7 +30,7 @@ function SellersList() {
         setIsLoading(true)
         fetchSellers().then(data => {
             setListOfSellers([...data])
-            console.log(data)
+            
             setIsLoading(false)
         })
     }, [setListOfSellers])

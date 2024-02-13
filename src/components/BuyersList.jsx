@@ -29,7 +29,7 @@ function BuyersList() {
     useEffect(() => {
         setIsLoading(true)
         fetchBuyers().then(data => {
-            console.log(data)
+           
             setListOfBuyers([...data])
             setIsLoading(false)
         })

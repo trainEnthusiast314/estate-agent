@@ -2,7 +2,7 @@
 
 import { useEffect } from "react"
 import { useState } from "react"
-import {  fetchProperties } from "../api/api"
+import {  fetchProperties, fetchSellers } from "../api/api"
 import { Link, useSearchParams } from "react-router-dom"
 import AddProperty from "./AddProperty"
 import './property-list-style.css'
@@ -17,6 +17,7 @@ function PropertyList() {
     const [listOfProperties,setListOfProperties]=useState([])
     const [clicked,setClicked]=useState(true)
     const [searchParams, setSearchParams]=useSearchParams()
+    const [sellers,setSellers]=useState([])
     let query= searchParams.get('_sort')
     let order=searchParams.get('_order')
     let type=searchParams.get('type')
@@ -33,18 +34,32 @@ function PropertyList() {
         
          fetchProperties({query,type,status}).then(data=>{
             
+            let filteredData=data.filter(item=>{
+                
+                return sellers.includes(item['sellerId'].toString())
+            })
+          
             setListOfProperties(currentList=>{
                 if(order==='desc'){
-                 return   [...data]
+                 return   [...filteredData]
                 } else{
-                    return [...data].reverse()
+                    return [...filteredData].reverse()
                 }
                })
               
             setIsLoading(false)
         })
         
-    },[setListOfProperties,query,order,type,status])
+    },[setListOfProperties,query,order,type,status,sellers])
+    //
+    useEffect(()=>{
+        fetchSellers().then(data=>{
+           let sellerIdArr=data.map(item=>{
+            return item.id
+           })
+           setSellers(sellerIdArr)
+    })
+    },[setSellers])
     //
     const handleChangeQuery=(e)=>{
         
@@ -123,9 +138,9 @@ function PropertyList() {
                 
             }
             return (
-                <div className={property.status.replaceAll(' ', '')}>
+                <div className={property.status.replaceAll(' ', '')} key={property.id}>
                 <div className="ppt title"><Link to={`/properties/${property.id}`}><h1>{property.address}</h1></Link></div>
-                <div className="ppt image"><Link to={`/properties/${property.id}`}><img class="property-list-image" src={`${property.image}`} alt={`image of property at ${property.address}`}/></Link></div>
+                <div className="ppt image"><Link to={`/properties/${property.id}`}><img className="property-list-image" src={`${property.image}`} alt={`image of property at ${property.address}`}/></Link></div>
                 <div className="ppt description">{property.description}<br /><br />Seller ID: {property.sellerId}<br /><br /><Link to={`/sellers/${property.sellerId}`}>Click here to manage</Link></div>
                 <div className="ppt content">
                     <h2>£{property.price}</h2>

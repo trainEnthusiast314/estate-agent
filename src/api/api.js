@@ -50,8 +50,11 @@ export const fetchSellers=()=>{
 export const fetchSellersbyID=(seller_id)=>{
     return estateApi.get(`/seller/${seller_id}`).then(res=>{
         return res.data
+
     }
-    )
+    ).catch(err=>[
+        console.log(seller_id,err)
+    ])
 }
 
 export const fetchBooking=()=>{
