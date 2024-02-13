@@ -1,8 +1,6 @@
 .footer-container {
     display:flex;
     background-color: rgb(48, 60, 100);
-    border-top-left-radius: 30px;
-    border-bottom-right-radius: 30px;
     color:#fff;
     justify-content: center;
     align-items: top;

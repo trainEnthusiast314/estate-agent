@@ -45,7 +45,7 @@ function Home() {
                 <Link to='/sellers' className={'info-link'}>Register Now</Link></p>
             </div>
             <div id='hiddenFeature' className='home-page-column column2'>
-                <h1 className='info-text'>*Display featured property?*</h1>
+                <h1 className='info-text'>Recently Sold!</h1>
             </div>
         </div>
 
@@ -58,7 +58,7 @@ function Home() {
                 <Link to='/buyers' className={'info-link'}>Register Now</Link></p>
             </div>
             <div id='hiddenFeature' className='home-page-column column2'>
-                <h1 className='info-text'>*Display featured property?*</h1>
+                <h1 className='info-text'>Newly Added!</h1>
             </div>
         </div>
 

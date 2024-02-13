@@ -188,11 +188,11 @@
     },
     {
       "id": "e18c",
-      "firstname": "David",
+      "firstName": "David",
       "surname": "Buyerman",
       "address": "2 Venesta Avenue, Salford",
       "postcode": "M6 8FE",
-      "telephone": "0161 671 1635"
+      "phone": "0161 671 1635"
     }
   ],
   "booking": [
@@ -242,6 +242,12 @@
       "buyerId": "41132",
       "propertyId": 2,
       "time": "2024-02-21 20:44"
+    },
+    {
+      "id": "7a21",
+      "buyerId": "Helen",
+      "propertyId": 3,
+      "time": "2024-03-01 13:35"
     }
   ]
 }
