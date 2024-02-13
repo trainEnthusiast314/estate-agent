@@ -12,6 +12,7 @@ import flat from '../assets/apartments.png'
 import detached from '../assets/home.png'
 import semiDetached from '../assets/semi-detached.png'
 import terrace from '../assets/terraced-house.png'
+
 function PropertyList() {
     const [isLoading,setIsLoading]=useState(true)
     const [listOfProperties,setListOfProperties]=useState([])
@@ -139,9 +140,19 @@ function PropertyList() {
             }
             return (
                 <div className={property.status.replaceAll(' ', '')} key={property.id}>
-                <div className="ppt title"><Link to={`/properties/${property.id}`}><h1>{property.address}</h1></Link></div>
-                <div className="ppt image"><Link to={`/properties/${property.id}`}><img className="property-list-image" src={`${property.image}`} alt={`image of property at ${property.address}`}/></Link></div>
-                <div className="ppt description">{property.description}<br /><br />Seller ID: {property.sellerId}<br /><br /><Link to={`/sellers/${property.sellerId}`}>Click here to manage</Link></div>
+                <div className="ppt title">
+                    
+
+                    <span><Link to={`/sellers/${property.sellerId}`}><img src="../src/assets/setting.png" className="property-settings-img" /></Link></span>
+                    
+                    <h1>{property.address}</h1></div>
+                <div className="ppt image"><img class="property-list-image" src={`${property.image}`} alt={`image of property at ${property.address}`}/></div>
+                <div className="ppt description">
+                    {property.description}
+                    <br /><br />
+                    <Link to={`/properties/${property.id}`}><button className='button-link'>Make a Booking</button></Link>
+                
+                </div>
                 <div className="ppt content">
                     <h2>£{property.price}</h2>
                     <h3>{property.address}, {property.postcode}</h3>
