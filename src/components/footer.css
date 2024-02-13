@@ -1,6 +1,6 @@
 .footer-container {
     display:flex;
-    background-color: rgb(48, 60, 100);
+    background-color: #1B3954;
     color:#fff;
     justify-content: center;
     align-items: top;
@@ -21,10 +21,10 @@
 .footer-content > img {
     width:50px;
     margin:5px;
-    opacity: 0.5;
+    filter: brightness(0) invert(1);
     transition: linear 0.8s;
 }
 
 .footer-content > img:hover {
-    opacity: 1;
+    opacity: 0.5;
 }
