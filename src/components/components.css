@@ -87,6 +87,55 @@ body {
    flex-grow: 10;
 }
 
+.recently-added {
+    background: url('../assets/houses/house-540796_640.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x:hidden;
+    justify-content: center;
+    height:25em;
+    width:100%;
+}
+
+.recently-sold {
+    background: url('../assets/houses/home-1597079_640.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x:hidden;
+    justify-content: center;
+    height:25em;
+    width:100%;
+}
+
+.property-container {
+    background: url('../assets/property-image.PNG');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x:hidden;
+    justify-content: center;
+    height:25em;
+    width:100%;
+}
+.buyer-container {
+    background: url('../assets/buyer-image.PNG');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x:hidden;
+    justify-content: center;
+    height:25em;
+    width:100%;
+    
+}
+.seller-container {
+    background: url('../assets/seller-image.PNG');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x:hidden;
+    justify-content: center;
+    height:25em;
+    width:100%;
+}
+
 .company-name {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 5em;

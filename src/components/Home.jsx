@@ -20,7 +20,7 @@ function Home() {
         </div>
 
         <div className='home-page-row'>
-            <div className='home-page-column column1'>
+            <div className='home-page-column column1 property-container'>
                 <h1 className='title-text'>Available Properties</h1>
                 <p className='info-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 <br/>
@@ -37,27 +37,27 @@ function Home() {
         </div>  
 
         <div className='home-page-row'>
-            <div className='home-page-column column1'>
+            <div className='home-page-column column1 seller-container'>
                 <h1 className='title-text'>I'm Selling</h1>
                 <p className='info-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                 <br/>
                 <br/>
                 <Link to='/sellers' className={'info-link'}>Register Now</Link></p>
             </div>
-            <div id='hiddenFeature' className='home-page-column column2'>
+            <div id='hiddenFeature' className='home-page-column column2 recently-sold'>
                 <h1 className='info-text'>Recently Sold!</h1>
             </div>
         </div>
 
         <div className='home-page-row'>
-            <div className='home-page-column column1'>
+            <div className='home-page-column column1 buyer-container'>
                 <h1 className='title-text'>I'm Buying</h1>
                 <p className='info-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 <br/>
                 <br/>
                 <Link to='/buyers' className={'info-link'}>Register Now</Link></p>
             </div>
-            <div id='hiddenFeature' className='home-page-column column2'>
+            <div id='hiddenFeature' className='home-page-column column2 recently-added'>
                 <h1 className='info-text'>Newly Added!</h1>
             </div>
         </div>
