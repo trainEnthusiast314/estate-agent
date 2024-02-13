@@ -141,6 +141,7 @@ function ManageProperties(){
                     <p><img src={bedSVG} className="property-list-svg" alt="icon for number of bedrooms"/> {property.bedroom}</p>
                     <p><img src={bathroomSVG} className="property-list-svg" alt='icon for number of bathrooms'/> {property.bathroom}</p>
                     <p> <img src={propertyTypeIcon} alt={`icon illustrating property type of ${property.type}`} className="property-list-svg"/> {property['type'].toLowerCase()}</p>
+                    <h3>Managment Tools</h3>
                     <h4><button onClick={e=>{handleClickStatus(property.id,property.status,e)}} className="manage-property-status">{property.status}</button></h4>
                     <button onClick={e=>{handleDelete(property)}} className="manage-property-delete">DELETE</button>
                     <button onClick={e=>{handleClickListing(property,e)}} className="manage-property-status">{property.listed?'listed':'unlisted'}</button>
