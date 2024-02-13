@@ -110,3 +110,8 @@
   display: flex;
   flex-direction: row;
 }
+.property-list-svg{
+  width:1.5em;
+  height:1.5em;
+  
+}
