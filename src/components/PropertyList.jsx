@@ -104,7 +104,7 @@ function PropertyList() {
                     
                     </select></label>
             
-        </div>
+        </div> 
         <div className="property-list-container">{listOfProperties.map(property=>{
             let propertyTypeIcon
             switch(property.type){

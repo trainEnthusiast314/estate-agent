@@ -33,8 +33,13 @@ function Home() {
 
                 <button className='button-link'>Register New Property</button>
 
+                <button className='button-link'><Link to='/properties?_sort=bedroom&_order=desc&type=&status=' className={'info-link'}>Register New Property</Link></button>
+
             </div>
         </div>  
+
+        {/* class= "add-property-container" 
+            class= "add-property-click"*/}
 
         <div className='home-page-row'>
             <div className='home-page-column column1 seller-container'>
