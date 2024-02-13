@@ -167,7 +167,17 @@ body {
 
 .add-property-container{
     margin-top: 2em;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 60vw;
+    background-color: #D3DADA;
+    padding: 1em;
+    border-radius: 15px;
+    color: #1B3954;
+    border:1px solid black;
+    text-align:center;
+    
     
 }
 /* Style inputs */
@@ -198,3 +208,27 @@ body {
   .add-property-form  input[type=submit]:hover {
     background-color: #45a049;
   }
+
+  #close-add-property{
+        width: 100%;
+        background-color: red;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: 0.5s;
+      
+  }
+  #close-add-property:hover{
+    width: 100%;
+    background-color: darkred;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  
+}
