@@ -14,7 +14,7 @@ import terrace from '../assets/terraced-house.png'
 function ManageProperties(){
     const {seller_id}=useParams()
     const [propertyList,setPropertyList]=useState([])
-    const [sellerInfo, setSellerInfo]=useState([])
+    const [sellerInfo, setSellerInfo]=useState({})
 
     //
     useEffect(()=>{
@@ -32,7 +32,9 @@ function ManageProperties(){
    //
 
     useEffect(()=>{
+      
         fetchSellersbyID(seller_id).then(data=>{
+            
             setSellerInfo(data)
         })
     },[setSellerInfo])
@@ -112,7 +114,7 @@ function ManageProperties(){
                 
             }
             return (               
-                <div className={property.status.replaceAll(' ', '')}>
+                <div className={property.status.replaceAll(' ', '')} key={property.id}>
                 <div className="ppt title"><Link to={`/properties/${property.id}`}><h1>{property.address}</h1></Link></div>
                 <div className="ppt image"><Link to={`/properties/${property.id}`}><img className="property-list-image" src={`${property.image}`} alt={`image of property at ${property.address}`}/></Link></div>
                 <div className="ppt description">{property.description}</div>
