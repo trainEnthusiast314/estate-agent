@@ -87,55 +87,6 @@ body {
    flex-grow: 10;
 }
 
-.recently-added {
-    background: url('../assets/houses/house-540796_640.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow-x:hidden;
-    justify-content: center;
-    height:25em;
-    width:100%;
-}
-
-.recently-sold {
-    background: url('../assets/houses/home-1597079_640.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow-x:hidden;
-    justify-content: center;
-    height:25em;
-    width:100%;
-}
-
-.property-container {
-    background: url('../assets/property-image.PNG');
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow-x:hidden;
-    justify-content: center;
-    height:25em;
-    width:100%;
-}
-.buyer-container {
-    background: url('../assets/buyer-image.PNG');
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow-x:hidden;
-    justify-content: center;
-    height:25em;
-    width:100%;
-    
-}
-.seller-container {
-    background: url('../assets/seller-image.PNG');
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow-x:hidden;
-    justify-content: center;
-    height:25em;
-    width:100%;
-}
-
 .company-name {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 5em;
@@ -147,8 +98,8 @@ body {
 
 .title-text {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 3em;
-    color: white;
+    font-size: 4em;
+    color: #1B3954;
     margin: 1%;
     padding: 1%;
 }
@@ -160,23 +111,35 @@ body {
     text-align: justify;
 }
 
-.info-text {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 2em;
-    color: white;
-    margin-left: 10px;
+.heading-text {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 3.5em;
+    color: #fcfcfd;
+    margin: 1%;
     padding: 1%;
 }
 
+.info-text {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2em;
+    color:#1B3954;
+    margin-left: 1%;
+    padding: 1%;
+    padding-right: 25%;
+    font-weight: bold;
+    text-align: justify;
+}
+
 .info-link{
-    color: aliceblue;
+    color:#1B3954;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1em;  
 }
+
 .button-link {
     background-color: #5DCAD1; 
     border: none;
-    color: white;
+    color:#1B3954;
     margin: 10%;
     padding: 15px 32px;
     text-align: center;
@@ -184,10 +147,54 @@ body {
     font-size: 2em;
   }
 
-/* NavBar Styling */
+  .recently-added {
+    background: url('../assets/houses/house-540796_640.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x:hidden;
+    /* justify-content: center; */
+    height:auto;
+    width:100%;
+}
 
+.recently-sold {
+    background: url('../assets/houses/home-1597079_640.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x:hidden;
+    /* justify-content: center; */
+    height:auto;
+    width:100%;
+}
 
-
+.property-container {
+    background: url('../assets/property-image.PNG');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* overflow-x:hidden; */
+    /* justify-content: center; */
+    height:30em;
+    width:100%;
+}
+.buyer-container {
+    background: url('../assets/buyer-image.PNG');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x:hidden;
+    /* justify-content: center; */
+    height:30em;
+    width:100%;
+    
+}
+.seller-container {
+    background: url('../assets/seller-image.PNG');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x:hidden;
+    /* justify-content: center; */
+    height:30em;
+    width:100%;
+}
 
 /* Placehold media query section for different screen sizes */
 @media screen and (max-width:1000px){

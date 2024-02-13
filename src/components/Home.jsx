@@ -29,7 +29,7 @@ function Home() {
                 </p>
             </div>
             <div className='home-page-column column2'>
-                <h1 className='info-text' >Don't See What You're Looking For?</h1>
+                <h1 className='heading-text' >Don't See What You're Looking For?</h1>
 
                 <button className='button-link'>Register New Property</button>
 
@@ -45,7 +45,7 @@ function Home() {
                 <Link to='/sellers' className={'info-link'}>Register Now</Link></p>
             </div>
             <div id='hiddenFeature' className='home-page-column column2 recently-sold'>
-                <h1 className='info-text'>Recently Sold!</h1>
+                <h1 className='heading-text'>Recently Sold!</h1>
             </div>
         </div>
 
@@ -58,7 +58,7 @@ function Home() {
                 <Link to='/buyers' className={'info-link'}>Register Now</Link></p>
             </div>
             <div id='hiddenFeature' className='home-page-column column2 recently-added'>
-                <h1 className='info-text'>Newly Added!</h1>
+                <h1 className='heading-text'>Newly Added!</h1>
             </div>
         </div>
 
