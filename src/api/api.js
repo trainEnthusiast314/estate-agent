@@ -107,3 +107,11 @@ export const updatePropertyStatus=(property_id,update)=>{
 
     })
 }
+
+export const updateListingStatus=(property_id,update)=>{
+    estateApi.patch(`/property/${property_id}`,update).then(res=>{
+        console.log(res)
+    }).catch(err=>{
+        console.log(err)
+    })
+}

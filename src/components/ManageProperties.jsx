@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router"
-import { deleteProperty, fetchProperties, updatePropertyStatus } from "../api/api"
+import { deleteProperty, fetchProperties, updateListingStatus, updatePropertyStatus } from "../api/api"
 import { Link } from "react-router-dom"
 import './property-list-style.css'
 import "../styles/sellerList.css"
@@ -86,6 +86,20 @@ function ManageProperties(){
         
     }
     //
+    const handleClickListing=(property)=>{
+        let update=property.listed?false:true
+        updateListingStatus(property.id,{listed:update})
+        setPropertyList(currentList=>{
+            return currentList.map(item=>{
+                if (item.id==property.id){
+                    item.listed=update
+                    return item
+                }else{return item}
+            })
+        })
+    }
+    
+    //
     return <div>
                 <div className="sellerCard">
                     <h1>Manage Properties for</h1>
@@ -126,7 +140,7 @@ function ManageProperties(){
                     <p> <img src={propertyTypeIcon} alt={`icon illustrating property type of ${property.type}`} className="property-list-svg"/> {property['type'].toLowerCase()}</p>
                     <h4><button onClick={e=>{handleClickStatus(property.id,property.status)}}>{property.status}</button></h4>
                     <button onClick={e=>{handleDelete(property)}}>DELETE</button>
-                    
+                    <button onClick={e=>{handleClickListing(property)}}>{property.listed?'listed':'unlisted'}</button>
                 </div>
                 </div>
                 )
