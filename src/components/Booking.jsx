@@ -5,13 +5,16 @@ import React from 'react';
 
 
 
-import {  fetchBooking, postBooking } from "../api/api";
+import {  fetchBooking, postBooking , fetchBuyers} from "../api/api";
 
 
 function Booking(props) {
     let bookings = [];
     const [isLoading, setIsLoading] = useState(true)
     const [listOfBookings, setListOfBookings] = useState([])
+    const [listOfBuyers, setListOfBuyers] = useState([])
+    let  hours = ["09","10","11","12","13","14","15","16","17"]
+    let  minutes = ["00","05","10","15","20","25","30","35","40","45","50","55"]
     useEffect(()=>{
         setIsLoading(true)
         fetchBooking().then((data)=>{
@@ -19,6 +22,14 @@ function Booking(props) {
             setIsLoading(false
                 )
         })},[setListOfBookings])
+
+        useEffect(()=>{
+            setIsLoading(true)
+            fetchBuyers().then((data)=>{
+                setListOfBuyers(data)
+                setIsLoading(false
+                    )
+            })},[setListOfBuyers])
  
 
     function findBookingbyPropertyId(){
@@ -44,7 +55,7 @@ function Booking(props) {
 
         let newBooking ={
             buyerId:document.getElementById("buyerId").value,
-            propertyId: parseInt(props.propId),
+            propertyId: props.propId,
             time : (document.getElementById("bookingDate").value + " "+ document.getElementById("bookingTime").value)
             }
         postBooking(newBooking)
@@ -65,9 +76,45 @@ function Booking(props) {
         } )}
         </div>
         <form >
-            <input id="buyerId" type = "text" required/>
+           <span>
+            <label>Buyer</label>
+            
+            <select id="buyerId" name="buyerId" required >{listOfBuyers.map(buyer => {
+                return(
+                    <option value = {buyer.id}>{buyer.id}{buyer.firstName}</option>
+                )
+            })}
+            
+            </select>
+            
+            
+          
             <input id = "bookingDate" type = "date" required/>
-            <input id = "bookingTime"type = "time" required/>
+            {/* <input id = "bookingTime"type = "time" min = "09:00" max = "17:00" required/> */}
+
+            
+            <select id = "timeHour" name = "timeHour">{hours.map(hour =>{
+                return(
+                    <option value = {hour}>{hour}</option>
+                    )
+                })}
+            </select>
+                
+           
+
+          
+            <h1>:</h1>
+           
+
+           
+            <select id = "timeMin" name = "timeMin">{minutes.map(minute =>{
+                return(
+                    <option value = {minute}>{minute}</option>
+                    )
+                })}
+            </select></span>
+         
+             <br/>
             <button onClick={handleSubmit}>Book</button>
         </form>
         
