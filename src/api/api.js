@@ -4,8 +4,15 @@ export const estateApi=axios.create(
     {baseURL:'http://localhost:3000'}
 )
 
-export const fetchProperties=()=>{
-    return estateApi.get('/property').then(res=>{
+export const fetchProperties=(params)=>{
+    
+    return estateApi.get('/property',{params:{
+        _sort:params.query,
+        type:params.type,
+        status:params.status
+    }
+        
+    }).then(res=>{
         return res.data
     }
     )
@@ -40,3 +47,34 @@ export const fetchSellers=()=>{
     )
 }
 
+export const fetchBooking=()=>{
+    return estateApi.get(`/booking/` ).then(res=>{
+        
+        return res.data
+    }
+    )
+}
+
+export const fetchBuyers=()=>{
+    return estateApi.get('/buyer').then(res=>{
+        return res.data
+    }
+    )
+}
+
+export const postBooking=(booking)=>{
+    return estateApi.post(`/booking`,booking).then(res=>{
+        console.log(res)
+    }).catch(err=>{
+        console.log(err)
+    })
+}
+
+export const deleteProperty=(property_id)=>{
+    return estateApi.delete(`/property/${property_id}`).then(res=>{
+        console.log(res)
+    }).catch(err=>{
+        console.log(err)
+        alert(err.status)
+    })
+}

@@ -1,0 +1,112 @@
+  body {
+    background-color: #fff;
+  }
+  
+  .image {
+    grid-area: image;
+  }
+
+  .image img {
+    max-width: 100%;
+    object-fit:contain;
+  }
+  
+  .content {
+    grid-area: content;
+    position: relative;
+  }
+
+  .description {
+    grid-area: description;
+  }
+  
+  .title {
+    grid-area: title;
+  }
+  
+  .SOLD {
+      opacity: 0.5;
+      display: grid;
+      width:80vw;
+      grid-gap: 0.5em;
+      grid-template-columns: 20% 30% 50%;
+      grid-template-areas:
+      "title  title  title"
+      "image content description";
+      background-color: #fff;
+      color: #444;
+      margin-bottom:3em;
+      margin-left:auto;
+      margin-right:auto;
+    }
+
+.FORSALE {
+      display: grid;
+      width:80vw;
+      grid-gap: 0.5em;
+      grid-template-columns: 20% 30% 50%;
+      grid-template-areas:
+      "title  title  title"
+      "image content description";
+      background-color: #fff;
+      color: #444;
+      margin-bottom:3em;
+      margin-left:auto;
+      margin-right:auto;
+}
+  
+  
+  .ppt {
+    background-color: #D3DADA;
+    color:  #1B3954;
+    border-radius: 0.5em;
+    padding: 1em;
+    font-size: 1em;
+  }
+
+  .title {
+    background-color:  #1B3954;
+    color:  #DCAD99;
+  }
+
+  .title h1 {
+    color: #5DCAD1;
+  }
+
+
+
+
+
+
+
+#add-property-click{
+    text-align: center;
+    background-color: red;
+    color: white;
+    transition: 0.5s;
+    padding: 1em 0;
+    width:30%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+    border-radius: 10px;
+}
+#add-property-click:hover{
+    
+    text-align: center;
+    background-color: darkred;
+    color: whitesmoke; 
+    cursor: pointer;
+    padding: 1em 0;
+    width:30%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+    border-radius: 10px;
+}
+
+.property-sort-querries{
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+}

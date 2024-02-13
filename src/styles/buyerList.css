@@ -1,8 +1,8 @@
-.seller-list-page{
-    margin: .5em;
+.buyer-list-page{
+    margin: .5em 1em;
 }
 
-.sellerCard {
+.buyerCard {
     margin:1em;
     padding: .6em;
     border-radius: 10px;
@@ -11,17 +11,17 @@
     transition: background-color 0.2;
 }
 
-.sellerCard:hover{
+.buyerCard:hover{
     transform: scale(1.02);
     cursor: pointer;
     background-color: rgba(0,0,0,.04);
 }
 
-.seller-list-item {
+.buyer-list-item {
     padding-left: 0;
     list-style: none;
 }
-.seller-list-item li{
+.buyer-list-item li{
     justify-content: left;
     display: flex;
     align-items: center;
@@ -29,7 +29,7 @@
     margin-left:20px
 }
 
-.seller-list-item h3 {
+.buyer-list-item h3 {
     margin-right: 10px;
 }
 
@@ -41,7 +41,7 @@
 
 
 /* overwrites li styling on the first li to shift uid to the right*/
-.seller-list-item li:nth-child(1) {
+.buyer-list-item li:nth-child(1) {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -57,4 +57,9 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.buyer-list-item button {
+    cursor: pointer;
+    text-align: end;
 }
