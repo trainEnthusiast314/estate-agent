@@ -29,7 +29,7 @@ function Home() {
                 </p>
             </div>
             <div className='home-page-column column2'>
-                <p className='info-text' >Don't See What You're Looking For?</p>
+                <h1 className='info-text' >Don't See What You're Looking For?</h1>
 
                 <button className='button-link'>Register New Property</button>
 
