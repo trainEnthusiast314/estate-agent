@@ -1,6 +1,14 @@
 {
   "seller": [
     {
+      "id": "1",
+      "firstName": "Daniel",
+      "surname": "Smith",
+      "address": "8 Lord Lane, Failsworth",
+      "postcode": "M35 0SL",
+      "phone": "0161 456 1143"
+    },
+    {
       "id": "2",
       "firstName": "Anna",
       "surname": "Smith",

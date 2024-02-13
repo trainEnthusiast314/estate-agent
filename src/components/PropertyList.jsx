@@ -2,7 +2,7 @@
 
 import { useEffect } from "react"
 import { useState } from "react"
-import {  fetchProperties } from "../api/api"
+import {  fetchProperties, fetchSellers } from "../api/api"
 import { Link, useSearchParams } from "react-router-dom"
 import AddProperty from "./AddProperty"
 import './property-list-style.css'
@@ -17,6 +17,7 @@ function PropertyList() {
     const [listOfProperties,setListOfProperties]=useState([])
     const [clicked,setClicked]=useState(true)
     const [searchParams, setSearchParams]=useSearchParams()
+    const [sellers,setSellers]=useState([])
     let query= searchParams.get('_sort')
     let order=searchParams.get('_order')
     let type=searchParams.get('type')
@@ -33,18 +34,32 @@ function PropertyList() {
         
          fetchProperties({query,type,status}).then(data=>{
             
+            let filteredData=data.filter(item=>{
+                
+                return sellers.includes(item['sellerId'].toString())
+            })
+          
             setListOfProperties(currentList=>{
                 if(order==='desc'){
-                 return   [...data]
+                 return   [...filteredData]
                 } else{
-                    return [...data].reverse()
+                    return [...filteredData].reverse()
                 }
                })
               
             setIsLoading(false)
         })
         
-    },[setListOfProperties,query,order,type,status])
+    },[setListOfProperties,query,order,type,status,sellers])
+    //
+    useEffect(()=>{
+        fetchSellers().then(data=>{
+           let sellerIdArr=data.map(item=>{
+            return item.id
+           })
+           setSellers(sellerIdArr)
+    })
+    },[setSellers])
     //
     const handleChangeQuery=(e)=>{
         
