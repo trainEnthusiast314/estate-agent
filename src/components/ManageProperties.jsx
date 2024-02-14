@@ -74,7 +74,7 @@ function ManageProperties(){
             })
         } else{
             e.target.style.backgroundColor='green'
-            updatePropertyStatus(id,{status:'FOR SALE'})
+            updatePropertyStatus(id,{status:'FOR SALE', date: new Date()})
             setPropertyList(currentList=>{
                 return currentList.map(item=>{
                     if (item.id==id){
