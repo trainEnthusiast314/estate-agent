@@ -344,7 +344,7 @@ body {
     
 }
 
-.ppt-content input[type=text], select,input[type=number], textarea, input {
+ /* input[type=text],select,input[type=number], textarea, input {
    width:40%;
    padding: 0;
    margin: 0;
@@ -352,4 +352,39 @@ body {
    border: 1px solid #ccc;
    border-radius: 4px;
    box-sizing: border-box;
+  } */
+.ppt-content{
+    
+    background-color: #D3DADA;
+    color:  #1B3954;
+    border-radius: 0.5em;
+    padding: 1em;
+    font-size: 1em;
+  
+}
+  .ppt-content input,.ppt-content select{ 
+    
+    width:40%;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
   }
+/* 
+  .add-property-container{
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 60vw;
+    background-color: #D3DADA;
+    padding: 1em;
+    border-radius: 15px;
+    color: #1B3954;
+    border:1px solid black;
+    text-align:center;
+    
+    
+} */
