@@ -24,7 +24,7 @@ function PropertyList() {
     let type=searchParams.get('type')
     let status=searchParams.get('status')
     //
-    useEffect(()=>{
+    useEffect(()=>{ 
         setIsLoading(true)
         if(type===null){
             type=''
@@ -87,8 +87,10 @@ function PropertyList() {
     }
     //
     return isLoading?<div>...is loading</div>:<div className="property-list-page">
+        <div id='add-property-container'><div onClick={e=>{clicked?setClicked(false):null}}>{clicked?<div id="add-property-click">List Property Click here</div>:<AddProperty setListOfProperties={setListOfProperties} setClicked={setClicked}/>}</div></div>
         
         <div className="property-sort-querries">
+         
             <label>sort by : 
                 <select onChange={handleChangeQuery} value={query} className="property-sort-select">
                     <option value="bedroom">bedrooms</option>
@@ -121,7 +123,8 @@ function PropertyList() {
                     </select></label>
                     
             
-        </div> 
+        </div>
+         
         <div className="property-list-container">{listOfProperties.map(property=>{
             if(property.listed){let propertyTypeIcon
             switch(property.type){
@@ -147,13 +150,7 @@ function PropertyList() {
                     <span><Link to={`/sellers/${property.sellerId}`}><img src="../src/assets/setting.png" className="property-settings-img" /></Link></span>
                     
                     <h1>{property.address}</h1></div>
-                <div className="ppt image"><img class="property-list-image" src={`${property.image}`} alt={`image of property at ${property.address}`}/></div>
-                <div className="ppt description">
-                    {property.description}
-                    <br /><br />
-                    <Link to={`/properties/${property.id}`}><button className='button-link'>Make a Booking</button></Link>
-                
-                </div>
+                <div className="ppt image"><img className="property-list-image" src={`${property.image}`} alt={`image of property at ${property.address}`}/></div>
                 <div className="ppt content">
                     <h2>£{property.price}</h2>
                     <h3>{property.address}, {property.postcode}</h3>
@@ -162,13 +159,19 @@ function PropertyList() {
                     <p> <img src={propertyTypeIcon} alt={`icon illustrating property type of ${property.type}`} className="property-list-svg"/> {property['type'].toLowerCase()}</p>
                     <h4>{property.status}</h4>
                 </div>
+                <div className="ppt description">
+                    {property.description}
+                    <br /><br />
+                    <Link to={`/properties/${property.id}`}><button className='button-link'>Make a Booking</button></Link>
+                
+                </div>
                 </div>
                 )}
             
 
         })}
 
-        <div onClick={e=>{clicked?setClicked(false):null}}>{clicked?<div id="add-property-click">List Property Click here</div>:<AddProperty setListOfProperties={setListOfProperties} setClicked={setClicked}/>}</div>
+       
         
         </div>
         </div>

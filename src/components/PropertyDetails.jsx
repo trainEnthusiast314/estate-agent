@@ -15,8 +15,9 @@ function PropertyDetails() {
             setProperty(data)
             setIsLoading(false
                 )
-        })
+        }) 
     },[setProperty,property_id,setIsLoading])
+
     return isLoading?<p>... loading</p>:<div>
         <ul key={property_id}>
             <li>property at {property.address}, {property.postcode}</li>

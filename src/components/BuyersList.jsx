@@ -25,7 +25,7 @@ function BuyersList() {
         }).catch(err=>{alert('Try again!')})    
         
         } else {}
-    }
+    } 
 
     useEffect(() => {
         setIsLoading(true)
