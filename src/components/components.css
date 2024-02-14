@@ -164,16 +164,30 @@ body {
 
 .property-container {
     background: url('../assets/property-image.PNG');
+    background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
     /* overflow-x:hidden; */
     /* justify-content: center; */
     /* height:auto; */
     width:100%;
+
 }
+
+.property-container > span, .buyer-container > span, .seller-container > span{
+    margin:2em;
+    display:inline;
+    width:calc(100% - 4em);
+    height:100%;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+
+
 .buyer-container {
-    background: url('../assets/buyer-image.PNG');
+    background: url('../assets/property-image.PNG');
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
     overflow-x:hidden;
     /* justify-content: center; */
@@ -182,8 +196,9 @@ body {
     
 }
 .seller-container {
-    background: url('../assets/seller-image.PNG');
+    background: url('../assets/property-image.PNG');
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
     overflow-x:hidden;
     /* justify-content: center; */
