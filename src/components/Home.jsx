@@ -87,11 +87,13 @@ function Home() {
                 </p>
                 </span>
             </div>
-            <div className='home-page-column column2'>
-                <h1 className='heading-text' >Don't See What You're Looking For?</h1>
+            <div className='home-page-column column2 looking-for'>
+                <span>
+                    <h1 className='heading-text' >Don't See What You're Looking For?</h1>
 
-                <Link className= 'button-link' to='/properties'>Register New Property</Link>
-
+                    <Link className= 'button-link' to='/properties'>Register New Property</Link>
+                </span>
+                
             </div>
         </div>  
 
@@ -105,8 +107,10 @@ function Home() {
                 <Link to='/sellers' className={'info-link'}>Register Now</Link></p>
                 </span>
             </div>
-            <div id='hiddenFeature' className='home-page-column column2' style={imageStyleSold}>
-                <Link to={`/properties/${soldPropId}`}><h1 className='heading-text'>Recently Sold!</h1></Link>
+            <div id='hiddenFeature' className='home-page-column column2 recently-sold' style={imageStyleSold}>
+                <span>
+                    <Link to={`/properties/${soldPropId}`}><h1 className='heading-text'>Recently Sold!</h1></Link>
+                </span>
             </div>
         </div>
 
@@ -120,8 +124,10 @@ function Home() {
                 <Link to='/buyers' className={'info-link'}>Register Now</Link></p>
                 </span>
             </div>
-            <div id='hiddenFeature' className='home-page-column column2'  style={imageStyleForSale} >
-                <Link to={`/properties/${forSalePropId}`}><h1 className='heading-text'>Recently Added!</h1></Link>
+            <div id='hiddenFeature' className='home-page-column column2 recently-added'  style={imageStyleForSale}>
+                <span>
+                    <Link to={`/properties/${forSalePropId}`}><h1 className='heading-text'>Recently Added!</h1></Link>
+                </span>
             </div>
         </div>
 
