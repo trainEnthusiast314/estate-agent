@@ -26,7 +26,7 @@ body {
 
 .form-button {
     background-color:#1B3954;
-    color:  #DCAD99;
+    color:  #5DCAD1;
     margin-top:20px;
     text-align: center;
     font-weight:bold;
@@ -37,7 +37,7 @@ body {
 }
 
 .form-button:hover {
-    background-color:#DCAD99;
+    background-color:#5DCAD1;
     color:#1B3954;
 }
 
