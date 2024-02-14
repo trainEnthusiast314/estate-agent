@@ -109,7 +109,7 @@
     },
     {
       "id": "2",
-      "listed": false,
+      "listed": true,
       "address": "5 Parkfield Avenue, Urmston",
       "postcode": "M41 9FE",
       "type": "APARTMENT",
@@ -155,7 +155,7 @@
     },
     {
       "id": "c5ed",
-      "listed": "true",
+      "listed": true,
       "address": "25 Whitehall Road, Manchester",
       "postcode": "M20 6RY",
       "type": "SEMI-DETACHED",
