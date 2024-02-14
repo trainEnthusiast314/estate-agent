@@ -16,17 +16,7 @@
   
 
 
- .bookingList{
 
-    background-color: red;
-    
-    
- }
-
-.bookingForm{
-    background-color: pink;
-    
-}
 
 .time-container select{
     width: 100px;
@@ -41,9 +31,16 @@ ul{
 
 .returnDiv{
     display: inline-block;
+   
+    grid-column: auto auto;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    
+    
+}
+.bookingForm{
     text-align: center;
-    
-    
+     
 }
 
 .calendar-booking input{
@@ -51,4 +48,51 @@ ul{
     height: 30px;
 }
 
+.booking-page{
+    display: grid;
+    width:80vw;
+    grid-gap: 0.5em;
+    grid-template-columns: 20% 30% 50%;
+    margin-bottom:3em;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.booking-container {
+    display: grid;
+    width:80vw;
+    grid-gap: 0.5em;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-areas:
+    "title  title  title"
+    "image content description"
+   ;
+    background-color: #fff;
+    color: #444;
+    margin-bottom:3em;
+    margin-left:auto;
+    margin-right:auto;
+} 
+
+.image {
+    grid-area: image;
+  }
+
+  .image img {
+    max-width: 100%;
+    object-fit:contain;
+  }
+  
+  .content {
+    grid-area: content;
+
+  }
+
+  .description {
+    grid-area: description;
+  }
+  
+  .title {
+    grid-area: title;
+  }
 

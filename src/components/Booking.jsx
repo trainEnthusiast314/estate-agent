@@ -15,14 +15,12 @@ function Booking(props) {
     const [isLoading, setIsLoading] = useState(true)
     const [listOfBookings, setListOfBookings] = useState([])
     const [listOfBuyers, setListOfBuyers] = useState([])
-    let  hours = ["09","10","11","12","13","14","15","16","17"]
-    let  minutes = ["00","05","10","15","20","25","30","35","40","45","50","55"]
+   
     useEffect(()=>{
         setIsLoading(true)
         fetchBooking().then((data)=>{
             setListOfBookings(data)
-            setIsLoading(false
-                )
+            setIsLoading(false)
         })},[setListOfBookings])
 
         useEffect(()=>{
@@ -52,32 +50,46 @@ function Booking(props) {
 
 
    // console.log(bookings)
-    function handleSubmit(){
+    function handleSubmit(e){
+        let prevent = false;
+        
         //Would need a check to see if  the user exists and if the booking has already been taken
-        if(){
-
+        let bookingsOfDay =[];
+        for(let item in bookings){
+             if(bookings[item].time.split(" ")[0] == document.getElementById("bookingDate").value){
+                 bookingsOfDay.push(bookings[item])
+             }
+            // }
+           console.log(bookingsOfDay)
         }
+        
+        for(let item in bookingsOfDay){
+           if(bookingsOfDay[item].time.split(" ")[1]== document.getElementById("timeHour").value+":"+document.getElementById("timeMin").value){
+            prevent = true;
+           }
+           // }
+         
+       }
 
-
-
-
-
-
-
-
+       if(!prevent ){
         let newBooking ={
-            buyerId:document.getElementById("buyerId").value,
-            propertyId: props.propId,
-            time : (document.getElementById("bookingDate").value + " "+ document.getElementById("timeHour").value +":"+document.getElementById("timeMin").value )
-            }
-        postBooking(newBooking)
+                buyerId:document.getElementById("buyerId").value,
+                propertyId: props.propId,
+                time : (document.getElementById("bookingDate").value + " "+ document.getElementById("timeHour").value+":"+document.getElementById("timeMin").value )
+                }
+            postBooking(newBooking)
+       }
+       else{
+        e.preventDefault()
+        alert("Time unavailable")
+        prevent = false;
+
+       }
+
     }
-    return(
-        <div className = "returnDiv">
-        <h1>Make a booking</h1>
-        
-        
-        <div className = "booking-list-container">{bookings.map(property =>{
+
+    function returnList(){
+        return(<div className = "booking-list-container" ><h1>Make a booking</h1>{bookings.map(property =>{
             return(
                 <div className = "booking-wrapper" key = {props.propId}>
                 <div>Booking ID {property.id}</div>
@@ -87,12 +99,17 @@ function Booking(props) {
                 </div>
                 )
         } )}
-        </div>
-        
-        <form  className = "bookingForm">
+        </div>)
+    }
+
+
+    function returnForm(){
+        if(props.comp =="list"){
+        return(<div className = "bookingForm">
+        <form  >
             <ul className = "bookingList">
 
-                {/* Item 1 within the grid */}
+               
                 <li> 
                     <label>Buyer</label>
                     <div className = "buyer-dropdown">
@@ -106,7 +123,7 @@ function Booking(props) {
                     </div>
                 </li>
 
-                {/* Item 2 in the grid */}
+               
                 <li>
                     <div className = "calendar-booking">
                         <input id = "bookingDate" type = "date" required/>       
@@ -121,7 +138,95 @@ function Booking(props) {
          
             
             <button className = "bookBtn" onClick={handleSubmit}>Book</button>
-        </form>
+        </form></div>)}
+
+
+        else if(props.comp =="form"){
+            return(<div className = "booking-list-container" ><h1>Make a booking</h1>{bookings.map(property =>{
+                return(
+                    <div className = "booking-wrapper" key = {props.propId}>
+                    <div>Booking ID {property.id}</div>
+                    <div>Booking Date {((property.time).split(" "))[0]}</div> 
+                    <div>Booking Time {((property.time).split(" "))[1]}</div>
+                    <hr/>
+                    </div>
+                    )
+            } )}
+            </div>)
+        }
+    }
+
+
+        
+
+
+
+
+
+
+
+        // let newBooking ={
+        //     buyerId:document.getElementById("buyerId").value,
+        //     propertyId: props.propId,
+        //     time : (document.getElementById("bookingDate").value + " "+ document.getElementById("timeHour").value +":"+document.getElementById("timeMin").value )
+        //     }
+        // postBooking(newBooking)
+    
+    return(
+
+        
+        
+        <div className = "returnDiv">
+
+            {returnForm()}
+        
+{/*         
+        <div className = "booking-list-container" ><h1>Make a booking</h1>{bookings.map(property =>{
+            return(
+                <div className = "booking-wrapper" key = {props.propId}>
+                <div>Booking ID {property.id}</div>
+                <div>Booking Date {((property.time).split(" "))[0]}</div> 
+                <div>Booking Time {((property.time).split(" "))[1]}</div>
+                <hr/>
+                </div>
+                )
+        } )}
+        </div> */}
+{/*    
+        <div className = "bookingForm">
+        <form  >
+            <ul className = "bookingList">
+
+               
+                <li> 
+                    <label>Buyer</label>
+                    <div className = "buyer-dropdown">
+                        <select id="buyerId" name="buyerId" required >{listOfBuyers.map(buyer => {
+                            return(
+                                <option value = {buyer.id}>{buyer.id}-{buyer.firstName} {buyer.surname}</option>
+                            )
+                        })}
+                        
+                        </select>
+                    </div>
+                </li>
+
+               
+                <li>
+                    <div className = "calendar-booking">
+                        <input id = "bookingDate" type = "date" required/>       
+                    </div>
+                </li>
+                <li>
+                <TimeComponent/>
+                </li>
+           
+               </ul> 
+             
+         
+            
+            <button className = "bookBtn" onClick={handleSubmit}>Book</button>
+        </form></div> */}
                     
         </div>
             
