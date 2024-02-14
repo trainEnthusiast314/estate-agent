@@ -1,12 +1,44 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {Link, useSearchParams} from 'react-router-dom';
+import {  fetchProperties, fetchSellers, fetchSoldProperties } from "../api/api"
+import { useEffect } from "react"
+import { useState } from "react"
+
 
 function Home() {   
+
+    const [soldProp, setSoldProp] = useState([])
+    const [soldPropId, setSoldPropId]=useState([])
+    const [soldPropImg, setSoldPropImg] = useState([])
+
+    useEffect(()=>{
+        fetchSoldProperties().then(res=>{return(
+            console.log(res),
+            setSoldPropId(res[0].id),
+            setSoldPropImg(res[0].image),
+            setSoldProp(res))
+        })
+    }, [setSoldProp, setSoldPropId, setSoldPropImg])
+
+    // console.log(soldProp[soldProp.length -1])
+
+    // console.log(soldPropId)
+    console.log(soldPropImg)
+
+    let imageStyle = {
+        backgroundImage : `url(${soldPropImg})`
+    };
 
     return(
 
         
     <div className='home-page-containers'>
+
+        {/* {console.log(soldProp[0])} */}
+        {/* <img src={`${soldProp[0].image}`}></img> */}
+        {/* <img src={`${soldPropImg}`}></img>
+
+        <h1>{`${soldPropId}`}</h1> */}
 
         <div className='home-page-row'>
             <div className='company-name'>
@@ -63,8 +95,9 @@ function Home() {
                 <br/>
                 <Link to='/sellers' className={'info-link'}>Register Now</Link></p>
             </div>
-            <div id='hiddenFeature' className='home-page-column column2 recently-sold'>
-                <h1 className='heading-text'>Recently Sold!</h1>
+            <div id='hiddenFeature' className='home-page-column column2' style={imageStyle}>
+                <Link to={`/properties/${soldPropId}`}><h1 className='heading-text'>Recently Sold!</h1></Link>
+                {/* <h1 className='heading-text'>Recently Sold!</h1> */}
             </div>
         </div>
 

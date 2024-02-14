@@ -24,7 +24,7 @@ function PropertyList() {
     let type=searchParams.get('type')
     let status=searchParams.get('status')
     //
-    useEffect(()=>{
+    useEffect(()=>{ 
         setIsLoading(true)
         if(type===null){
             type=''
