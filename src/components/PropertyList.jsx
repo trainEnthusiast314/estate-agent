@@ -148,12 +148,6 @@ function PropertyList() {
                     
                     <h1>{property.address}</h1></div>
                 <div className="ppt image"><img class="property-list-image" src={`${property.image}`} alt={`image of property at ${property.address}`}/></div>
-                <div className="ppt description">
-                    {property.description}
-                    <br /><br />
-                    <Link to={`/properties/${property.id}`}><button className='button-link'>Make a Booking</button></Link>
-                
-                </div>
                 <div className="ppt content">
                     <h2>£{property.price}</h2>
                     <h3>{property.address}, {property.postcode}</h3>
@@ -161,6 +155,12 @@ function PropertyList() {
                     <p><img src={bathroomSVG} className="property-list-svg" alt='icon for number of bathrooms'/> {property.bathroom}</p>
                     <p> <img src={propertyTypeIcon} alt={`icon illustrating property type of ${property.type}`} className="property-list-svg"/> {property['type'].toLowerCase()}</p>
                     <h4>{property.status}</h4>
+                </div>
+                <div className="ppt description">
+                    {property.description}
+                    <br /><br />
+                    <Link to={`/properties/${property.id}`}><button className='button-link'>Make a Booking</button></Link>
+                
                 </div>
                 </div>
                 )}

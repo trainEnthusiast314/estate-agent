@@ -125,3 +125,4 @@ export const updateListingStatus=(property_id,update)=>{
         console.log(err)
     })
 }
+
