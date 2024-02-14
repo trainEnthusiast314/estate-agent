@@ -53,12 +53,14 @@ function Home() {
 
         <div className='home-page-row'>
             <div className='home-page-column column1 property-container'>
+                <span>
                 <h1 className='title-text'>Available Properties</h1>
                 <p className='info-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 <br/>
                 <br/>
                 <Link to='/properties?_sort=bedroom&_order=desc&type=&status=' className={'info-link'}>Find out more...</Link>
                 </p>
+                </span>
             </div>
             <div className='home-page-column column2'>
                 <h1 className='heading-text' >Don't See What You're Looking For?</h1>
@@ -70,11 +72,13 @@ function Home() {
 
         <div className='home-page-row'>
             <div className='home-page-column column1 seller-container'>
+                <span>
                 <h1 className='title-text'>I'm Selling</h1>
                 <p className='info-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                 <br/>
                 <br/>
                 <Link to='/sellers' className={'info-link'}>Register Now</Link></p>
+                </span>
             </div>
             <div id='hiddenFeature' className='home-page-column column2' style={imageStyleSold}>
                 <Link to={`/properties/${soldPropId}`}><h1 className='heading-text'>Recently Sold!</h1></Link>
@@ -84,11 +88,13 @@ function Home() {
 
         <div className='home-page-row'>
             <div className='home-page-column column1 buyer-container'>
+                <span>
                 <h1 className='title-text'>I'm Buying</h1>
                 <p className='info-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 <br/>
                 <br/>
                 <Link to='/buyers' className={'info-link'}>Register Now</Link></p>
+                </span>
             </div>
             <div id='hiddenFeature' className='home-page-column column2 recently-added'>
                 <h1 className='heading-text'>Newly Added!</h1>
