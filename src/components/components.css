@@ -166,9 +166,9 @@ body {
 
 
 .buyer-container {
-    background: url('../assets/buyer-image.PNG');
+    background: url('../assets/seller-image.PNG');
     background-repeat: no-repeat;
-    /* background-attachment: fixed; */
+    background-attachment: fixed;
     background-size: cover;
     /* overflow-x:hidden; */
     background-position: top center;
@@ -180,7 +180,7 @@ body {
 .seller-container {
     background: url('../assets/seller-image.PNG');
     background-repeat: no-repeat;
-    /* background-attachment: fixed; */
+    background-attachment: fixed;
     background-size: cover;
     background-position: top center;
     /* justify-content: center; */
