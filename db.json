@@ -101,10 +101,11 @@
       "bathroom": 1,
       "garden": 0,
       "sellerId": 1,
-      "status": "FOR SALE",
+      "status": "SOLD",
       "buyerId": 3,
       "image": "../src/assets/houses/cottage-2955582_640.jpg",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "date": "2024-02-14T13:56:58.804Z"
     },
     {
       "id": "2",
@@ -132,7 +133,7 @@
       "bathroom": "3",
       "garden": 1,
       "sellerId": 3,
-      "status": "SOLD",
+      "status": "FOR SALE",
       "id": "3",
       "image": "../src/assets/houses/house-540796_640.jpg",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
@@ -147,7 +148,7 @@
       "bathroom": 3,
       "garden": 1,
       "sellerId": 4,
-      "status": "FOR SALE",
+      "status": "SOLD",
       "id": "4",
       "image": "../src/assets/houses/small-house-353929_640.jpg",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
@@ -163,7 +164,7 @@
       "bathroom": "2",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "image": "../src/assets/houses/vw-beetle-405876_640.jpg",
-      "status": "SOLD",
+      "status": "FOR SALE",
       "sellerId": "12",
       "buyerId": "12",
       "date": ""
@@ -209,7 +210,8 @@
       "description": "stuff going on around here ",
       "image": "https://assetsio.reedpopcdn.com/minecraft-house-ideas-3-floor-white-container-house.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp",
       "status": "FOR SALE",
-      "listed": "true"
+      "listed": "true",
+      "date": ""
     }
   ],
   "buyer": [

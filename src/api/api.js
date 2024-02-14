@@ -24,6 +24,12 @@ export const fetchSoldProperties=()=>{
         return(res.data)})
 }
 
+export const fetchForSaleProperties=()=>{
+    return estateApi.get('/property',{params:
+    {status:"FOR SALE"}}).then(res=>{
+        return(res.data)})
+}
+
 export const postAccount=(account, url)=> {
     return estateApi.post(`/${url}`, account )
         .then(response => {
