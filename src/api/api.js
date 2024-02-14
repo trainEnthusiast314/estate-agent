@@ -16,6 +16,18 @@ export const fetchProperties=(params)=>{
         return res.data
     }
     )
+} 
+
+export const fetchSoldProperties=()=>{
+    return estateApi.get('/property',{params:
+    {status:"SOLD"}}).then(res=>{
+        return(res.data)})
+}
+
+export const fetchForSaleProperties=()=>{
+    return estateApi.get('/property',{params:
+    {status:"FOR SALE"}}).then(res=>{
+        return(res.data)})
 }
 
 export const postAccount=(account, url)=> {
@@ -113,3 +125,4 @@ export const updateListingStatus=(property_id,update)=>{
         console.log(err)
     })
 }
+

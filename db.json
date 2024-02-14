@@ -104,11 +104,12 @@
       "status": "SOLD",
       "buyerId": 3,
       "image": "../src/assets/houses/cottage-2955582_640.jpg",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "date": "2024-02-14T14:51:17.634Z"
     },
     {
       "id": "2",
-      "listed": false,
+      "listed": true,
       "address": "5 Parkfield Avenue, Urmston",
       "postcode": "M41 9FE",
       "type": "APARTMENT",
@@ -127,9 +128,9 @@
       "postcode": "M44 5YB",
       "listed": true,
       "type": "DETACHED",
-      "price": 125000,
-      "bedroom": 1,
-      "bathroom": 1,
+      "price": "489000",
+      "bedroom": "5",
+      "bathroom": "3",
       "garden": 1,
       "sellerId": 3,
       "status": "FOR SALE",
@@ -147,25 +148,26 @@
       "bathroom": 3,
       "garden": 1,
       "sellerId": 4,
-      "status": "FOR SALE",
+      "status": "SOLD",
       "id": "4",
       "image": "../src/assets/houses/small-house-353929_640.jpg",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     },
     {
       "id": "c5ed",
-      "listed": "true",
+      "listed": true,
       "address": "25 Whitehall Road, Manchester",
       "postcode": "M20 6RY",
       "type": "SEMI-DETACHED",
-      "price": "2",
+      "price": "200000",
       "bedroom": "2",
       "bathroom": "2",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "image": "../src/assets/houses/vw-beetle-405876_640.jpg",
-      "status": "FOR SALE",
+      "status": "SOLD",
       "sellerId": "12",
-      "buyerId": "12"
+      "buyerId": "12",
+      "date": "2024-02-14T14:49:21.006Z"
     },
     {
       "id": "7fa3",
@@ -194,7 +196,23 @@
       "description": "Very nice place",
       "image": "https://previews.123rf.com/images/estherpoon/estherpoon2008/estherpoon200800041/153171588-detached-houses-in-manchester-united-kingdom.jpg",
       "status": "FOR SALE",
-      "listed": "true"
+      "listed": "true",
+      "date": ""
+    },
+    {
+      "id": "edbd",
+      "sellerId": "5",
+      "address": "24 Manchester road",
+      "postcode": "CP8 12JJJ",
+      "type": "TERRACE",
+      "price": "145000",
+      "bedroom": "4",
+      "bathroom": "2",
+      "description": "stuff going on around here ",
+      "image": "https://assetsio.reedpopcdn.com/minecraft-house-ideas-3-floor-white-container-house.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp",
+      "status": "FOR SALE",
+      "listed": "true",
+      "date": ""
     }
   ],
   "buyer": [

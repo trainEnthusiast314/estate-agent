@@ -15,7 +15,7 @@ function PropertyDetails() {
             setProperty(data)
             setIsLoading(false
                 )
-        })
+        }) 
     },[setProperty,property_id,setIsLoading])
     return isLoading?<p>... loading</p>:
     <div className="booking-container"> 
