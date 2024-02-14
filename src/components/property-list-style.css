@@ -96,7 +96,10 @@ opacity: 0.5;
   }
 
 
-
+#add-property-container{
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
 #add-property-click{
     text-align: center;
     background-color: red;
@@ -106,7 +109,8 @@ opacity: 0.5;
     width:30%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 2em;
+    margin-top: 1em;
+    margin-bottom: 1em;
     border-radius: 10px;
 }
 #add-property-click:hover{
@@ -155,4 +159,6 @@ opacity: 0.5;
     margin-top:1em;
   }
 } 
-
+.property-list-container{
+  margin-top: 1em;
+}
