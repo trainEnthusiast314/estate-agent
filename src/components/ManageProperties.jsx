@@ -143,6 +143,7 @@ function ManageProperties(){
                          <li><h3>Postcode:</h3><span>{sellerInfo.postcode}</span></li>
                          <li><h3>Phone:</h3><span>{sellerInfo.phone}</span></li>
                          </ul>
+                         <button onClick={handleClickEdit} className="manage-property-edit">Edit Properties</button>
                 </div>
         {propertyList.map(property=>{
             let propertyTypeIcon
@@ -178,7 +179,7 @@ function ManageProperties(){
                     <option value="TERRACE"> terrace</option>
                     </select>:property['type'].toLowerCase()}</p>
                     <h3>Managment Tools</h3>
-                    <h4><button onClick={e=>{handleClickStatus(property.id,property.status,e)}} className="manage-property-status">{property.status}</button><button onClick={e=>{handleClickListing(property,e)}} className="manage-property-status">{property.listed?'listed':'unlisted'}</button><button onClick={handleClickEdit} className="manage-property-edit">Edit</button></h4>
+                    <h4><button onClick={e=>{handleClickStatus(property.id,property.status,e)}} className="manage-property-status">{property.status}</button><button onClick={e=>{handleClickListing(property,e)}} className="manage-property-status">{property.listed?'listed':'unlisted'}</button></h4>
                     
                     {editMode?<button onClick={e=>handleSubmit(property,e)} className="manage-property-edit">submit</button>:<button onClick={e=>{handleDelete(property)}} className="manage-property-delete">DELETE</button>}
                     
