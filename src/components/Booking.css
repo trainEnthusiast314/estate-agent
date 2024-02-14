@@ -1,17 +1,12 @@
 
 
 .time-container {
-    float: left;
+    display: inline;
 
 
   }
 
-  .buyer-dropdown{
-    width: 150px;
-    
- 
- 
-  }
+
 
 .booking-date{
     width: 150px;
@@ -20,22 +15,7 @@
     
   
 
-.hour-container {
-    padding-top: 10px;
-    float: left;
-  
-}
-  
-.colon{
-    float: left;
-}
 
-.minute-container {
-    padding-top: 10px;
-    float: left;
-
-
-}
  .bookingList{
 
     background-color: red;
@@ -43,8 +23,32 @@
     
  }
 
-.returnDiv{
+.bookingForm{
     background-color: pink;
+    
+}
+
+.time-container select{
+    width: 100px;
+    display: inline;
+}
+ul{
+    list-style: none;
+    padding: 0px;
+}
+
+
+
+.returnDiv{
+    display: inline-block;
+    text-align: center;
+    
+    
+}
+
+.calendar-booking input{
+    width: 200px;
+    height: 30px;
 }
 
 

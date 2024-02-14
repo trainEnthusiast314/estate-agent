@@ -54,6 +54,16 @@ function Booking(props) {
    // console.log(bookings)
     function handleSubmit(){
         //Would need a check to see if  the user exists and if the booking has already been taken
+        if(){
+
+        }
+
+
+
+
+
+
+
 
         let newBooking ={
             buyerId:document.getElementById("buyerId").value,
@@ -102,22 +112,17 @@ function Booking(props) {
                         <input id = "bookingDate" type = "date" required/>       
                     </div>
                 </li>
-
                 <li>
-                    <TimeComponent/>
+                <TimeComponent/>
                 </li>
-
-                
-
-                
-                    
            
                </ul> 
+             
          
             
-            <button  onClick={handleSubmit}>Book</button>
+            <button className = "bookBtn" onClick={handleSubmit}>Book</button>
         </form>
-       
+                    
         </div>
             
   
