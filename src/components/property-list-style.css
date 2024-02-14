@@ -44,6 +44,24 @@
   opacity: 0.5;
 }
   
+.LISTED, .UNLISTED {
+  display: grid;
+  width:80vw;
+  grid-gap: 0.5em;
+  grid-template-columns: 20% 30% 50%;
+  grid-template-areas:
+  "title  title  title"
+  "image content description";
+  background-color: #fff;
+  color: #444;
+  margin-bottom:3em;
+  margin-left:auto;
+  margin-right:auto;
+} 
+
+.UNLISTED {
+opacity: 0.5;
+}
   
   .ppt {
     background-color: #D3DADA;

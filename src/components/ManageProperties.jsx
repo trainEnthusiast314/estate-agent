@@ -131,7 +131,7 @@ function ManageProperties(){
                 
             }
             return (               
-                <div className={property.status.replaceAll(' ', '')} key={property.id}>
+                <div className={property.listed?'LISTED':'UNLISTED'}><div className={property.status.replaceAll(' ', '')} key={property.id}>
                 <div className="ppt title"><Link to={`/properties/${property.id}`}><h1>{property.address}</h1></Link></div>
                 <div className="ppt image"><Link to={`/properties/${property.id}`}><img className="property-list-image" src={`${property.image}`} alt={`image of property at ${property.address}`}/></Link></div>
                 <div className="ppt description">{property.description}</div>
@@ -146,7 +146,8 @@ function ManageProperties(){
                     <button onClick={e=>{handleDelete(property)}} className="manage-property-delete">DELETE</button>
                     <button onClick={e=>{handleClickListing(property,e)}} className="manage-property-status">{property.listed?'listed':'unlisted'}</button>
                 </div>
-                </div>
+                </div></div>
+                
                 )
 
         })}
