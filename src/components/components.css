@@ -74,7 +74,7 @@ body {
     flex: 1;
     margin: 1%;
     border-radius: 10px;
-    height: 20em;
+    height: 25em;
 }
 
 .column1 {
@@ -89,7 +89,7 @@ body {
 
 .company-name {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 3em;
+    font-size: 4em;
     color: #1B3954;
     margin: 1%;
     width: 100%;
@@ -106,7 +106,7 @@ body {
 
 .about-text {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1em;
+    font-size: 1.5em;
     color: #1B3954;
     text-align: justify;
 }
@@ -121,12 +121,12 @@ body {
 
 .info-text {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1em;
+    font-size: 1.5em;
     color:#1B3954;
     margin-left: 1%;
     padding: 1%;
     padding-right: 25%;
-    font-weight: bold;
+    /* font-weight: bold; */
     text-align: justify;
 }
 
@@ -175,6 +175,7 @@ body {
     background: url('../assets/property-image.PNG');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center;
     /* overflow-x:hidden; */
     /* justify-content: center; */
     /* height:auto; */
@@ -184,7 +185,8 @@ body {
     background: url('../assets/buyer-image.PNG');
     background-repeat: no-repeat;
     background-size: cover;
-    overflow-x:hidden;
+    /* overflow-x:hidden; */
+    background-position: top center;
     /* justify-content: center; */
     /* height:auto; */
     width:100%;
@@ -194,7 +196,8 @@ body {
     background: url('../assets/seller-image.PNG');
     background-repeat: no-repeat;
     background-size: cover;
-    overflow-x:hidden;
+    /* overflow-x:hidden; */
+    background-position: top center;
     /* justify-content: center; */
     /* height:auto; */
     width:100%;
