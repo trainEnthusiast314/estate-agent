@@ -14,17 +14,6 @@ body {
     color:#1B3954;
 }
 
-@media only screen and (min-width: 768px) {
-    .form-container {
-        width:30vw;
-    }
-
-    .form-container > form > div > input{
-        width:50% !important;
-    }
-}
-
-
 .form-container > form > div {
     display:inline-block;
     width:100%;
@@ -221,6 +210,16 @@ body {
         flex-wrap: wrap;
     }
 
+}
+
+@media only screen and (min-width: 768px) {
+    .form-container {
+        width:30vw;
+    }
+
+    .form-container > form > div > input{
+        width:50% !important;
+    }
 }
 
 
