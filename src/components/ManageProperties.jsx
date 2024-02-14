@@ -167,8 +167,8 @@ function ManageProperties(){
                 <div className="ppt title"><Link to={`/properties/${property.id}`}><h1>{property.address}</h1></Link></div>
                 <div className="ppt image"><Link to={`/properties/${property.id}`}><img className="property-list-image" src={`${property.image}`} alt={`image of property at ${property.address}`}/></Link></div>
                 <div className="ppt description">{property.description}</div>
-                <div className="ppt content">
-                    <h2>£{editMode?<input type="number" placeholder={property.price} name='price' onChange={handleChange}/>:property.price}</h2>
+                <div className="ppt-content">
+                    <h2>£{editMode?<input type="number" placeholder={property.price} name='price' onChange={handleChange} />:property.price}</h2>
                     <h3>{editMode?<input type="text" placeholder={property.address} onChange={handleChange} name="address"/>:property.address}, {editMode?<input type="text" name="postcode" placeholder={property.postcode} onChange={handleChange}/>:property.postcode}</h3>
                     <p><img src={bedSVG} className="property-list-svg" alt="icon for number of bedrooms"/> {editMode?<input type="number" placeholder={property.bedroom} onChange={handleChange} name="bedroom"/>:property.bedroom}</p>
                     <p><img src={bathroomSVG} className="property-list-svg" alt='icon for number of bathrooms'/>{editMode?<input type="number" placeholder={property.bathroom} onChange={handleChange} name="bathroom"/>:property.bathroom}</p>
