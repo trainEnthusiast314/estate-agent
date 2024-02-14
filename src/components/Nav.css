@@ -1,5 +1,5 @@
 .nav-bar{
-    background: url('src/assets/Manchester.jpg') 50% 40%; 
+    background: url('./Manchester.jpg') 50% 40%; 
     background-repeat: no-repeat;
     background-size: cover;
     overflow-x:hidden;
