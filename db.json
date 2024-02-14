@@ -1,6 +1,14 @@
 {
   "seller": [
     {
+      "id": "1",
+      "firstName": "Daniel",
+      "surname": "Smith",
+      "address": "8 Lord Lane, Failsworth",
+      "postcode": "M35 0SL",
+      "phone": "0161 456 1143"
+    },
+    {
       "id": "2",
       "firstName": "Anna",
       "surname": "Smith",
@@ -84,6 +92,7 @@
   "property": [
     {
       "id": "1",
+      "listed": true,
       "address": "3 Inchcape Drive, Manchester",
       "postcode": "M9 8JN",
       "type": "DETACHED",
@@ -92,13 +101,14 @@
       "bathroom": 1,
       "garden": 0,
       "sellerId": 1,
-      "status": "FOR SALE",
+      "status": "SOLD",
       "buyerId": 3,
       "image": "../src/assets/houses/cottage-2955582_640.jpg",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     },
     {
       "id": "2",
+      "listed": false,
       "address": "5 Parkfield Avenue, Urmston",
       "postcode": "M41 9FE",
       "type": "APARTMENT",
@@ -115,6 +125,7 @@
     {
       "address": "122 Lords Street, Cadishead",
       "postcode": "M44 5YB",
+      "listed": true,
       "type": "DETACHED",
       "price": 125000,
       "bedroom": 1,
@@ -129,19 +140,21 @@
     {
       "address": "253 Littleton Road, Salford",
       "postcode": "M7 3TB",
+      "listed": "true",
       "type": "DETACHED",
       "price": 99000,
       "bedroom": 3,
       "bathroom": 3,
       "garden": 1,
       "sellerId": 4,
-      "status": "SOLD",
+      "status": "FOR SALE",
       "id": "4",
       "image": "../src/assets/houses/small-house-353929_640.jpg",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     },
     {
       "id": "c5ed",
+      "listed": "true",
       "address": "25 Whitehall Road, Manchester",
       "postcode": "M20 6RY",
       "type": "SEMI-DETACHED",
@@ -158,6 +171,7 @@
       "id": "7fa3",
       "address": "cool person street, Coolington",
       "postcode": "CP8 12J",
+      "listed": true,
       "type": "TERRACE",
       "price": "400000",
       "bedroom": "5",
@@ -167,6 +181,20 @@
       "status": "FOR SALE",
       "sellerId": "12",
       "buyerId": "12"
+    },
+    {
+      "id": "9e12",
+      "sellerId": "9",
+      "address": "my house road",
+      "postcode": "CP8 12J",
+      "type": "SEMI-DETACHED",
+      "price": "1000000",
+      "bedroom": "5",
+      "bathroom": "3",
+      "description": "Very nice place",
+      "image": "https://previews.123rf.com/images/estherpoon/estherpoon2008/estherpoon200800041/153171588-detached-houses-in-manchester-united-kingdom.jpg",
+      "status": "FOR SALE",
+      "listed": "true"
     }
   ],
   "buyer": [

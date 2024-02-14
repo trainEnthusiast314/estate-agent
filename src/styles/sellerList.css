@@ -1,5 +1,10 @@
 .seller-list-page{
-    margin: .5em;
+    margin: .5em 1em;
+}
+
+.seller-list-container{
+    margin-left: 6%;
+    margin-right: 6%;
 }
 
 .sellerCard {
@@ -9,12 +14,25 @@
     border: 1px solid black;
     transition: transform 0.2s;
     transition: background-color 0.2;
+    color: #D3DADA;
+    background-color:#1B3954
 }
 
 .sellerCard:hover{
     transform: scale(1.02);
     cursor: pointer;
-    background-color: rgba(0,0,0,.04);
+    color:#1B3954;
+    background-color: #D3DADA;
+}
+
+@media screen and (min-width: 600px) {
+    .sellerCard:hover{
+        transform:scale(1.006)
+    }
+}
+
+.list-title {
+    text-align: center;
 }
 
 .seller-list-item {
@@ -30,13 +48,13 @@
 }
 
 .seller-list-item h3 {
-    margin-right: 10px;
+    margin: .5em 10px .5em .5em;
 }
 
 
 .uuid {
     margin:0;
-    color: rgba(0,0,0,.5)
+    color: #5DCAD1
 }
 
 
@@ -57,4 +75,36 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.del-btn {
+    position: relative;
+    bottom: 50px;
+    right: 15px;
+    font-size: 2em;
+    transition: transform 0.2s;
+    float:right;
+    clear:both
+}
+
+.del-btn:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    color:#5DCAD1
+}
+
+.manage-btn h3{
+    border: 1px solid #5DCAD1;
+    background-color: #D3DADA;
+    color: #1B3954;
+    padding: .6em;
+    border-radius: 30px;
+}
+.manage-btn a{
+    text-decoration: none;
+}
+
+.manage-btn h3:hover{
+    color: #D3DADA;
+    background-color: #1B3954;
 }

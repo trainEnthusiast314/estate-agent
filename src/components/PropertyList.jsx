@@ -2,7 +2,7 @@
 
 import { useEffect } from "react"
 import { useState } from "react"
-import {  fetchProperties } from "../api/api"
+import {  fetchProperties, fetchSellers } from "../api/api"
 import { Link, useSearchParams } from "react-router-dom"
 import AddProperty from "./AddProperty"
 import './property-list-style.css'
@@ -12,11 +12,13 @@ import flat from '../assets/apartments.png'
 import detached from '../assets/home.png'
 import semiDetached from '../assets/semi-detached.png'
 import terrace from '../assets/terraced-house.png'
+
 function PropertyList() {
     const [isLoading,setIsLoading]=useState(true)
     const [listOfProperties,setListOfProperties]=useState([])
     const [clicked,setClicked]=useState(true)
     const [searchParams, setSearchParams]=useSearchParams()
+    const [sellers,setSellers]=useState([])
     let query= searchParams.get('_sort')
     let order=searchParams.get('_order')
     let type=searchParams.get('type')
@@ -33,18 +35,32 @@ function PropertyList() {
         
          fetchProperties({query,type,status}).then(data=>{
             
+            let filteredData=data.filter(item=>{
+                
+                return sellers.includes(item['sellerId'].toString())
+            })
+          
             setListOfProperties(currentList=>{
                 if(order==='desc'){
-                 return   [...data]
+                 return   [...filteredData]
                 } else{
-                    return [...data].reverse()
+                    return [...filteredData].reverse()
                 }
                })
               
             setIsLoading(false)
         })
         
-    },[setListOfProperties,query,order,type,status])
+    },[setListOfProperties,query,order,type,status,sellers])
+    //
+    useEffect(()=>{
+        fetchSellers().then(data=>{
+           let sellerIdArr=data.map(item=>{
+            return item.id
+           })
+           setSellers(sellerIdArr)
+    })
+    },[setSellers])
     //
     const handleChangeQuery=(e)=>{
         
@@ -103,10 +119,11 @@ function PropertyList() {
                    
                     
                     </select></label>
+                    
             
-        </div>
+        </div> 
         <div className="property-list-container">{listOfProperties.map(property=>{
-            let propertyTypeIcon
+            if(property.listed){let propertyTypeIcon
             switch(property.type){
                 case 'DETACHED':
                     propertyTypeIcon=detached
@@ -123,10 +140,20 @@ function PropertyList() {
                 
             }
             return (
-                <div className={property.status.replaceAll(' ', '')}>
-                <div className="ppt title"><Link to={`/properties/${property.id}`}><h1>{property.address}</h1></Link></div>
-                <div className="ppt image"><Link to={`/properties/${property.id}`}><img class="property-list-image" src={`${property.image}`} alt={`image of property at ${property.address}`}/></Link></div>
-                <div className="ppt description">{property.description}<br /><br />Seller ID: {property.sellerId}<br /><br /><Link to={`/sellers/${property.sellerId}`}>Click here to manage</Link></div>
+                <div className={property.status.replaceAll(' ', '')} key={property.id}>
+                <div className="ppt title">
+                    
+
+                    <span><Link to={`/sellers/${property.sellerId}`}><img src="../src/assets/setting.png" className="property-settings-img" /></Link></span>
+                    
+                    <h1>{property.address}</h1></div>
+                <div className="ppt image"><img class="property-list-image" src={`${property.image}`} alt={`image of property at ${property.address}`}/></div>
+                <div className="ppt description">
+                    {property.description}
+                    <br /><br />
+                    <Link to={`/properties/${property.id}`}><button className='button-link'>Make a Booking</button></Link>
+                
+                </div>
                 <div className="ppt content">
                     <h2>£{property.price}</h2>
                     <h3>{property.address}, {property.postcode}</h3>
@@ -136,9 +163,11 @@ function PropertyList() {
                     <h4>{property.status}</h4>
                 </div>
                 </div>
-                )
+                )}
+            
 
         })}
+
         <div onClick={e=>{clicked?setClicked(false):null}}>{clicked?<div id="add-property-click">List Property Click here</div>:<AddProperty setListOfProperties={setListOfProperties} setClicked={setClicked}/>}</div>
         
         </div>
