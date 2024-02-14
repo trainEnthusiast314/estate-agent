@@ -147,7 +147,7 @@ function PropertyList() {
                     <span><Link to={`/sellers/${property.sellerId}`}><img src="../src/assets/setting.png" className="property-settings-img" /></Link></span>
                     
                     <h1>{property.address}</h1></div>
-                <div className="ppt image"><img class="property-list-image" src={`${property.image}`} alt={`image of property at ${property.address}`}/></div>
+                <div className="ppt image"><img className="property-list-image" src={`${property.image}`} alt={`image of property at ${property.address}`}/></div>
                 <div className="ppt content">
                     <h2>£{property.price}</h2>
                     <h3>{property.address}, {property.postcode}</h3>
