@@ -15,7 +15,8 @@ function ManageProperties(){
     const {seller_id}=useParams()
     const [propertyList,setPropertyList]=useState([])
     const [sellerInfo, setSellerInfo]=useState({})
-
+    const [editMode,setEditMode]=useState(false)
+    const [input,setInput]=useState({})
     //
     useEffect(()=>{
         fetchProperties({query:'',type:'',status:''}).then(data=>{
@@ -101,7 +102,37 @@ function ManageProperties(){
             })
         })
     }
-    
+    //
+    const handleClickEdit=()=>{
+        setEditMode(editMode?false:true)
+    }
+    //
+    const handleChange=(e)=>{
+        setInput(currentInput=>{
+            return {...currentInput,[e.target.name]:e.target.value}
+        })
+    }
+    const handleSubmit=(property,e)=>{
+       if(confirm('are you sure you want to make these changes')){
+        if(Object.keys(input).length>0){
+            setPropertyList(currentList=>{
+                
+                let updatedList=currentList.map(item=>{
+                    if(item.id==property.id){
+                        
+                        return {...item, ...input}
+                    } else{return item}
+                })
+                return updatedList
+            })
+        updatePropertyStatus(property.id, input)
+    setEditMode(false)}
+       }
+        
+        else{
+            setEditMode(false)
+            alert('no changes have been made')}
+    }
     //
     return <div>
                 <div className="sellerCard">
@@ -136,14 +167,20 @@ function ManageProperties(){
                 <div className="ppt image"><Link to={`/properties/${property.id}`}><img className="property-list-image" src={`${property.image}`} alt={`image of property at ${property.address}`}/></Link></div>
                 <div className="ppt description">{property.description}</div>
                 <div className="ppt content">
-                    <h2>£{property.price}</h2>
-                    <h3>{property.address}, {property.postcode}</h3>
-                    <p><img src={bedSVG} className="property-list-svg" alt="icon for number of bedrooms"/> {property.bedroom}</p>
-                    <p><img src={bathroomSVG} className="property-list-svg" alt='icon for number of bathrooms'/> {property.bathroom}</p>
-                    <p> <img src={propertyTypeIcon} alt={`icon illustrating property type of ${property.type}`} className="property-list-svg"/> {property['type'].toLowerCase()}</p>
+                    <h2>£{editMode?<input type="number" placeholder={property.price} name='price' onChange={handleChange}/>:property.price}</h2>
+                    <h3>{editMode?<input type="text" placeholder={property.address} onChange={handleChange} name="address"/>:property.address}, {editMode?<input type="text" name="postcode" placeholder={property.postcode} onChange={handleChange}/>:property.postcode}</h3>
+                    <p><img src={bedSVG} className="property-list-svg" alt="icon for number of bedrooms"/> {editMode?<input type="number" placeholder={property.bedroom} onChange={handleChange} name="bedroom"/>:property.bedroom}</p>
+                    <p><img src={bathroomSVG} className="property-list-svg" alt='icon for number of bathrooms'/>{editMode?<input type="number" placeholder={property.bathroom} onChange={handleChange} name="bathroom"/>:property.bathroom}</p>
+                    <p> <img src={propertyTypeIcon} alt={`icon illustrating property type of ${property.type}`} className="property-list-svg"/> {editMode?<select onChange={handleChange} name="type">
+                    <option value="APARTMENT" > apartment</option>
+                    <option value="DETACHED">detached</option>
+                    <option value="SEMI-DETACHED">semi-detached</option>
+                    <option value="TERRACE"> terrace</option>
+                    </select>:property['type'].toLowerCase()}</p>
                     <h3>Managment Tools</h3>
-                    <h4><button onClick={e=>{handleClickStatus(property.id,property.status,e)}} className="manage-property-status">{property.status}</button><button onClick={e=>{handleClickListing(property,e)}} className="manage-property-status">{property.listed?'listed':'unlisted'}</button></h4>
-                    <button onClick={e=>{handleDelete(property)}} className="manage-property-delete">DELETE</button>
+                    <h4><button onClick={e=>{handleClickStatus(property.id,property.status,e)}} className="manage-property-status">{property.status}</button><button onClick={e=>{handleClickListing(property,e)}} className="manage-property-status">{property.listed?'listed':'unlisted'}</button><button onClick={handleClickEdit} className="manage-property-edit">Edit</button></h4>
+                    
+                    {editMode?<button onClick={e=>handleSubmit(property,e)} className="manage-property-edit">submit</button>:<button onClick={e=>{handleDelete(property)}} className="manage-property-delete">DELETE</button>}
                     
                 </div>
                 </div></div>
