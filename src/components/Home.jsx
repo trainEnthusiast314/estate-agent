@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link, useSearchParams} from 'react-router-dom';
-import {  fetchProperties, fetchSellers, fetchSoldProperties } from "../api/api"
+import {  fetchSoldProperties, fetchForSaleProperties } from "../api/api"
 import { useEffect } from "react"
 import { useState } from "react"
 
@@ -13,7 +13,7 @@ function Home() {
 
     useEffect(()=>{
         fetchSoldProperties().then(res=>{return(
-            console.log(res),
+            // console.log(res),
             setSoldPropId(res[res.length-1].id),
             setSoldPropImg(res[res.length-1].image),
             setSoldProp(res))
@@ -25,8 +25,32 @@ function Home() {
     // console.log(soldPropId)
     // console.log(soldPropImg)
 
+    const [forSaleProp, setForSaleProp] = useState([])
+    const [forSalePropId, setForSalePropId]=useState([])
+    const [forSalePropImg, setForSalePropImg] = useState([])
+
+    useEffect(()=>{
+        fetchForSaleProperties().then(res=>{return(
+            console.log(res),
+            setForSalePropId(res[res.length-1].id),
+            setForSalePropImg(res[res.length-1].image),
+            setForSaleProp(res))
+        })
+    }, [setForSaleProp, setForSalePropId, setForSalePropImg])
+
+    console.log(forSalePropId)
+    console.log(forSalePropImg)
+
+
     let imageStyleSold = {
-        backgroundImage : `url(${soldPropImg})`
+        backgroundImage : `url(${soldPropImg})`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+    };
+    let imageStyleForSale = {
+        backgroundImage : `url(${forSalePropImg})`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
     };
 
     return(
@@ -90,8 +114,9 @@ function Home() {
                 <br/>
                 <Link to='/buyers' className={'info-link'}>Register Now</Link></p>
             </div>
-            <div id='hiddenFeature' className='home-page-column column2 recently-added'>
-                <h1 className='heading-text'>Newly Added!</h1>
+            <div id='hiddenFeature' className='home-page-column column2'  style={imageStyleForSale} >
+                <Link to={`/properties/${forSalePropId}`}><h1 className='heading-text'>Recently Added!</h1></Link>
+                {/* <h1 className='heading-text'>Newly Added!</h1> */}
             </div>
         </div>
 
