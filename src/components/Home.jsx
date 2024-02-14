@@ -102,7 +102,6 @@ function Home() {
             </div>
             <div id='hiddenFeature' className='home-page-column column2' style={imageStyleSold}>
                 <Link to={`/properties/${soldPropId}`}><h1 className='heading-text'>Recently Sold!</h1></Link>
-                {/* <h1 className='heading-text'>Recently Sold!</h1> */}
             </div>
         </div>
 
@@ -116,7 +115,6 @@ function Home() {
             </div>
             <div id='hiddenFeature' className='home-page-column column2'  style={imageStyleForSale} >
                 <Link to={`/properties/${forSalePropId}`}><h1 className='heading-text'>Recently Added!</h1></Link>
-                {/* <h1 className='heading-text'>Newly Added!</h1> */}
             </div>
         </div>
 
