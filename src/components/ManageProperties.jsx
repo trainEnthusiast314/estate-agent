@@ -61,7 +61,7 @@ function ManageProperties(){
     const handleClickStatus=(id,status,e)=>{
         if(status==='FOR SALE'){
             e.target.style.backgroundColor='red'
-            updatePropertyStatus(id,{status:'SOLD'})
+            updatePropertyStatus(id,{status:'SOLD', date: new Date()})
             setPropertyList(currentList=>{
                 return currentList.map(item=>{
                     if (item.id==id){
@@ -74,7 +74,7 @@ function ManageProperties(){
             })
         } else{
             e.target.style.backgroundColor='green'
-            updatePropertyStatus(id,{status:'FOR SALE'})
+            updatePropertyStatus(id,{status:'FOR SALE', date: ""})
             setPropertyList(currentList=>{
                 return currentList.map(item=>{
                     if (item.id==id){
