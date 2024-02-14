@@ -58,7 +58,7 @@ function SellersList() {
                                         <li><h3>Phone:</h3><span>{handleInputDisplay(seller.phone)}</span></li>
                                         <li className="manage-btn"><Link to={`/sellers/${seller.id}`}><h3>Manage Properties</h3></Link></li>
                                     </ul>
-                                    <FaTrashAlt onClick={()=>handleDelete(seller.id)} className="del-btn"/>
+                                    <FaTrashAlt className="del-btn" onClick={()=>handleDelete(seller.id)}/>
                                 </div>
                             )
                         })
