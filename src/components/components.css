@@ -296,3 +296,34 @@ body {
     cursor: pointer;
   
 }
+
+.manage-property-delete{
+    background-color: red;
+    color: white;
+    font-weight: 1000;
+    border-radius: 15px;
+    transition: 0.25s;
+}
+.manage-property-delete:hover{
+    background-color: darkred;
+    color: white;
+    font-weight: 1000;
+    border-radius: 15px;
+}
+
+
+.manage-property-status{
+    background-color: green;
+    color: white;
+    font-weight: 1000;
+    border-radius: 15px;
+    transition: 0.25s;
+    
+}
+.manage-property-status:hover{
+    background-color: darkgreen;
+    color: white;
+    font-weight: 1000;
+    border-radius: 15px;
+    
+}

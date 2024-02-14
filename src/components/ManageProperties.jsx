@@ -57,8 +57,9 @@ function ManageProperties(){
         }
         
     }
-    const handleClickStatus=(id,status)=>{
+    const handleClickStatus=(id,status,e)=>{
         if(status==='FOR SALE'){
+            e.target.style.backgroundColor='red'
             updatePropertyStatus(id,{status:'SOLD'})
             setPropertyList(currentList=>{
                 return currentList.map(item=>{
@@ -71,6 +72,7 @@ function ManageProperties(){
                 })
             })
         } else{
+            e.target.style.backgroundColor='green'
             updatePropertyStatus(id,{status:'FOR SALE'})
             setPropertyList(currentList=>{
                 return currentList.map(item=>{
@@ -86,8 +88,9 @@ function ManageProperties(){
         
     }
     //
-    const handleClickListing=(property)=>{
+    const handleClickListing=(property,e)=>{
         let update=property.listed?false:true
+        update?e.target.style.backgroundColor='green':e.target.style.backgroundColor='red'
         updateListingStatus(property.id,{listed:update})
         setPropertyList(currentList=>{
             return currentList.map(item=>{
@@ -128,7 +131,7 @@ function ManageProperties(){
                 
             }
             return (               
-                <div className={property.status.replaceAll(' ', '')} key={property.id}>
+                <div className={property.listed?'LISTED':'UNLISTED'}><div className={property.status.replaceAll(' ', '')} key={property.id}>
                 <div className="ppt title"><Link to={`/properties/${property.id}`}><h1>{property.address}</h1></Link></div>
                 <div className="ppt image"><Link to={`/properties/${property.id}`}><img className="property-list-image" src={`${property.image}`} alt={`image of property at ${property.address}`}/></Link></div>
                 <div className="ppt description">{property.description}</div>
@@ -138,11 +141,13 @@ function ManageProperties(){
                     <p><img src={bedSVG} className="property-list-svg" alt="icon for number of bedrooms"/> {property.bedroom}</p>
                     <p><img src={bathroomSVG} className="property-list-svg" alt='icon for number of bathrooms'/> {property.bathroom}</p>
                     <p> <img src={propertyTypeIcon} alt={`icon illustrating property type of ${property.type}`} className="property-list-svg"/> {property['type'].toLowerCase()}</p>
-                    <h4><button onClick={e=>{handleClickStatus(property.id,property.status)}}>{property.status}</button></h4>
-                    <button onClick={e=>{handleDelete(property)}}>DELETE</button>
-                    <button onClick={e=>{handleClickListing(property)}}>{property.listed?'listed':'unlisted'}</button>
+                    <h3>Managment Tools</h3>
+                    <h4><button onClick={e=>{handleClickStatus(property.id,property.status,e)}} className="manage-property-status">{property.status}</button></h4>
+                    <button onClick={e=>{handleDelete(property)}} className="manage-property-delete">DELETE</button>
+                    <button onClick={e=>{handleClickListing(property,e)}} className="manage-property-status">{property.listed?'listed':'unlisted'}</button>
                 </div>
-                </div>
+                </div></div>
+                
                 )
 
         })}
