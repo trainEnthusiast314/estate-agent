@@ -101,7 +101,7 @@
       "bathroom": 1,
       "garden": 0,
       "sellerId": 1,
-      "status": "SOLD",
+      "status": "FOR SALE",
       "buyerId": 3,
       "image": "../src/assets/houses/cottage-2955582_640.jpg",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
@@ -165,7 +165,8 @@
       "image": "../src/assets/houses/vw-beetle-405876_640.jpg",
       "status": "SOLD",
       "sellerId": "12",
-      "buyerId": "12"
+      "buyerId": "12",
+      "date": ""
     },
     {
       "id": "7fa3",
@@ -194,6 +195,20 @@
       "description": "Very nice place",
       "image": "https://previews.123rf.com/images/estherpoon/estherpoon2008/estherpoon200800041/153171588-detached-houses-in-manchester-united-kingdom.jpg",
       "status": "SOLD",
+      "listed": "true"
+    },
+    {
+      "id": "edbd",
+      "sellerId": "5",
+      "address": "24 Manchester road",
+      "postcode": "CP8 12JJJ",
+      "type": "TERRACE",
+      "price": "145000",
+      "bedroom": "4",
+      "bathroom": "2",
+      "description": "stuff going on around here ",
+      "image": "https://assetsio.reedpopcdn.com/minecraft-house-ideas-3-floor-white-container-house.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp",
+      "status": "FOR SALE",
       "listed": "true"
     }
   ],
