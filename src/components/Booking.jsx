@@ -104,9 +104,10 @@ function Booking(props) {
 
 
     function returnForm(){
-        if(props.comp =="list"){
-        return(<div className = "bookingForm">
-        <form  >
+     
+        if(props.comp =="form"){
+        return(<div className = "bookingForm" >
+        <form >
             <ul className = "bookingList">
 
                
@@ -137,17 +138,18 @@ function Booking(props) {
              
          
             
-            <button className = "bookBtn" onClick={handleSubmit}>Book</button>
+            <button className='button-link' onClick={handleSubmit}>Book</button>
         </form></div>)}
 
 
-        else if(props.comp =="form"){
-            return(<div className = "booking-list-container" ><h1>Make a booking</h1>{bookings.map(property =>{
+        else if(props.comp =="list"){
+            return(<div className = "booking-list-container"><h1 >Bookings</h1>{bookings.map(booking =>{
                 return(
                     <div className = "booking-wrapper" key = {props.propId}>
-                    <div>Booking ID {property.id}</div>
-                    <div>Booking Date {((property.time).split(" "))[0]}</div> 
-                    <div>Booking Time {((property.time).split(" "))[1]}</div>
+                    <div>Booking ID {booking.id}</div>
+                    
+                    <div>Booking Date {((booking.time).split(" "))[0]}</div> 
+                    <div>Booking Time {((booking.time).split(" "))[1]}</div>
                     <hr/>
                     </div>
                     )
@@ -176,7 +178,7 @@ function Booking(props) {
 
         
         
-        <div className = "returnDiv">
+        <div className = "returnDiv" >
 
             {returnForm()}
         
