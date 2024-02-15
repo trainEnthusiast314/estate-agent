@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 import {Link} from 'react-router-dom';
 
 function ResponsiveBurger() {
-  const CustomBurgerIcon = () => <img className="bm-img" src="./menus.png" />
+  const CustomBurgerIcon = () => <img className="bm-img" src="src\assets\menus.png" />
   const [width, setWidth] = useState(window.innerWidth);
   const breakPoint = 768;
   useEffect(() => {
