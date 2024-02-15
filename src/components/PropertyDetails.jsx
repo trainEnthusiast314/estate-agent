@@ -37,7 +37,7 @@ function PropertyDetails() {
             
             
         
-        <div className = "ppt content" ><Booking propId= {property_id} comp = "list"/></div>
+        <div className = "ppt booking" ><Booking propId= {property_id} comp = "list"/></div>
             
         <div className = "ppt description"><Booking propId= {property_id} comp = "form"/></div>
       
