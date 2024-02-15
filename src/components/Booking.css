@@ -85,14 +85,21 @@ ul{
   
   .content {
     grid-area: content;
+    text-align: center;
 
   }
 
   .description {
     grid-area: description;
+    text-align: center;
   }
   
   .title {
     grid-area: title;
   }
 
+  
+@media screen and (max-width:1000px){
+  .booking-container{
+    display: block;
+  }}

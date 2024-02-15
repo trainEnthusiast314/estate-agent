@@ -16,7 +16,7 @@ export const fetchProperties=(params)=>{
         return res.data
     }
     )
-} 
+}
 
 export const fetchSoldProperties=()=>{
     return estateApi.get('/property',{params:
