@@ -1,5 +1,10 @@
 .seller-list-page{
-    margin: .5em;
+    margin: .5em 1em;
+}
+
+.seller-list-container{
+    margin-left: 6%;
+    margin-right: 6%;
 }
 
 .sellerCard {
@@ -8,19 +13,34 @@
     border-radius: 10px;
     border: 1px solid black;
     transition: transform 0.2s;
-    transition: background-color 0.2;
+    transition: background-color 0.2s;
+    color: #D3DADA;
+    background-color:#1B3954
 }
 
 .sellerCard:hover{
     transform: scale(1.02);
-    cursor: pointer;
-    background-color: rgba(0,0,0,.04);
+    color:#1B3954;
+    background-color: #D3DADA;
+}
+
+.sellerCard:hover .manage-btn h3{
+    background-color: #1B3954;
+    color: #D3DADA;
+}
+
+.list-title {
+    text-align: center;
+    margin-top: 2em;
+
 }
 
 .seller-list-item {
     padding-left: 0;
     list-style: none;
+    margin-bottom: 10px;
 }
+
 .seller-list-item li{
     justify-content: left;
     display: flex;
@@ -30,13 +50,13 @@
 }
 
 .seller-list-item h3 {
-    margin-right: 10px;
+    margin: .5em 10px .5em .5em;
 }
 
 
 .uuid {
     margin:0;
-    color: rgba(0,0,0,.5)
+    color: #5DCAD1
 }
 
 
@@ -58,3 +78,98 @@
     align-items: center;
     flex-direction: column;
 }
+
+.del-btn {
+    position: relative;
+    bottom: 50px;
+    right: 15px;
+    font-size: 2em;
+    transition: transform 0.2s;
+    float:right;
+    clear:both
+}
+
+.del-btn:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    color:#5DCAD1
+}
+
+
+
+.manage-btn h3{
+    border: 1px solid #5DCAD1;
+    background-color: #D3DADA;
+    color: #1B3954;
+    padding: .6em;
+    border-radius: 30px;
+    margin: 3px 0 0 0;
+}
+.manage-btn a{
+    text-decoration: none;
+}
+
+/* .manage-btn h3:hover{
+    color: #D3DADA;
+    background-color: #1B3954;
+} */
+
+@media screen and (min-width: 600px) {
+    .sellerCard:hover{
+        transform:scale(1.006)
+    }
+}
+
+@media screen and (max-width:500px) {
+    .seller-list-container{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .sellerCard {
+        margin-left:0;
+        margin-right: 0;
+    }
+    .head {
+        margin-left: 5px !important;
+        margin-right: 5px !important;
+        margin-bottom: 5px;
+    }
+    
+    .seller-list-item{
+        margin-bottom: 5px;
+    }
+
+    .seller-list-item li {
+        font-size:14px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .del-btn {
+        position: relative;
+        bottom: 40px !important;
+        right: 15px;
+    }
+
+    .manage-btn h3{
+        margin:3px 0 0 0;
+        font-size:14px
+    }
+}
+
+
+
+@media screen and (min-width:501px) {
+    .del-btn:hover{
+        animation: shake 10s infinite;
+    }
+
+}
+
+@keyframes shake {
+    0% { transform: translate(0px, 0px) rotate(0deg); }
+    33% { transform: translate(0px, 0px) rotate(-1deg); }
+    66% { transform: translate(0px, 0px) rotate(0deg); }
+    100% { transform: translate(0px, 0px) rotate(1deg); }
+}
+

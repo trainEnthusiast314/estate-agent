@@ -1,10 +1,11 @@
 // imports
 import React from "react"
 import { useState, useEffect } from "react";
-import { fetchSellers } from "../api/api"
+import { fetchSellers, deleteSeller } from "../api/api"
 import "../styles/sellerList.css"
 import RegisterForm from "./RegisterForm";
 import { Link } from "react-router-dom";
+import {FaTrashAlt} from "react-icons/fa";
 
 function SellersList() {
     const [isLoading, setIsLoading] = useState(true)
@@ -15,11 +16,22 @@ function SellersList() {
         return (input ? input : 'Data Unavailable')
     }
 
+    function handleDelete(id) {
+        if(confirm(`Are you sure you want to deleted Seller ${id}?`)){
+        deleteSeller(id).then(res=>{setListOfSellers(currentList=>{
+            return currentList.filter((seller)=>{return seller.id!=id})
+        })
+        alert('Successfully deleted user!')
+        }).catch(err=>{alert('Try again!')})    
+        
+        } else {}
+    }
+
     useEffect(() => {
         setIsLoading(true)
         fetchSellers().then(data => {
             setListOfSellers([...data])
-            console.log(data)
+            
             setIsLoading(false)
         })
     }, [setListOfSellers])
@@ -34,19 +46,19 @@ function SellersList() {
             {isLoading ?
                 <div>Loading Sellers .....</div> :
                 <>
-                    <h2>List of Sellers</h2>
+                    <h2 className="list-title">Current Sellers</h2>
                     <div className="seller-list-container">
                         {listOfSellers.map(seller => {
-                            seller
                             return (
-                                <div className="sellerCard">
-                                    <ul key={seller.id} className="seller-list-item">
+                                <div key={seller.id} className="sellerCard">
+                                    <ul className="seller-list-item">
                                         <li className="head"><h2>{handleInputDisplay(seller.firstName)} {seller.surname}</h2><span className="uuid">Seller uid: {seller.id}</span></li>
                                         <li><h3>Address: </h3> <span>{handleInputDisplay(seller.address)}</span></li>
                                         <li><h3>Postcode:</h3><span>{handleInputDisplay(seller.postcode)}</span></li>
                                         <li><h3>Phone:</h3><span>{handleInputDisplay(seller.phone)}</span></li>
-                                        <li><Link to={`/sellers/${seller.id}`}><h3>Manage Properties</h3></Link></li>
+                                        <li className="manage-btn"><Link to={`/sellers/${seller.id}`}><h3>Manage Properties</h3></Link></li>
                                     </ul>
+                                    <FaTrashAlt className="del-btn" onClick={()=>handleDelete(seller.id)}/>
                                 </div>
                             )
                         })

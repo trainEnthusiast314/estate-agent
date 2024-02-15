@@ -2,11 +2,11 @@
   "seller": [
     {
       "id": "1",
-      "firstName": "John",
-      "surname": "Doe",
-      "address": "13 Reather Walk, Manchester",
-      "postcode": "M40 7PD",
-      "phone": "0161 311 6348"
+      "firstName": "Daniel",
+      "surname": "Smith",
+      "address": "8 Lord Lane, Failsworth",
+      "postcode": "M35 0SL",
+      "phone": "0161 456 1143"
     },
     {
       "id": "2",
@@ -87,19 +87,12 @@
       "postcode": "M24 5JW",
       "phone": "01706 073046",
       "id": "12"
-    },
-    {
-      "firstName": "Sam",
-      "surname": "Ash",
-      "address": "6 Kingston Road, Failsworth",
-      "postcode": "M35 9JD",
-      "phone": "0161 341 7164",
-      "id": "13"
     }
   ],
   "property": [
     {
       "id": "1",
+      "listed": true,
       "address": "3 Inchcape Drive, Manchester",
       "postcode": "M9 8JN",
       "type": "DETACHED",
@@ -111,10 +104,12 @@
       "status": "SOLD",
       "buyerId": 3,
       "image": "../src/assets/houses/cottage-2955582_640.jpg",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "date": "2024-02-14T14:51:17.634Z"
     },
     {
       "id": "2",
+      "listed": true,
       "address": "5 Parkfield Avenue, Urmston",
       "postcode": "M41 9FE",
       "type": "APARTMENT",
@@ -123,7 +118,7 @@
       "bathroom": 1,
       "garden": 0,
       "sellerId": 1,
-      "status": "SOLD",
+      "status": "FOR SALE",
       "buyerId": 3,
       "image": "../src/assets/houses/home-1597079_640.jpg",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
@@ -131,10 +126,11 @@
     {
       "address": "122 Lords Street, Cadishead",
       "postcode": "M44 5YB",
+      "listed": true,
       "type": "DETACHED",
-      "price": 125000,
-      "bedroom": 1,
-      "bathroom": 1,
+      "price": "489000",
+      "bedroom": "5",
+      "bathroom": "3",
       "garden": 1,
       "sellerId": 3,
       "status": "FOR SALE",
@@ -145,6 +141,7 @@
     {
       "address": "253 Littleton Road, Salford",
       "postcode": "M7 3TB",
+      "listed": "true",
       "type": "DETACHED",
       "price": 99000,
       "bedroom": 3,
@@ -158,22 +155,25 @@
     },
     {
       "id": "c5ed",
+      "listed": true,
       "address": "25 Whitehall Road, Manchester",
       "postcode": "M20 6RY",
       "type": "SEMI-DETACHED",
-      "price": "2",
+      "price": "200000",
       "bedroom": "2",
       "bathroom": "2",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "image": "../src/assets/houses/vw-beetle-405876_640.jpg",
-      "status": "FOR SALE",
+      "status": "SOLD",
       "sellerId": "12",
-      "buyerId": "12"
+      "buyerId": "12",
+      "date": "2024-02-14T14:49:21.006Z"
     },
     {
       "id": "7fa3",
       "address": "cool person street, Coolington",
       "postcode": "CP8 12J",
+      "listed": true,
       "type": "TERRACE",
       "price": "400000",
       "bedroom": "5",
@@ -183,17 +183,39 @@
       "status": "FOR SALE",
       "sellerId": "12",
       "buyerId": "12"
+    },
+    {
+      "id": "9e12",
+      "sellerId": "9",
+      "address": "my house road",
+      "postcode": "CP8 12J",
+      "type": "SEMI-DETACHED",
+      "price": "1000000",
+      "bedroom": "5",
+      "bathroom": "3",
+      "description": "Very nice place",
+      "image": "https://previews.123rf.com/images/estherpoon/estherpoon2008/estherpoon200800041/153171588-detached-houses-in-manchester-united-kingdom.jpg",
+      "status": "FOR SALE",
+      "listed": "true",
+      "date": ""
+    },
+    {
+      "id": "edbd",
+      "sellerId": "5",
+      "address": "24 Manchester road",
+      "postcode": "CP8 12JJJ",
+      "type": "TERRACE",
+      "price": "145000",
+      "bedroom": "4",
+      "bathroom": "2",
+      "description": "stuff going on around here ",
+      "image": "https://assetsio.reedpopcdn.com/minecraft-house-ideas-3-floor-white-container-house.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp",
+      "status": "FOR SALE",
+      "listed": "true",
+      "date": ""
     }
   ],
   "buyer": [
-    {
-      "id": "1",
-      "firstName": "Penny",
-      "surname": "Cath",
-      "address": "5 Wilderswood Close, Manchester",
-      "postcode": "M20 4XU",
-      "phone": "0161 566 5810"
-    },
     {
       "id": "2",
       "firstName": "Nilla",
@@ -223,31 +245,31 @@
     {
       "buyerId": 1,
       "propertyId": 1,
-      "time": "2023-02-28T08 00:00.038Z",
+      "time": "2024-02-28 11:30",
       "id": "1"
     },
     {
       "buyerId": 2,
       "propertyId": 2,
-      "time": "2023-02-29T08 00:00.038Z",
+      "time": "2024-02-29 09:30",
       "id": "2"
     },
     {
       "buyerId": 3,
       "propertyId": 4,
-      "time": "2023-03-02T08 00:00.000Z",
+      "time": "2024-03-02T08 00:00.000Z",
       "id": "3"
     },
     {
       "buyerId": 1,
       "propertyId": 3,
-      "time": "2023-02-28T08 00:00.038Z",
+      "time": "2024-02-28 8:30",
       "id": "5"
     },
     {
       "buyerId": 2,
       "propertyId": 2,
-      "time": "2023-02-29T08 00:00.038Z",
+      "time": "2024-02-29 15:30",
       "id": "6"
     },
     {
@@ -272,6 +294,78 @@
       "buyerId": "Helen",
       "propertyId": 3,
       "time": "2024-03-01 13:35"
+    },
+    {
+      "id": "a9a7",
+      "buyerId": "Ellis",
+      "propertyId": null,
+      "time": "2024-02-22 15:16"
+    },
+    {
+      "id": "0c19",
+      "buyerId": "QWERTY",
+      "propertyId": "c5ed",
+      "time": "2024-02-20 16:17"
+    },
+    {
+      "id": "ec93",
+      "buyerId": "uythgfhgfh",
+      "propertyId": "c5ed",
+      "time": "2024-02-28 08:02"
+    },
+    {
+      "id": "4a00",
+      "buyerId": "",
+      "propertyId": "c5ed",
+      "time": " 08:30"
+    },
+    {
+      "id": "d375",
+      "buyerId": "3",
+      "propertyId": "2",
+      "time": "2024-01-30 09:00"
+    },
+    {
+      "id": "3749",
+      "buyerId": "e18c",
+      "propertyId": "2",
+      "time": "2024-01-01 09:00"
+    },
+    {
+      "id": "2661",
+      "buyerId": "3",
+      "propertyId": "2",
+      "time": "2024-02-08 09:10"
+    },
+    {
+      "id": "8a32",
+      "buyerId": "2",
+      "propertyId": "2",
+      "time": "2024-02-29 09:30"
+    },
+    {
+      "id": "b0db",
+      "buyerId": "2",
+      "propertyId": "2",
+      "time": "2024-02-29 09:50"
+    },
+    {
+      "id": "2e47",
+      "buyerId": "2",
+      "propertyId": "2",
+      "time": "2024-02-29 09:55"
+    },
+    {
+      "id": "a972",
+      "buyerId": "2",
+      "propertyId": "3",
+      "time": "2024-02-15 09:00"
+    },
+    {
+      "id": "9d6e",
+      "buyerId": "2",
+      "propertyId": "3",
+      "time": "2024-02-28 09:00"
     }
   ]
 }
