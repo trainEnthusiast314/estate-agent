@@ -26,7 +26,7 @@ body {
 
 .form-button {
     background-color:#1B3954;
-    color:  #DCAD99;
+    color:  #5DCAD1;
     margin-top:20px;
     text-align: center;
     font-weight:bold;
@@ -37,7 +37,7 @@ body {
 }
 
 .form-button:hover {
-    background-color:#DCAD99;
+    background-color:#5DCAD1;
     color:#1B3954;
 }
 
@@ -63,7 +63,7 @@ body {
     flex: 1;
     margin: 1%;
     border-radius: 10px;
-    height: 20em;
+    height: 25em;
 }
 
 .column1 {
@@ -78,7 +78,7 @@ body {
 
 .company-name {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 3em;
+    font-size: 4em;
     color: #1B3954;
     margin: 1%;
     width: 100%;
@@ -95,7 +95,7 @@ body {
 
 .about-text {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1em;
+    font-size: 1.5em;
     color: #1B3954;
     text-align: justify;
 }
@@ -103,19 +103,19 @@ body {
 .heading-text {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 2em;
-    color: #fcfcfd;
+    color: #1B3954;
     margin: 1%;
     padding: 3%;
 }
 
 .info-text {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1em;
+    font-size: 1.5em;
     color:#1B3954;
     margin-left: 1%;
     padding: 1%;
     padding-right: 25%;
-    font-weight: bold;
+    /* font-weight: bold; */
     text-align: justify;
 }
 
@@ -142,29 +142,12 @@ body {
     cursor:pointer;
   }
 
-  .recently-added {
-    background: url('../assets/houses/house-540796_640.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow-x:hidden;
-    /* justify-content: center; */
-    /* height:auto; */
-    width:100%;
-}
-
-.recently-sold {
-    background: url('../assets/houses/home-1597079_640.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow-x:hidden;
-    width:100%;
-}
-
 .property-container {
     background: url('../assets/property-image.PNG');
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center;
     /* overflow-x:hidden; */
     /* justify-content: center; */
     /* height:auto; */
@@ -180,25 +163,32 @@ body {
     background-color: rgba(255, 255, 255, 0.8);
 }
 
-
+.recently-added > span, .recently-sold> span, .looking-for > span{
+    margin:2em;
+    display:inline;
+    width:calc(100% - 4em);
+    height:100%;
+    background-color: rgba(255, 255, 255, 0.8);
+}
 
 .buyer-container {
-    background: url('../assets/property-image.PNG');
+    background: url('../assets/seller-image.PNG');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    overflow-x:hidden;
+    /* overflow-x:hidden; */
+    background-position: top center;
     /* justify-content: center; */
     /* height:auto; */
     width:100%;
     
 }
 .seller-container {
-    background: url('../assets/property-image.PNG');
+    background: url('../assets/seller-image.PNG');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    overflow-x:hidden;
+    background-position: top center;
     /* justify-content: center; */
     /* height:auto; */
     width:100%;

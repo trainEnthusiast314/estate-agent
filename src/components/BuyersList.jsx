@@ -39,7 +39,7 @@ function BuyersList() {
     return (
         <div className="buyer-list-page">
             <div className="register-form">
-                <h1>Register as a New Buyer:</h1>
+                <h1>Register as a New Buyer</h1>
                 <RegisterForm user="buyer" />
             </div>
             

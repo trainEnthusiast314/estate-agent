@@ -20,24 +20,19 @@
 
 .buyerCard:hover{
     transform: scale(1.02);
-    cursor: pointer;
     color:#1B3954;
     background-color: #D3DADA;
 }
 
-@media screen and (min-width: 600px) {
-    .buyerCard:hover{
-        transform:scale(1.006)
-    }
-}
-
 .list-title {
     text-align: center;
+    margin-top: 2em;
 }
 
 .buyer-list-item {
     padding-left: 0;
     list-style: none;
+    margin-bottom: 10px;
 }
 .buyer-list-item li{
     justify-content: left;
@@ -91,4 +86,64 @@
     cursor: pointer;
     transform: scale(1.05);
     color:#5DCAD1
+}
+
+@media screen and (min-width: 600px) {
+    .buyerCard:hover{
+        transform:scale(1.006)
+    }
+}
+
+@media screen and (max-width:500px) {
+    .buyer-list-container{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .buyerCard {
+        margin-left:0;
+        margin-right: 0;
+    }
+    .head {
+        margin-left: 5px !important;
+        margin-right: 5px !important;
+        margin-bottom: 5px;
+    }
+    
+    .buyer-list-item{
+        margin-bottom: 5px;
+    }
+
+    .buyer-list-item li {
+        font-size:14px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .del-btn {
+        position: relative;
+        bottom: 40px !important;
+        right: 15px;
+    }
+}
+
+@media screen and (min-width:501px) {
+    .del-btn:hover{
+        animation: bin-shake 0.5s;
+        animation-iteration-count: infinite;
+    }
+
+}
+
+@keyframes bin-shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
 }

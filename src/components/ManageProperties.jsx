@@ -163,7 +163,7 @@ function ManageProperties(){
                 
             }
             return (               
-                <div className={property.listed?'LISTED':'UNLISTED'}><div className={property.status.replaceAll(' ', '')} key={property.id}>
+                <div className={property.listed?'LISTED':'UNLISTED'} key={property.id}><div className={property.status.replaceAll(' ', '')} >
                 <div className="ppt title"><Link to={`/properties/${property.id}`}><h1>{property.address}</h1></Link></div>
                 <div className="ppt image"><Link to={`/properties/${property.id}`}><img className="property-list-image" src={`${property.image}`} alt={`image of property at ${property.address}`}/></Link></div>
                 <div className="ppt description">{property.description}</div>
@@ -179,7 +179,7 @@ function ManageProperties(){
                     <option value="TERRACE"> terrace</option>
                     </select>:property['type'].toLowerCase()}</p>
                     <h3>Managment Tools</h3>
-                    <h4><button onClick={e=>{handleClickStatus(property.id,property.status,e)}} className="manage-property-status">{property.status}</button><button onClick={e=>{handleClickListing(property,e)}} className="manage-property-status">{property.listed?'listed':'unlisted'}</button></h4>
+                    <h4><button style={{backgroundColor:property.status=='SOLD'?'red':'green'}}onClick={e=>{handleClickStatus(property.id,property.status,e)}} className="manage-property-status">{property.status}</button><button style={{backgroundColor:property.listed?'green':'red'}} onClick={e=>{handleClickListing(property,e)}} className="manage-property-status">{property.listed?'listed':'unlisted'}</button></h4>
                     
                     {editMode?<button onClick={e=>handleSubmit(property,e)} className="manage-property-edit">submit</button>:<button onClick={e=>{handleDelete(property)}} className="manage-property-delete">DELETE</button>}
                     

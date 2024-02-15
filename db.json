@@ -101,14 +101,15 @@
       "bathroom": 1,
       "garden": 0,
       "sellerId": 1,
-      "status": "FOR SALE",
+      "status": "SOLD",
       "buyerId": 3,
       "image": "../src/assets/houses/cottage-2955582_640.jpg",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "date": "2024-02-14T14:51:17.634Z"
     },
     {
       "id": "2",
-      "listed": false,
+      "listed": true,
       "address": "5 Parkfield Avenue, Urmston",
       "postcode": "M41 9FE",
       "type": "APARTMENT",
@@ -132,7 +133,7 @@
       "bathroom": "3",
       "garden": 1,
       "sellerId": 3,
-      "status": "SOLD",
+      "status": "FOR SALE",
       "id": "3",
       "image": "../src/assets/houses/house-540796_640.jpg",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
@@ -147,14 +148,14 @@
       "bathroom": 3,
       "garden": 1,
       "sellerId": 4,
-      "status": "FOR SALE",
+      "status": "SOLD",
       "id": "4",
       "image": "../src/assets/houses/small-house-353929_640.jpg",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     },
     {
       "id": "c5ed",
-      "listed": "true",
+      "listed": true,
       "address": "25 Whitehall Road, Manchester",
       "postcode": "M20 6RY",
       "type": "SEMI-DETACHED",
@@ -166,7 +167,7 @@
       "status": "SOLD",
       "sellerId": "12",
       "buyerId": "12",
-      "date": ""
+      "date": "2024-02-14T14:49:21.006Z"
     },
     {
       "id": "7fa3",
@@ -194,8 +195,9 @@
       "bathroom": "3",
       "description": "Very nice place",
       "image": "https://previews.123rf.com/images/estherpoon/estherpoon2008/estherpoon200800041/153171588-detached-houses-in-manchester-united-kingdom.jpg",
-      "status": "SOLD",
-      "listed": "true"
+      "status": "FOR SALE",
+      "listed": "true",
+      "date": ""
     },
     {
       "id": "edbd",
@@ -209,7 +211,8 @@
       "description": "stuff going on around here ",
       "image": "https://assetsio.reedpopcdn.com/minecraft-house-ideas-3-floor-white-container-house.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp",
       "status": "FOR SALE",
-      "listed": "true"
+      "listed": "true",
+      "date": ""
     }
   ],
   "buyer": [
@@ -242,31 +245,31 @@
     {
       "buyerId": 1,
       "propertyId": 1,
-      "time": "2023-02-28T08 00:00.038Z",
+      "time": "2024-02-28 11:30",
       "id": "1"
     },
     {
       "buyerId": 2,
       "propertyId": 2,
-      "time": "2023-02-29T08 00:00.038Z",
+      "time": "2024-02-29 09:30",
       "id": "2"
     },
     {
       "buyerId": 3,
       "propertyId": 4,
-      "time": "2023-03-02T08 00:00.000Z",
+      "time": "2024-03-02T08 00:00.000Z",
       "id": "3"
     },
     {
       "buyerId": 1,
       "propertyId": 3,
-      "time": "2023-02-28T08 00:00.038Z",
+      "time": "2024-02-28 8:30",
       "id": "5"
     },
     {
       "buyerId": 2,
       "propertyId": 2,
-      "time": "2023-02-29T08 00:00.038Z",
+      "time": "2024-02-29 15:30",
       "id": "6"
     },
     {
@@ -291,6 +294,78 @@
       "buyerId": "Helen",
       "propertyId": 3,
       "time": "2024-03-01 13:35"
+    },
+    {
+      "id": "a9a7",
+      "buyerId": "Ellis",
+      "propertyId": null,
+      "time": "2024-02-22 15:16"
+    },
+    {
+      "id": "0c19",
+      "buyerId": "QWERTY",
+      "propertyId": "c5ed",
+      "time": "2024-02-20 16:17"
+    },
+    {
+      "id": "ec93",
+      "buyerId": "uythgfhgfh",
+      "propertyId": "c5ed",
+      "time": "2024-02-28 08:02"
+    },
+    {
+      "id": "4a00",
+      "buyerId": "",
+      "propertyId": "c5ed",
+      "time": " 08:30"
+    },
+    {
+      "id": "d375",
+      "buyerId": "3",
+      "propertyId": "2",
+      "time": "2024-01-30 09:00"
+    },
+    {
+      "id": "3749",
+      "buyerId": "e18c",
+      "propertyId": "2",
+      "time": "2024-01-01 09:00"
+    },
+    {
+      "id": "2661",
+      "buyerId": "3",
+      "propertyId": "2",
+      "time": "2024-02-08 09:10"
+    },
+    {
+      "id": "8a32",
+      "buyerId": "2",
+      "propertyId": "2",
+      "time": "2024-02-29 09:30"
+    },
+    {
+      "id": "b0db",
+      "buyerId": "2",
+      "propertyId": "2",
+      "time": "2024-02-29 09:50"
+    },
+    {
+      "id": "2e47",
+      "buyerId": "2",
+      "propertyId": "2",
+      "time": "2024-02-29 09:55"
+    },
+    {
+      "id": "a972",
+      "buyerId": "2",
+      "propertyId": "3",
+      "time": "2024-02-15 09:00"
+    },
+    {
+      "id": "9d6e",
+      "buyerId": "2",
+      "propertyId": "3",
+      "time": "2024-02-28 09:00"
     }
   ]
 }
