@@ -9,7 +9,7 @@ pipline{
         }
         stage('Deploy'){
             steps{
-                sh 'npx run preview'
+                sh 'npm run preview'
             }
         }
     }
