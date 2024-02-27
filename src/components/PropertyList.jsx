@@ -140,14 +140,14 @@ function PropertyList() {
                 case 'TERRACE':
                     propertyTypeIcon=terrace
                     break
-                
+                s
             }
             return (
                 <div className={property.status.replaceAll(' ', '')} key={property.id}>
                 <div className="ppt title">
                     
 
-                    <span><Link to={`/sellers/${property.sellerId}`}><img src="../src/assets/setting.png" className="property-settings-img" /></Link></span>
+                    <span><Link to={`/sellers/${property.sellerId}`}><img src="../assets/setting.png" className="property-settings-img" /></Link></span>
                     
                     <h1>{property.address}</h1></div>
                 <div className="ppt image"><img className="property-list-image" src={`${property.image}`} alt={`image of property at ${property.address}`}/></div>
