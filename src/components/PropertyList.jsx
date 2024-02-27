@@ -12,7 +12,7 @@ import flat from '../assets/apartments.png'
 import detached from '../assets/home.png'
 import semiDetached from '../assets/semi-detached.png'
 import terrace from '../assets/terraced-house.png'
-
+import settingCog from '../assets/setting.png'
 function PropertyList() {
     const [isLoading,setIsLoading]=useState(true)
     const [listOfProperties,setListOfProperties]=useState([])
@@ -147,7 +147,7 @@ function PropertyList() {
                 <div className="ppt title">
                     
 
-                    <span><Link to={`/sellers/${property.sellerId}`}><img src="../assets/setting.png" className="property-settings-img" /></Link></span>
+                    <span><Link to={`/sellers/${property.sellerId}`}><img src={settingCog} className="property-settings-img" /></Link></span>
                     
                     <h1>{property.address}</h1></div>
                 <div className="ppt image"><img className="property-list-image" src={`${property.image}`} alt={`image of property at ${property.address}`}/></div>
