@@ -103,7 +103,7 @@
       "sellerId": 1,
       "status": "SOLD",
       "buyerId": 3,
-      "image": "../src/assets/houses/cottage-2955582_640.jpg",
+      "image": "https://cabernet.org.uk/wp-content/uploads/2022/10/cottage-2955582_640.jpg",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "date": "2024-02-27T10:11:02.496Z"
     },
@@ -120,7 +120,7 @@
       "sellerId": 1,
       "status": "FOR SALE",
       "buyerId": 3,
-      "image": "../src/assets/houses/home-1597079_640.jpg",
+      "image": "https://cdn.pixabay.com/photo/2016/08/16/03/39/home-1597079_640.jpg",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     },
     {
@@ -135,7 +135,7 @@
       "sellerId": 3,
       "status": "FOR SALE",
       "id": "3",
-      "image": "../src/assets/houses/house-540796_640.jpg",
+      "image": "https://cdn.pixabay.com/photo/2014/11/21/17/17/house-540796_640.jpg",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     },
     {
@@ -150,7 +150,7 @@
       "sellerId": 4,
       "status": "SOLD",
       "id": "4",
-      "image": "../src/assets/houses/small-house-353929_640.jpg",
+      "image": "https://cdn.pixabay.com/photo/2014/05/25/19/49/small-house-353929_640.jpg",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     },
     {
@@ -163,7 +163,7 @@
       "bedroom": "2",
       "bathroom": "2",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      "image": "../src/assets/houses/vw-beetle-405876_640.jpg",
+      "image": "https://cdn.pixabay.com/photo/2014/07/31/00/30/vw-beetle-405876_640.jpg",
       "status": "SOLD",
       "sellerId": "12",
       "buyerId": "12",
