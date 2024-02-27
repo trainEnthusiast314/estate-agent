@@ -3,13 +3,13 @@ pipline{
     stages{
         stage('Build'){
             steps{
-                sh 'npm install'
-                sh 'npm run build'
+                bat 'npm install'
+                bat 'npm run build'
             }
         }
         stage('Deploy'){
             steps{
-                sh 'npm run preview'
+                bat 'npm run preview'
             }
         }
     }
