@@ -7,10 +7,17 @@ pipeline{
                 bat 'npm run build'
             }
         }
-        stage('Deploy'){
-            steps{
-                bat 'npm run preview'
-            }
-        }
+        stage('run-parallel-server') {
+  steps {
+    parallel(
+      a: {
+        bat 'npm run preview'
+      },
+      b: {
+        bat "npx json-server db.json"
+      }
+    )
+  }
+}
     }
 }
